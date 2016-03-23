@@ -5624,8 +5624,7 @@ ul li {
   /* line 403, ../dev/scss/_style-3-desktop.scss */
   .nav-second .button-cta {
     position: absolute;
-    right: 195px;
-    top: 13px;
+    right: 215px;
     width: 180px;
     z-index: 105;
   }
@@ -6025,10 +6024,20 @@ ul li {
     padding: 40px 0px 20px 0px;
   }
 
+  .color-text-black {
+    color: #000000 !important;
+    font-weight: bold !important;
+  }
   .phone-top {
     color: #01bded;
-    font-size: 18px;
-    font-size: 1.8rem;
+    font-size: 17px;
+    font-size: 1.7rem;
+    font-family: inherit;
+    position: absolute;
+    right: 5px;
+    top: 13px;
+    width: 200px;
+    z-index: 115;
   }
 
   .section-contact_form{
