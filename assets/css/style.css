@@ -7590,8 +7590,7 @@ ul li {
   }
 
   .social-media-icons {
-    color: #767676;
-
+    color: #767676 !important;
   }
 
   /* line 18, ../dev/scss/_print.scss */

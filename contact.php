@@ -15,8 +15,8 @@ $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, 
 $mail->Port = 587;                                    // TCP port to connect to
 
 $mail->setFrom('contact@conversionwebsites.com', 'ROC Website Contact');
-//$mail->addAddress('barrett@returnonclick.com.au');                 // Add a recipient
-$mail->addAddress('jossandro@gmail.com',');   // Name is optional
+$mail->addAddress('barrett@returnonclick.com.au', 'Barret');                 // Add a recipient
+$mail->addAddress('jossandro@gmail.com');   // Name is optional
 // $mail->addReplyTo('info@example.com', 'Information');
 // $mail->addCC('cc@example.com');
 // $mail->addBCC('bcc@example.com');
