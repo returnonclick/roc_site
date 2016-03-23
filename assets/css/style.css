@@ -6030,12 +6030,12 @@ ul li {
   }
   .phone-top {
     color: #01bded;
-    font-size: 17px;
-    font-size: 1.7rem;
-    font-family: inherit;
+    font-size: 18px ;
+    font-size: 1.8rem ;
+    font-weight: bold;    
     position: absolute;
     right: 5px;
-    top: 13px;
+    top: 10px;
     width: 200px;
     z-index: 115;
   }
@@ -7628,6 +7628,11 @@ ul li {
     width: 235px;
   }
 
+  .social-media-icons {
+    color: #767676;
+
+  }
+
   /* line 18, ../dev/scss/_print.scss */
   a,
   .footer-site a,
@@ -7643,7 +7648,7 @@ ul li {
 
   /* line 31, ../dev/scss/_print.scss */
   .wysiwyg a[href]:after {
-    content: " (http://www.acquisio.com" attr(href) ")";
+    content: " (http://www.returnonclick.com" attr(href) ")";
     font-size: 12px;
     font-size: 1.2rem;
     line-height: 18px;
