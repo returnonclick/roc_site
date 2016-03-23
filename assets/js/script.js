@@ -111,32 +111,17 @@
                   var scrollPos = $(document).scrollTop();      //pega altura que estou na tela quando faz rolagem
                   if(data.direction === 'up' && (scrollPos < 700 || scrollPos > 900)){
                     $('html').addClass('skrollr-up').removeClass('skrollr-down');
-                    console.log('skrollr-up');
+                    // console.log('skrollr-up');
                   }else if(data.direction === 'down' && scrollPos > 700 && scrollPos < 900){
                     $('html').addClass('skrollr-up').removeClass('skrollr-down');
-                    console.log('skrollr-up no else');
+                    // console.log('skrollr-up no else');
                   }else{
                     $('html').addClass('skrollr-down').removeClass('skrollr-up');
-                    console.log('skrollr-down');
+                    // console.log('skrollr-down');
                   } 
                   
                 }
-                /*,
-                keyframe: function(element, keyframe, direction) {
-                    if(element !== fish) {
-                      return;
-                    }
-                    
-                    if(direction === 'up') {
-                      console.log("up, 401");
-                      fish.style.webkitTransform = "1";
-                      fish.style.MozTransform = "1";
-                      fish.style.msTransform = "1";
-                      fish.style.OTransform = "1";
-                      fish.style.transform = "1";
-                      fish.style.msFilter = "flipH";  
-                    }
-                }*/
+                
               });
             }
           }
