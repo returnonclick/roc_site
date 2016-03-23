@@ -6299,22 +6299,16 @@ ul li {
   }
 
   .skrollr-up .template-adn .header-article .fish-desktop {
-    transform: scaleX(-1)!important;
+    transform: scaleX(1)!important;
   }
 
   .skrollr-down .template-adn .header-article .fish-desktop {
-    transform: scaleX(1)!important;
+    transform: scaleX(-1)!important;
   }
 
   .skrollr-up .template-adn .section-eagle .eagle-flying {
     transform: scaleX(-1)!important;
   }
-
-/*
-  .skrollr-down .template-adn .header-article .fish-desktop {
-    transform: scaleX(-1)!important;
-  }
-*/
 
   .skrollr-down .template-adn .section-eagle .eagle-flying{
     transform: scaleX(1)!important;

@@ -108,11 +108,17 @@
                 smoothScrolling:true,
                 render: function(data) {
                   
-                if(lastDirection !== data.direction) {
-                    lastDirection = data.direction;
-                    var otherDirection = (data.direction === 'up') ? 'down' : 'up';
-                    $('html').addClass('skrollr-' + data.direction).removeClass('skrollr-' + otherDirection);
-                }
+                  var scrollPos = $(document).scrollTop();      //pega altura que estou na tela quando faz rolagem
+                  if(data.direction === 'up' && (scrollPos < 700 || scrollPos > 900)){
+                    $('html').addClass('skrollr-up').removeClass('skrollr-down');
+                    console.log('skrollr-up');
+                  }else if(data.direction === 'down' && scrollPos > 700 && scrollPos < 900){
+                    $('html').addClass('skrollr-up').removeClass('skrollr-down');
+                    console.log('skrollr-up no else');
+                  }else{
+                    $('html').addClass('skrollr-down').removeClass('skrollr-up');
+                    console.log('skrollr-down');
+                  } 
                   
                 }
                 /*,
@@ -168,24 +174,10 @@
 
       });
 
-
       $('.scroll-top').click(function(){
     		$('html, body').animate({scrollTop : 0},800);
     		return false;
     	});
-
-      
-        
-      
-
-
-
-
-
-
-
-
-
 
     }
   };
@@ -203,6 +195,12 @@
 
     });
   });
+
+  //Function used only for debug, just to see where the scrool is.
+  // $(window).scroll(function(){
+  //   var scrollPos = $(document).scrollTop();
+  //   console.log(scrollPos);
+  // });
 
 
 })(jQuery);
