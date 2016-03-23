@@ -7858,10 +7858,18 @@ ul li {
     right: 185px;
   }
 }
+
+
+
+.copy-mobile, .phone-mobile {
+  display: none !important;
+}
+
 @media (max-width: 768px) {
   .site-logo {
     background-size: 100% auto;
     width: 130px;
+    margin-bottom: 0px;
   }
   .template-adn .header-article .polar_bear-desktop {
     bottom: -340px;
@@ -7897,12 +7905,23 @@ ul li {
     padding: 15px 75px 8px 85px;
 
   }
-  #social-media-links, .your-free {
+  #social-media-links, .your-free, .copy, .cta-mobile-only, .opener-mobile-menu {
     display: none;
     visibility: hidden;
   }
-  .copy {
+
+  .copy-mobile {
     font-size: 0.97em;
+    display: block !important;
+  }
+
+  .phone-mobile{
+    display: block !important;
+    font-weight: bold;
+  }
+
+  .no-padding-mobile {
+    padding-bottom: 0px !important;
   }
 
 }
