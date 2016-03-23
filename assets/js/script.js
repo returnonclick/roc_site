@@ -193,6 +193,9 @@
   $('#button-contactUs').click(function() {
       $(".collapse").on('show.bs.collapse', function(){
         $('.section-contact_form').css({"padding":"40px 0px 20px 0px"});
+        var y = $(window).scrollTop();  //your current y position on the page
+        $('html, body').animate({scrollTop : y + 350},800);
+        //$(window).animate({height:'40px'}, 500);
       });
 
       $(".collapse").on('hidden.bs.collapse', function(){
