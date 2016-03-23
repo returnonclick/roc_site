@@ -7923,6 +7923,7 @@ ul li {
   }
 
   .no-padding-mobile {
+    padding-top: 15px !important;
     padding-bottom: 0px !important;
   }
 
