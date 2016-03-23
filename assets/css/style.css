@@ -5995,7 +5995,7 @@ ul li {
 
   .color-text-black {
     color: #000000 !important;
-    font-weight: bold !important;
+    font-weight: 500 !important;
   }
   .phone-top {
     color: #01bded;
@@ -7871,6 +7871,12 @@ ul li {
     width: 130px;
     margin: 10px 0px 0px 10px;
   }
+
+  .color-text-black {
+    color: #000000 !important;
+    font-weight: 500 !important;
+  }
+
   .template-adn .header-article .polar_bear-desktop {
     bottom: -340px;
     display: block;
@@ -7939,17 +7945,20 @@ ul li {
     font-size: 1.5em !important;
   }
 
-  .wrapper-eagle {
+  .wrapper-eagle, .wrapper-eagle .content {
     padding-bottom: 0px !important;
   }
+
+
 
   .eagle-mobile {
      text-indent: -999999px;
      display: block !important;
      width: 100%;
-     height: 250px;
+     height: 265px;
      background-image: url(../images/eagle.png) !important;
      background-size: 100%;
+    background-position: center top;
    }
 
   .polar_bear-desktop {
@@ -7979,10 +7988,23 @@ ul li {
     width: 100%;
     height: 100%;
   }
+  .fish-desktop {
+    background: url(../images/fish.png);
+    background-repeat: no-repeat;
+    bottom: -50px;
+    display: block;
+    height: 176px;
+    position: absolute;
+    right: 2%;
+    text-indent: -5000px;
+    width: 292px;
+    z-index: 2;
+    background-size: 30% 30% !important;
+  }
 
   .template-adn .wrapper.wrapper-tiger {
     background-image: url(../images/tiger.png);
-    background-size: 40% auto !important;
+    background-size: 45% auto !important;
     background-position: center bottom;
     background-repeat: no-repeat;
   }
