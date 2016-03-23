@@ -7861,10 +7861,18 @@ ul li {
 }
 @media (max-width: 768px) {
   .site-logo {
-    background: url(../images/roc_logo.png) !important;
-    background-size: cover;
-    height: 37px;
-    width: 118px;
+    background-size: 100% auto;
+    width: 180px;
+  }
+  .template-adn .header-article .polar_bear-desktop {
+    bottom: -340px;
+    display: block;
+    height: 964px;
+    position: absolute;
+    right: 4px;
+    text-indent: -5000px;
+    width: 519px;
+    z-index: 1;
   }
 }
 
