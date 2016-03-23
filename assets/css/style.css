@@ -7918,7 +7918,8 @@ ul li {
   .phone-mobile{
     display: block !important;
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1.5em !important;
+    padding: 0px 5px !important;
   }
 
   .no-padding-mobile {
