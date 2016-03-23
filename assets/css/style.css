@@ -5985,12 +5985,6 @@ ul li {
     padding-top: 40px;
   }
 
-  .section-clients .v-center{
-    vertical-align: middle;
-    display: inline-block;
-    float: none;
-  }
-
   .section-clients .h-center{
     text-align: center !important;
   }
@@ -7872,4 +7866,38 @@ ul li {
     height: 37px;
     width: 118px;
   }
+}
+
+
+
+
+.min-height-img {
+
+}
+
+/* centered columns styles */
+.row-centered {
+  text-align:center;
+}
+.col-centered {
+  display:inline-block;
+  float:none;
+  /* reset the text-align */
+  text-align:center;
+  /* inline-block space fix */
+  margin: 0 auto;
+
+}
+
+.col-v-centered {
+  vertical-align: middle;
+  display: inline-block;
+  float: none;
+}
+
+.section-clients .v-center{
+  vertical-align: middle;
+  display: inline-block;
+  float: none;
+  padding: 20px 0;
 }

@@ -28,8 +28,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.208333">
-              <caret line="257" column="60" selection-start-line="257" selection-start-column="60" selection-end-line="257" selection-end-column="60" />
+            <state vertical-scroll-proportion="98.791664">
+              <caret line="268" column="62" selection-start-line="268" selection-start-column="62" selection-end-line="268" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -38,8 +38,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8145286">
-              <caret line="7870" column="26" selection-start-line="7870" selection-start-column="26" selection-end-line="7870" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.86089647">
+              <caret line="7901" column="17" selection-start-line="7901" selection-start-column="17" selection-end-line="7901" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -276,12 +276,12 @@
       <created>1458708145314</created>
       <option name="number" value="Default" />
       <updated>1458708145314</updated>
-      <workItem from="1458708147067" duration="1339000" />
+      <workItem from="1458708147067" duration="2753000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1339000" />
+    <option name="totallyTimeSpent" value="2753000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="821" extended-state="6" />
@@ -321,16 +321,16 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.208333">
-          <caret line="257" column="60" selection-start-line="257" selection-start-column="60" selection-end-line="257" selection-end-column="60" />
+        <state vertical-scroll-proportion="98.791664">
+          <caret line="268" column="62" selection-start-line="268" selection-start-column="62" selection-end-line="268" selection-end-column="62" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8145286">
-          <caret line="7870" column="26" selection-start-line="7870" selection-start-column="26" selection-end-line="7870" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.86089647">
+          <caret line="7901" column="17" selection-start-line="7901" selection-start-column="17" selection-end-line="7901" selection-end-column="17" />
           <folding />
         </state>
       </provider>
