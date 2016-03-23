@@ -38,7 +38,6 @@ figcaption,
 figure,
 footer,
 header,
-hgroup,
 main,
 nav,
 section,
@@ -483,11 +482,6 @@ th {
   background: #01bded;
 }
 
-/* line 16, ../dev/scss/_style-0-main.scss */
-::-webkit-selection {
-  color: #fff;
-  background: #01bded;
-}
 
 /* line 21, ../dev/scss/_style-0-main.scss */
 ::-moz-selection {
@@ -655,9 +649,7 @@ textarea {
 .main .search-form input[type=submit] {
   /*background-image: url("../images/sprite.png");*/
 }
-.social-link:before, .social-link:after {
-  background-image: url("../images/sprite2.png");
-}
+
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   /* line 158, ../dev/scss/_style-0-main.scss */
   .link-arrow a:before, .link-arrow a:after, .header-search-wrapper .opener-search:before, .header-search-wrapper .opener-search:after, .header-search-wrapper input[type=submit], .sub-menu li a:before, .sub-menu li a:after, .footer-site .footer-menu a:before, .footer-site .footer-menu a:after, .social-link:before, .social-link:after, .link-triangle-icon strong:before, .menu-cat a.active:before, .menu-cat-button span:before, .menu-cat-button span:after, .content .event-details .event-icon:before, .main .search-form input[type=submit] {
@@ -2773,7 +2765,7 @@ ul li {
   color: #474747;
   font-weight: 600;
   font-size: 4.5rem;
-  line-height': 5rem;
+  line-height: 5rem;
 }
 
 /*HEADER BLOCK*/
@@ -2811,7 +2803,6 @@ ul li {
   position: relative;
 }
 .section-block-pillars .pillar:before {
-  background: url(/sites/all/themes/acquisio/images/sprite2.png) no-repeat;
   content: "";
   display: block;
   height: 50px;
@@ -3930,20 +3921,7 @@ ul li {
   position: absolute;
 }
 
-/* line 3161, ../dev/scss/_style-0-main.scss */
-.icon-circle-acquire:before {
-  background-image: url(../images/icon-circle-acquire.png);
-}
 
-/* line 3164, ../dev/scss/_style-0-main.scss */
-.icon-circle-analyze:before {
-  background-image: url(../images/icon-circle-analyse.png);
-}
-
-/* line 3167, ../dev/scss/_style-0-main.scss */
-.icon-circle-act:before {
-  background-image: url(../images/icon-circle-act.png);
-}
 
 /* line 3183, ../dev/scss/_style-0-main.scss */
 .ie8 .link-triangle {
@@ -4508,10 +4486,7 @@ ul li {
   .LPMcontainer {
     display: none !important;
   }
-  /* line 494, ../dev/scss/_style-1-mobile.scss */
-  .front .section-block-verticals {
-    background: #313131 url(../images/bg-verticals-mobile.jpg) right center;
-  }
+
   /* line 497, ../dev/scss/_style-1-mobile.scss */
   .front .section-block-verticals .wrapper, .front .section-block-verticals #user-login, .front .section-block-verticals .profile {
     padding-top: 25px;
@@ -4533,7 +4508,6 @@ ul li {
     /*background-size: 100% auto;*/
     background-size: cover;
     background-color: #5f5b53;
-    background-image: url(../images/aq-mobile-tiger.jpg);
     /*background-image: url(../images/bg-video.jpg);*/
     /*background-position: right bottom;*/
     /*background-position: 50%;
@@ -4601,17 +4575,14 @@ ul li {
   }
   /* line 558, ../dev/scss/_style-1-mobile.scss */
   .section-block-packaged .col-30:first-child:before {
-    background: url(../images/triangle-s-mobile.png) no-repeat;
     height: 40px;
   }
   /* line 566, ../dev/scss/_style-1-mobile.scss */
   .section-block-packaged .col-30 + .col-30:before {
-    background: url(../images/triangle-m-mobile.png) no-repeat;
     height: 65px;
   }
   /* line 573, ../dev/scss/_style-1-mobile.scss */
   .section-block-packaged .col-30 + .col-30 + .col-30:before {
-    background: url(../images/triangle-l-mobile.png) no-repeat;
     height: 95px;
   }
 
@@ -6020,6 +5991,10 @@ ul li {
     float: none;
   }
 
+  .section-clients .h-center{
+    text-align: center !important;
+  }
+
   .section-superstardom{
     padding: 40px 0px 20px 0px;
   }
@@ -6073,10 +6048,7 @@ ul li {
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
-  
-  .spam-block a spam {
-    display: block;
-  }
+
   
 }
   /* line 611, ../dev/scss/_style-3-desktop.scss */
@@ -6361,7 +6333,7 @@ ul li {
     -ms-transform: scaleX(-1);
     transform: scaleX(-1);
     -ms-filter: "FlipH";
-    filter: FlipH;
+    filter: "FlipH";
   }
   .fish-desktop[class="flip-left"] {
     -moz-transform: scaleX(1);
@@ -6370,7 +6342,7 @@ ul li {
     -ms-transform: scaleX(1);
     transform: scaleX(1);
     -ms-filter: "FlipH";
-    filter: FlipH;
+    filter: "FlipH";
   }
 
   .template-adn .header-article .polar_bear-desktop {
@@ -6429,7 +6401,7 @@ ul li {
     -moz-transform:scale(1);
     -moz-transform-origin: 0 0;
   }
-}
+
 @media (min-width: 768px) and (max-width: 1460px) {
   /* line 886, ../dev/scss/_style-3-desktop.scss */
   .template-adn .tiger {
@@ -6546,7 +6518,6 @@ ul li {
 
   /* line 999, ../dev/scss/_style-3-desktop.scss */
   .section-block-video {
-    background-image: url(../images/bg-video.jpg);
     /*background-position: right -350px;*/
     /*background-size: 100% auto;*/
     background-size: cover;
@@ -6658,7 +6629,6 @@ ul li {
 
   /* line 1061, ../dev/scss/_style-3-desktop.scss */
   .section-block-seek {
-    background-image: url(../images/interface.png);
     background-repeat: no-repeat;
     background-position: right bottom;
   }
@@ -6691,13 +6661,11 @@ ul li {
   }
   /* line 1090, ../dev/scss/_style-3-desktop.scss */
   .section-block-seek .bg {
-    background: url(../images/interface-small.png) no-repeat right bottom;
   }
 }
 @media (min-width: 768px) and (max-width: 1550px) {
   /* line 1096, ../dev/scss/_style-3-desktop.scss */
   .section-block-seek .bg {
-    background: url(../images/interface-small-right.png) no-repeat right bottom;
   }
 }
 @media (min-width: 768px) and (max-width: 1675px) {
@@ -6729,7 +6697,6 @@ ul li {
     width: 100%;
   }
   .section-block-learnmore .bg {
-    background: url(/sites/all/themes/acquisio/images/laptopeagle.png) no-repeat;
     background-color: #01bded;
     background-position: 65% bottom;
     background-size: 90% auto;
@@ -6806,15 +6773,12 @@ ul li {
   }
   /* line 1203, ../dev/scss/_style-3-desktop.scss */
   .section-block-packaged .col-30:first-child:before {
-    background: url(../images/triangle-s.png) no-repeat;
   }
   /* line 1209, ../dev/scss/_style-3-desktop.scss */
   .section-block-packaged .col-30 + .col-30:before {
-    background: url(../images/triangle-m.png) no-repeat;
   }
   /* line 1214, ../dev/scss/_style-3-desktop.scss */
   .section-block-packaged .col-30 + .col-30 + .col-30:before {
-    background: url(../images/triangle-l.png) no-repeat;
   }
 
   /* line 1225, ../dev/scss/_style-3-desktop.scss */
@@ -6824,7 +6788,6 @@ ul li {
 
   /* line 1233, ../dev/scss/_style-3-desktop.scss */
   .section-block-pricing {
-    background-image: url(../images/bg-pricing.jpg);
     background-repeat: no-repeat;
     background-position: right bottom;
     min-height: 780px;
@@ -6836,7 +6799,6 @@ ul li {
 
   /* line 1250, ../dev/scss/_style-3-desktop.scss */
   .section-block-demo {
-    background: #01bded url(../images/bg-demo.jpg) no-repeat 8% bottom;
     display: table;
     min-height: 515px;
     width: 100%;
@@ -6907,7 +6869,7 @@ ul li {
   /* line 1332, ../dev/scss/_style-3-desktop.scss */
   .list-article-item .picture {
     overflow: hidden;
-    max-width: 350;
+    max-width: 350px;
   }
 
   /* line 1338, ../dev/scss/_style-3-desktop.scss */
@@ -7419,7 +7381,7 @@ ul li {
 @media (min-width: 768px) and (max-width: 1080px) {
   /* line 299, ../dev/scss/_style-2-tablet.scss */
   .template-adn .section-eagle {
-    background-image: url(../images/eagle-complete.png);
+    background-image: url(../images/eagle.png);
     background-repeat: no-repeat;
     background-position: right bottom;
     display: block;
@@ -7520,7 +7482,6 @@ ul li {
   }
   /* line 390, ../dev/scss/_style-2-tablet.scss */
   .section-block-seek .bg {
-    background: url(../images/interface.png) no-repeat right bottom;
     background-size: 100% auto;
     padding-bottom: 40%;
   }
@@ -7623,7 +7584,7 @@ ul li {
 
   /* line 12, ../dev/scss/_print.scss */
   .site-logo {
-    background: url(../images/acquisio-logo-print.png) !important;
+    background: url(../images/roc_logo.png) !important;
     height: 74px;
     width: 235px;
   }
@@ -7708,11 +7669,6 @@ ul li {
     page-break-after: avoid;
   }
 
-  /* line 82, ../dev/scss/_print.scss */
-  .section-block-video {
-    min-height: auto !important;
-    height: auto !important;
-  }
   /* line 86, ../dev/scss/_print.scss */
   .section-block-video .wrapper, .section-block-video #user-login, .section-block-video .profile {
     padding: 80px 30px !important;
@@ -7901,10 +7857,19 @@ ul li {
   .nav-second .button-cta {
     top: 0px;
   }
+
 }
 @media (min-width: 1151px) {
   .main-menu {
     width: 500px;
     right: 185px;
+  }
+}
+@media (max-width: 768px) {
+  .site-logo {
+    background: url(../images/roc_logo.png) !important;
+    background-size: cover;
+    height: 37px;
+    width: 118px;
   }
 }
