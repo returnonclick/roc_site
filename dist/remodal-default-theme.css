@@ -300,6 +300,13 @@
   }
 }
 
+@media only screen and (max-width: 641px) {
+  .remodal {
+    max-width: 100%;
+    min-width: 80% !important;
+  }
+}
+
 /* IE8
    ========================================================================== */
 

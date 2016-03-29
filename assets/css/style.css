@@ -7821,7 +7821,7 @@ ul li {
     top: 54px;
   }
   .button.button-blue a.cta-mobile-only {
-
+    display: none;
   }
 }
 @media (max-width: 1150px) and (min-width: 768px) {
@@ -7916,7 +7916,7 @@ ul li {
     padding: 15px 75px 8px 85px;
 
   }
-  #social-media-links, .your-free, .copy, .cta-mobile-only, .opener-mobile-menu {
+  #social-media-links, .your-free, .copy, .opener-mobile-menu {
     display: none;
     visibility: hidden;
   }
@@ -8004,6 +8004,11 @@ ul li {
     background-size: 45% auto !important;
     background-position: center bottom;
     background-repeat: no-repeat;
+  }
+
+  .button.button-blue a.cta-mobile-only {
+    display: block!important;
+
   }
 
 }
