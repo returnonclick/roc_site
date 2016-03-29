@@ -61,6 +61,9 @@
     <script src="assets/js/modernizr.js"></script>
     <!--[if lt IE 9]>
     <script src="assets/js/respond.min.js"></script><![endif]-->
+
+
+
   </head>
   <body class="not-front no-sidebars node-type-complex-page i18n-en">
     <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
@@ -75,7 +78,7 @@
               <button type="button" id="opener-mobile-menu" class="opener-mobile-menu">Menu <span></span>
               </button>
               <span class="button button-blue">
-              <a href="#" class="cta-mobile-only">Request a Call</a>
+              <a class="cta-mobile-only" href="#modal">Request a Call</a>
               <a href="tel:1300 021 087" class="pull-right phone-mobile" style="border: none; margin: -65px 0 0 0;"><span class="glyphicon glyphicon-earphone"></span> 1300 021 087</a>
               </span>
             </div>
@@ -85,7 +88,7 @@
                   </nav> -->
                 <nav class="nav-second">
                   <div class="nav-second-inner">
-                    <a href="h#" class="button-cta">Request a Call</a>
+                    <a href="#modal" class="button-cta">Request a Call</a>
                     <div class="phone-top">  
                       <span class="glyphicon glyphicon-earphone"></span> 1300 021 087
                     </div>
@@ -332,6 +335,7 @@
               </div>
             </div>
             </form>
+            </div>
         </section>
         <!-- END section contact form -->
       </article>
@@ -363,6 +367,11 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
+    <!-- Request a Calll -->
+      <link rel="stylesheet" href="dist/remodal.css">
+      <link rel="stylesheet" href="dist/remodal-default-theme.css">
+
+
     <div class="overlay-touch"></div></div>
     <script src="assets/js/jquery.once.js"></script>
     <script src="assets/js/anim.js"></script>
@@ -373,6 +382,8 @@
     <script src="assets/js/main-menu.js"></script>
     <script src="assets/js/contextual.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="dist/remodal.min.js"></script>
+
     <script type="text/javascript">
       // BODY CLASS
       (function($) {
@@ -419,6 +430,102 @@
       (function($) {
           $('.pillar').matchHeight();
       })(jQuery);
+
+
+
     </script>
+
+
+
+    <!-- SECTION CONTACT FORM -->
+
+    <div class="remodal remodal-is-initialized remodal-is-closed" data-remodal-id="modal" aria-labelledby="modalTitle" aria-describedby="modalDesc" tabindex="-1">
+      <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+      <h1>Request a call</h1>
+      <div class="container-fluid section-request-form">
+          <form action="contact.php" method="POST" role="form">
+            <div class="row">
+              <div class="col-md-12 col-sm12 col-xs-12" >
+                <div class="row">
+                  <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                    <input type="text" class="form-control form-field" id="requestName" name="contactName" placeholder="Name"  />
+                  </div>
+
+                  <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                    <input type="text" class="form-control form-field" id="requestPhone" name="phone" placeholder="Phone Number"  />
+                  </div>
+
+                  <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                    <textarea class="form-control form-field" rows="5" id="requestComment" name="comment" placeholder="Your Message"></textarea>
+                  </div>
+                </div>
+
+
+
+                    <input type="submit" class="form-button col-md-12 col-sm-12 col-xs-12" value="Request a Call" data-remodal-action="confirm" />
+
+
+              </div>
+            </div>
+          </form>
+        </div>
+
+      <!-- <br>
+      <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
+      <button data-remodal-action="confirm" class="remodal-confirm">OK</button> -->
+    </div>
+
+    <!--
+    <section class="section-contact_form bg-darker remodal" data-remodal-id="modal"
+             data-remodal-options="hashTracking: false, closeOnOutsideClick: false">
+      <button data-remodal-action="close" class="remodal-close"></button>
+      <div class="container collapse" id="requestForm">
+        <form action="contact.php" method="POST" role="form">
+          <div class="row">
+            <div class="col-md-4 col-sm4 col-xs-12" >
+              <div class="row">
+                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                  <input type="text" class="form-control form-field" id="requestName" name="contactName" placeholder="Name"  />
+                </div>
+                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                  <input type="text" class="form-control form-field" id="requestEmail" name="email" placeholder="Email"  />
+                </div>
+                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                  <input type="text" class="form-control form-field" id="requestPhone" name="phone" placeholder="Phone Number"  />
+                </div>
+                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                  <input type="text" class="form-control form-field" id="requestWebsite" name="website" placeholder="Website"  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 col-sm-8 col-xs-12" >
+              <div class="row">
+                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                  <input type="text" class="form-control form-field" id="requestCompanyName" name="companyName" placeholder="Company Name"  />
+                </div>
+                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                  <textarea class="form-control form-field" rows="5" id="requestComment" name="comment" placeholder="Your Message"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-md-12 col-sm-12 col-xs-12" >
+                <div class="pull-right">
+                  <input type="submit" class="form-field form-button" value="Request Report" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        </div>
+        <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
+        <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+    </section>
+    -->
+    <!-- END section contact form -->
+
+
+
+
   </body>
 </html>

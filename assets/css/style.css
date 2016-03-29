@@ -8034,6 +8034,9 @@ ul li {
   padding: 20px 10px;
 }
 
+.sm-links {
+  margin: 0px;
+}
 
 .sm-links i {
   width: 30px;
@@ -8093,3 +8096,46 @@ ul li {
   height: 150px;
 }
 
+
+.remodal {
+  width: 70% !important;
+}
+
+.section-request-form{
+  padding: 0;
+}
+
+.section-request-form .col-field{
+  padding: 8px 10px 8px 10px;
+}
+
+.section-request-form .form-field{
+  background: transparent;
+  border: 1px solid #01bded;
+  border-radius: 0;
+  color: #01bded;
+  font-size: 18px;
+  font-size: 1.8rem;
+  padding: 22px 5px 22px 5px;
+}
+
+.section-request-form .form-button{
+  font-size: 18px;
+  font-size: 1.8rem;
+  border: 1px solid #01bded;
+  border-radius: 0;
+  padding: 15px 0px 12px 0px;
+  background: #01bded;
+  color: #fff;
+
+}
+
+.section-request-form .form-button:hover{
+
+  background: #01bded;
+  color: #313131;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
