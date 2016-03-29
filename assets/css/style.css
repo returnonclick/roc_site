@@ -8023,12 +8023,6 @@ ul li {
 
 }
 
-.col-v-centered {
-  vertical-align: middle;
-  display: inline-block;
-  float: none;
-}
-
 .section-clients .v-center{
   vertical-align: middle;
   display: inline-block;
@@ -8053,6 +8047,14 @@ ul li {
 }
 .sm-links:hover i {
   color: #fff;
+}
+
+.sm-linkedin:hover i {
+  background-color: #0e76a8;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .sm-facebook:hover i {

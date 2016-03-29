@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44beab3b-6d7f-484b-a5f1-0405e53930a0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/images/nuzest-logo-green_180.png" afterPath="$PROJECT_DIR$/assets/images/nuzest-logo-green_180.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/images/rescu_180.png" afterPath="$PROJECT_DIR$/assets/images/rescu_180.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/images/sporteluxeLogo_180.png" afterPath="$PROJECT_DIR$/assets/images/sporteluxeLogo_180.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teste2.html" afterPath="$PROJECT_DIR$/teste2.html" />
     </list>
     <ignored path="roc_site.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21791443">
-              <caret line="345" column="154" selection-start-line="345" selection-start-column="154" selection-end-line="345" selection-end-column="154" />
+            <state vertical-scroll-proportion="-3.490196">
+              <caret line="345" column="156" selection-start-line="345" selection-start-column="156" selection-end-line="345" selection-end-column="156" />
               <folding>
                 <element signature="n#style#0;n#a#1;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#header#0;n#article#0;n#main#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -50,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.882353">
-              <caret line="8025" column="1" selection-start-line="8025" selection-start-column="1" selection-end-line="8025" selection-end-column="15" />
+            <state vertical-scroll-proportion="0.4986631">
+              <caret line="8023" column="1" selection-start-line="8023" selection-start-column="1" selection-end-line="8023" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -85,8 +80,8 @@
       <list>
         <option value="$PROJECT_DIR$/assets/js/script.js" />
         <option value="$PROJECT_DIR$/teste2.html" />
-        <option value="$PROJECT_DIR$/assets/css/style.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/assets/css/style.css" />
       </list>
     </option>
   </component>
@@ -619,12 +614,12 @@
       <option name="number" value="Default" />
       <updated>1458708145314</updated>
       <workItem from="1458708147067" duration="21094000" />
-      <workItem from="1459214194620" duration="1043000" />
+      <workItem from="1459214194620" duration="1398000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22137000" />
+    <option name="totallyTimeSpent" value="22492000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -769,18 +764,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.882353">
-          <caret line="8025" column="1" selection-start-line="8025" selection-start-column="1" selection-end-line="8025" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21791443">
-          <caret line="345" column="154" selection-start-line="345" selection-start-column="154" selection-end-line="345" selection-end-column="154" />
+        <state vertical-scroll-proportion="-3.490196">
+          <caret line="345" column="156" selection-start-line="345" selection-start-column="156" selection-end-line="345" selection-end-column="156" />
           <folding>
             <element signature="n#style#0;n#a#1;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#header#0;n#article#0;n#main#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -792,6 +779,14 @@
             <element signature="n#style#0;n#span#1;n#div#1;n#div#0;n#section#1;n#article#0;n#main#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#2;n#div#1;n#div#0;n#section#1;n#article#0;n#main#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4986631">
+          <caret line="8023" column="1" selection-start-line="8023" selection-start-column="1" selection-end-line="8023" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
