@@ -7,10 +7,10 @@ $mail = new PHPMailer;
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'ses-smtp-user.20160329-194045';  // Specify main and backup SMTP servers
+$mail->Host = 'email-smtp.us-east-1.amazonaws.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'AKIAJLSECI3QJDBPPIFQ';                 // SMTP username
-$mail->Password = 'Au12Ar850VJMUOGbk2gE9nkuHPEZp1j9Ak8woRPlmgV4';                           // SMTP password
+$mail->Username = 'lucas@returnonclick.com.au';                 // SMTP username
+$mail->Password = 'theBrazilian3';                           // SMTP password
 $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;                                    // TCP port to connect to
 
