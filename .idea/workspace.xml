@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44beab3b-6d7f-484b-a5f1-0405e53930a0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="roc_site.iws" />
@@ -28,8 +27,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24403183">
-              <caret line="356" column="104" selection-start-line="356" selection-start-column="104" selection-end-line="356" selection-end-column="104" />
+            <state vertical-scroll-proportion="0.29840848">
+              <caret line="232" column="337" selection-start-line="232" selection-start-column="337" selection-end-line="232" selection-end-column="337" />
               <folding>
                 <element signature="n#style#0;n#a#1;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#header#0;n#article#0;n#main#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -699,12 +698,12 @@
       <updated>1458708145314</updated>
       <workItem from="1458708147067" duration="21094000" />
       <workItem from="1459214194620" duration="15774000" />
-      <workItem from="1459316939652" duration="38000" />
+      <workItem from="1459316939652" duration="163000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36906000" />
+    <option name="totallyTimeSpent" value="37031000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -970,6 +969,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06396589">
           <caret line="9" column="2268" selection-start-line="9" selection-start-column="2268" selection-end-line="9" selection-end-column="2268" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -977,6 +977,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16968326">
           <caret line="1" column="668" selection-start-line="1" selection-start-column="668" selection-end-line="1" selection-end-column="668" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1035,8 +1036,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24403183">
-          <caret line="356" column="104" selection-start-line="356" selection-start-column="104" selection-end-line="356" selection-end-column="104" />
+        <state vertical-scroll-proportion="0.29840848">
+          <caret line="232" column="337" selection-start-line="232" selection-start-column="337" selection-end-line="232" selection-end-column="337" />
           <folding>
             <element signature="n#style#0;n#a#1;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#header#0;n#article#0;n#main#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
