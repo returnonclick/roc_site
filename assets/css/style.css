@@ -8144,3 +8144,6 @@ ul li {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
+.terms p {
+  font-size: 10px !important;
+}
