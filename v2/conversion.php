@@ -29,7 +29,7 @@ $mail->Subject = 'New Lead from ROC website';
 
 
 
-$data = $_POST['data'];
+$data = $_POST['steps'];
 print_r(json_decode($data));
 
 
