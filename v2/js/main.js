@@ -493,7 +493,6 @@ $(document).on('click', '.btn-step-finish', function(e) {
     ({
         type: 'POST',
         url: 'conversion.php',
-        dataType: "json",
         data: steps,
         success: function () {
             setTimeout( function() {
