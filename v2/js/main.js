@@ -504,9 +504,18 @@ $(document).on('click', '.btn-step-finish', function(e) {
     ({
         type: 'POST',
         url: 'conversion.php',
+        dataType: "json",
         data: steps,
-        success: function () {alert("Project Submitted!"); },
-        failure: function() {alert("Error in project submission!");}
+        success: function () {
+            setTimeout( function() {
+                $('#load-content').hide().html($('#content-step-sent').html()).fadeIn(500)
+            }, 1000)
+        },
+        failure: function() {
+            setTimeout( function() {
+                $('#load-content').hide().html($('#content-step-error').html()).fadeIn(500)
+            }, 1000)
+        }
     });
 
 });
