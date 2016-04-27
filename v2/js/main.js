@@ -174,9 +174,6 @@ $(function(){
 
     function runFish() {
 
-        console.log('ok');
-
-
         var scroll = $window.scrollTop();
         var window_bottom_position = (scroll + window_height);
         var fish_height = $animation_element_fish.outerHeight();
@@ -331,18 +328,12 @@ $(document).on('click', '.btn-step', function(e) {
     var attr = $(this).attr('data-content');
     if (typeof attr !== typeof undefined && attr !== false) {
 
-
-
             steps.push({
                 step: $(this).data('steps') - 1,
                 data:[{
                     content: $(this).data('content')
                 }]
             });
-
-            console.log(steps);
-
-
 
     }
 
@@ -365,7 +356,6 @@ $(document).on('click', '.btn-step-check', function(e) {
             content: $(this).data('content')
         }]
     });
-    console.log(steps);
 });
 
 
@@ -471,7 +461,6 @@ $(document).on('click', '.btn-person', function(e) {
                             content: $(this).data('content')
                         }]
                     });
-                    console.log(steps);
                     $('#load-content').hide().html($('#' + myObj.data('type') + '-step-' + myObj.data('steps')).html()).fadeIn(500);
                 })
             }
@@ -511,7 +500,7 @@ $(document).on('click', '.btn-step-finish', function(e) {
                 $('#load-content').hide().html($('#content-step-sent').html()).fadeIn(500)
             }, 1000)
         },
-        failure: function() {
+        error: function() {
             setTimeout( function() {
                 $('#load-content').hide().html($('#content-step-error').html()).fadeIn(500)
             }, 1000)
