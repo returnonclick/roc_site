@@ -12,7 +12,7 @@ $mail->SMTPAuth = true;                               // Enable SMTP authenticat
 $mail->Username = 'contact@conversionwebsites.com';                 // SMTP username
 $mail->Password = 'cont.918273';                           // SMTP password
 $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 587;                                    // TCP port to connect to
+$mail->Port = 465;                                    // TCP port to connect to
 
 $mail->setFrom('contact@conversionwebsites.com', 'ROC Website Contact');
 $mail->addAddress('lucas@returnonclick.com.au', 'Lucas');                 // Add a recipient
