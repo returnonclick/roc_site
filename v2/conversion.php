@@ -11,7 +11,7 @@ $mail->Host = 'mail.conversionwebsites.com';  // Specify main and backup SMTP se
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = 'contact@conversionwebsites.com';                 // SMTP username
 $mail->Password = 'cont.918273';                           // SMTP password
-$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
 
 $mail->setFrom('contact@conversionwebsites.com', 'ROC Website Contact');
