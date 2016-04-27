@@ -15,8 +15,8 @@ $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, 
 $mail->Port = 587;                                    // TCP port to connect to
 
 $mail->setFrom('contact@conversionwebsites.com', 'ROC Website Contact');
-$mail->addAddress('barrett@returnonclick.com.au', 'Barret');                 // Add a recipient
-$mail->addAddress('jossandro@gmail.com');   // Name is optional
+$mail->addAddress('lucas@returnonclick.com.au', 'Lucas');                 // Add a recipient
+//$mail->addAddress('jossandro@gmail.com');   // Name is optional
 // $mail->addReplyTo('info@example.com', 'Information');
 // $mail->addCC('cc@example.com');
 // $mail->addBCC('bcc@example.com');
@@ -26,6 +26,17 @@ $mail->addAddress('jossandro@gmail.com');   // Name is optional
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'New Lead from ROC website';
+
+
+
+$data = $_POST['data'];
+print_r(json_decode($data));
+
+
+
+
+
+
 $mail->Body    = '
 	<h1>New lead from ROC website</h1>
 	<p>Contact Name: '.$_POST['contactName']. ' </p>
@@ -35,6 +46,7 @@ $mail->Body    = '
 	<p>Company: '.$_POST['companyName']. ' </p>
 	<p>Comment: '.$_POST['comment']. ' </p>
 ';
+
 $mail->AltBody = 'New lead from ROC website
 	Contact Name: '.$_POST['contactName']. ' 
 	Email: '.$_POST['email']. ' 
