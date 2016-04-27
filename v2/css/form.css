@@ -1,0 +1,27 @@
+/********* DANIEL COLOURS *********/
+/************ MIXINS ************/
+#form-home-page .form-field {
+  padding: 25px 10px 24px 10px;
+  border: 2px #000000 solid !important;
+}
+.form-field {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 29px 10px;
+  border-radius: 0px !important;
+  border: 2px #01bded solid !important;
+}
+.form-button {
+  padding: 10px 20px !important;
+  background-color: #01bded;
+  color: #ffffff;
+}
+.form-button:hover {
+  background-color: #ffffff;
+  color: #01bded;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
