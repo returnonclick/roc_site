@@ -55,21 +55,31 @@ var_dump($data);
 
 $mail->Body    = '
 	<h1>New lead from ROC website</h1>
-	<p>Contact Name: TEST </p>
-	<p>Email: '.$_POST['email']. ' </p>
-	<p>Phone: '.$_POST['phone']. ' </p>
-	<p>Website: '.$_POST['website']. ' </p>
-	<p>Company: '.$_POST['companyName']. ' </p>
-	<p>Comment: '.$_POST['comment']. ' </p>
+	<p>Contact Name: '.$data->contactName.'</p>
+	<p>Business Name: '.$data->businessName.' </p>
+	<p>Phone: '.$data->phone.' </p>
+	<p>Email: '.$data->email.' </p>
+
+
+	<p>Conversion Type: ' . $data->step1 . '</p>
+	<p>Where: ' . $data->step2 . '</p>
+	<p>How many leads: ' . $data->step3 . '</p>
+	<p>Leads turned into a sales: ' . $data->step4 . '</p>
+
 ';
 
-$mail->AltBody = 'New lead from ROC website
-	Contact Name: '.$_POST['contactName']. ' 
-	Email: '.$_POST['email']. ' 
-	Phone: '.$_POST['phone']. ' 
-	Website: '.$_POST['website']. ' 
-	Company: '.$_POST['companyName']. '
-	Comment: '.$_POST['comment']. '
+$mail->AltBody = '
+    <h1>New lead from ROC website</h1>
+	<p>Contact Name: '.$data->contactName.'</p>
+	<p>Business Name: '.$data->businessName.' </p>
+	<p>Phone: '.$data->phone.' </p>
+	<p>Email: '.$data->email.' </p>
+
+
+	<p>Conversion Type: ' . $data->step1 . '</p>
+	<p>Where: ' . $data->step2 . '</p>
+	<p>How many leads: ' . $data->step3 . '</p>
+	<p>Leads turned into a sales: ' . $data->step4 . '</p>
 ';
 
 

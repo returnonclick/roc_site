@@ -327,7 +327,7 @@ $(document).on('click', '.btn-step', function(e) {
 
     var attr = $(this).attr('data-content');
     if (typeof attr !== typeof undefined && attr !== false) {
-        json[$(this).data('steps') - 1] =  $(this).data('content')
+        json['step'+$(this).data('steps') - 1] =  $(this).data('content');
     }
 
 
@@ -343,7 +343,7 @@ $(document).on('click', '.btn-step', function(e) {
 
 $(document).on('click', '.btn-step-check', function(e) {
     $(this).toggleClass('active-blue');
-    json[$(this).data('steps') - 1] =  $(this).data('content')
+    json['step'+$(this).data('steps') - 1] =  $(this).data('content');
 });
 
 
@@ -409,7 +409,7 @@ $(document).on('click', '.btn-person', function(e) {
 
     $('ul.timeline li:nth-child(' + $(this).data('steps') + ')').addClass('complete');
 
-    json[$(this).data('steps') - 1] =  $(this).data('content')
+    json['step'+$(this).data('steps') - 1] =  $(this).data('content');
 
     progress.open();
     //console.log(progress.open());
