@@ -50,7 +50,7 @@ $mail->Subject = 'New Lead from ROC website';
 
 
 
-$data = json_decode(stripslashes($_POST['data']), true);
+$data = json_decode($_POST['data']);
 $step2STR = "";
 
 foreach ($data->step2 as $media) {
