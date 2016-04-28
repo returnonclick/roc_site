@@ -4,15 +4,36 @@ require './php/mailer/PHPMailerAutoload.php';
 
 $mail = new PHPMailer;
 
-//$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
-$mail->isSMTP();                                      // Set mailer to use SMTP
+$mail->SMTPDebug = 3;                               // Enable verbose debug output
+
+/*
+ *
+ * $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'mail.conversionwebsites.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = 'contact@conversionwebsites.com';                 // SMTP username
 $mail->Password = 'cont.918273';                           // SMTP password
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
+
+*/
+
+
+
+$mail->isSMTP();                                      // Set mailer to use SMTP
+$mail->Host = 'email-smtp.us-east-1.amazonaws.com';   // Specify main and backup SMTP servers
+$mail->SMTPAuth = true;                               // Enable SMTP authentication
+$mail->Username = 'lucas@returnonclick.com.au';       // SMTP username
+$mail->Password = 'theBrazilian3';                    // SMTP password
+$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 587;
+
+
+
+
+
+
 
 $mail->setFrom('contact@conversionwebsites.com', 'ROC Website Contact');
 $mail->addAddress('lucas@returnonclick.com.au', 'Lucas');                 // Add a recipient
