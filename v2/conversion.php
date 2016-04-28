@@ -29,13 +29,34 @@ $mail->Subject = 'New Lead from ROC website';
 
 
 
-$data = $_POST['steps'];
-print_r(json_decode($data));
+//$data = $_POST['steps'];
+//print_r(json_decode($data));
+
+
+$mail->Body    = '
+	<h1>New lead from ROC website</h1>
+	<p>Contact Name: Lucas </p>
+	<p>Email: Lucas </p>
+	<p>Phone: Lucas </p>
+	<p>Website: Lucas </p>
+	<p>Company: Lucas </p>
+	<p>Comment: Lucas </p>
+';
+
+$mail->AltBody = 'New lead from ROC website
+	Contact Name: Lucas
+	Email: Lucas
+	Phone: Lucas
+	Website: Lucas
+	Company: Lucas
+	Comment: Lucas
+';
 
 
 
 
 
+/*
 
 $mail->Body    = '
 	<h1>New lead from ROC website</h1>
@@ -55,6 +76,8 @@ $mail->AltBody = 'New lead from ROC website
 	Company: '.$_POST['companyName']. '
 	Comment: '.$_POST['comment']. '
 ';
+
+*/
 
 if(!$mail->send()) {
     echo 'Message could not be sent.';
