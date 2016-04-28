@@ -5,7 +5,7 @@ require './php/mailer/PHPMailerAutoload.php';
 $mail = new PHPMailer;
 
 
-$mail->SMTPDebug = 3;                               // Enable verbose debug output
+//$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 /*
  *
@@ -50,13 +50,13 @@ $mail->Subject = 'New Lead from ROC website';
 
 
 
-$data = $_POST['steps'];
+$data = $_POST['data'];
 print_r(json_decode($data));
 
 
 $mail->Body    = '
 	<h1>New lead from ROC website</h1>
-	<p>Contact Name: '.$_POST['contactName']. ' </p>
+	<p>Contact Name: '.$data. ' </p>
 	<p>Email: '.$_POST['email']. ' </p>
 	<p>Phone: '.$_POST['phone']. ' </p>
 	<p>Website: '.$_POST['website']. ' </p>
