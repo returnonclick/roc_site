@@ -49,6 +49,10 @@ $mail->isHTML(true);                                  // Set email format to HTM
 $mail->Subject = 'New Lead from ROC website';
 
 $data = json_decode($_POST['data']);
+$arr = (array)$data->step2;
+$strStep2 = implode(array_keys($arr),', ');
+
+var_dump($data);
 
 $mail->Body    = '
 	<h1>New lead from ROC website</h1>
@@ -59,7 +63,7 @@ $mail->Body    = '
 
 
 	<p>Conversion Type: ' . $data->step1 . '</p>
-	<p>Where: '.implode(array_keys($data->step2)).'</p>
+	<p>Where: '. $strStep2 .'</p>
 	<p>How many leads: ' . $data->step3 . '</p>
 	<p>Leads turned into a sales: ' . $data->step4 . '</p>
 
@@ -74,7 +78,7 @@ $mail->AltBody = '
 
 
 	<p>Conversion Type: ' . $data->step1 . '</p>
-	<p>Where: '.implode(array_keys($data->step2)).'</p>
+	<p>Where: '. $strStep2 .'</p>
 	<p>How many leads: ' . $data->step3 . '</p>
 	<p>Leads turned into a sales: ' . $data->step4 . '</p>
 ';
