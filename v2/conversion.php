@@ -51,7 +51,9 @@ $mail->Subject = 'New Lead from ROC website';
 
 
 $data = json_decode(stripslashes($_POST['data']));
-print_r($data);
+foreach($data as $d){
+    echo $d;
+}
 
 
 $mail->Body    = '
