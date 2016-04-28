@@ -348,7 +348,7 @@ $(document).on('click', '.btn-step', function(e) {
 
 $(document).on('click', '.btn-step-check', function(e) {
     $(this).toggleClass('active-blue');
-    choices[$(this).data('name')] = $(this).data('content');
+    choices[$(this).data('content')] = 1;
 });
 
 

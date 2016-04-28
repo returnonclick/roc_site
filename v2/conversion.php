@@ -53,8 +53,8 @@ $mail->Subject = 'New Lead from ROC website';
 $data = json_decode($_POST['data']);
 $step2STR = "";
 
-foreach ($data->step2 as $media) {
-    $step2STR += $media->media;
+foreach ($data->step2 as $key=>$value) {
+    $step2STR += $key;
     $step2STR += ", ";
 }
 
