@@ -419,6 +419,12 @@ $(document).on('click', '.btn-person', function(e) {
 
     });
 
+    steps.push({
+        step: $(this).data('steps') - 1,
+        data:[{
+            content: $(this).data('content')
+        }]
+    });
 
     progress.open();
     //console.log(progress.open());
@@ -454,13 +460,7 @@ $(document).on('click', '.btn-person', function(e) {
             if (v < dataValue) {
                 TweenMax.delayedCall(0.05 + (Math.random() * 0.14), l)
             } else {
-                TweenMax.delayedCall(2.5, function () {
-                    steps.push({
-                        step: $(this).data('steps') - 1,
-                        data:[{
-                            content: $(this).data('content')
-                        }]
-                    });
+                TweenMax.delayedCall(2.0, function () {
                     $('#load-content').hide().html($('#' + myObj.data('type') + '-step-' + myObj.data('steps')).html()).fadeIn(500);
                 })
             }
@@ -489,6 +489,17 @@ $(document).on('click', '.btn-person', function(e) {
  *
  */
 $(document).on('click', '.btn-step-finish', function(e) {
+
+    steps.push({
+        step: $(this).data('steps') - 1,
+        data:[{
+            businessName:   $(this).('#businessName').val(),
+            contactName:    $(this).('#contactName').val(),
+            email:          $(this).('#email').val(),
+            phone:          $(this).('#phone').val()
+        }]
+    });
+
     var jsonString = JSON.stringify(steps);
     $.ajax
     ({
