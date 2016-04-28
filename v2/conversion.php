@@ -24,10 +24,10 @@ $mail->Port = 465;                                    // TCP port to connect to
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'email-smtp.us-east-1.amazonaws.com';   // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'lucas@returnonclick.com.au';       // SMTP username
-$mail->Password = 'theBrazilian3';                    // SMTP password
+$mail->Username = 'AKIAJSTFYYYB6CTOEV4A';       // SMTP username
+$mail->Password = 'AhW0dDQV/jxRZZGmxnUNjb9Mg88HkRzep8JVN7Ztv7kC';                    // SMTP password
 $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 587;
+$mail->Port = 465;
 
 
 
