@@ -419,6 +419,8 @@ $(document).on('click', '.btn-person', function(e) {
 
     });
 
+    $('ul.timeline li:nth-child(' + $(this).data('steps') + ')').addClass('complete');
+
     steps.push({
         step: $(this).data('steps') - 1,
         data:[{
@@ -499,6 +501,8 @@ $(document).on('click', '.btn-step-finish', function(e) {
             phone:          $('#phone').val()
         }]
     });
+
+    $('ul.timeline li:nth-child(' + $(this).data('steps') + ')').addClass('complete');
 
     var jsonString = JSON.stringify(steps);
     $.ajax
