@@ -55,7 +55,6 @@ $step2STR = "";
 
 foreach ($data->step2 as $key=>$value) {
     $step2STR += $key;
-    $step2STR += ", ";
 }
 
 
@@ -70,7 +69,7 @@ $mail->Body    = '
 
 
 	<p>Conversion Type: ' . $data->step1 . '</p>
-	<p>Where: '.$step2STR.'</p>
+	<p>Where: '.$data->step2.'</p>
 	<p>How many leads: ' . $data->step3 . '</p>
 	<p>Leads turned into a sales: ' . $data->step4 . '</p>
 
@@ -85,7 +84,7 @@ $mail->AltBody = '
 
 
 	<p>Conversion Type: ' . $data->step1 . '</p>
-	<p>Where: '.$step2STR.'</p>
+	<p>Where: '.$data->step2.'</p>
 	<p>How many leads: ' . $data->step3 . '</p>
 	<p>Leads turned into a sales: ' . $data->step4 . '</p>
 ';
