@@ -489,11 +489,12 @@ $(document).on('click', '.btn-person', function(e) {
  *
  */
 $(document).on('click', '.btn-step-finish', function(e) {
+    var jsonString = JSON.stringify(steps);
     $.ajax
     ({
         type: 'POST',
         url: 'conversion.php',
-        data: steps,
+        data: {data : jsonString},
         success: function () {
             setTimeout( function() {
                 $('#load-content').hide().html($('#content-step-sent').html()).fadeIn(500)

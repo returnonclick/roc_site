@@ -50,8 +50,8 @@ $mail->Subject = 'New Lead from ROC website';
 
 
 
-$data = $_POST['data'];
-print_r(json_decode($data));
+$data = json_decode(stripslashes($_POST['data']));
+print_r($data);
 
 
 $mail->Body    = '
