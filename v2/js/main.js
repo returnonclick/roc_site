@@ -510,10 +510,11 @@ $(document).on('click', '.btn-step-finish', function(e) {
         type: 'POST',
         url: 'conversion.php',
         data: {data : jsonString},
-        success: function () {
+        success: function (data) {
             setTimeout( function() {
                 $('#load-content').hide().html($('#content-step-sent').html()).fadeIn(500)
-            }, 1000)
+            }, 1000);
+            console.log(data);
         },
         error: function() {
             setTimeout( function() {

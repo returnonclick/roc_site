@@ -50,13 +50,12 @@ $mail->Subject = 'New Lead from ROC website';
 
 
 
-$data = json_decode(stripslashes($_POST['data']));
-error_log(print_r($data));
-
+$data = json_decode(stripslashes($_POST['data']), true);
+var_dump($data);
 
 $mail->Body    = '
 	<h1>New lead from ROC website</h1>
-	<p>Contact Name: '.$data. ' </p>
+	<p>Contact Name: TEST </p>
 	<p>Email: '.$_POST['email']. ' </p>
 	<p>Phone: '.$_POST['phone']. ' </p>
 	<p>Website: '.$_POST['website']. ' </p>
