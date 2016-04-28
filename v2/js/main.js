@@ -1,4 +1,5 @@
 var json = {};
+var choices = {};
 
 $(function(){
 
@@ -326,8 +327,12 @@ $(document).on('click', '.btn-step', function(e) {
 
 
     var attr = $(this).attr('data-content');
+    var attrStep = $(this).attr('data-steps');
     if (typeof attr !== typeof undefined && attr !== false) {
-        json['step'+$(this).data('steps') - 1] =  $(this).data('content');
+        json[ 'step' + ($(this).data('steps') - 1)] =  $(this).data('content');
+    } else
+    if (attrStep == 3) {
+        json[ 'step' + ($(this).data('steps') - 1) ] = choices;
     }
 
 
@@ -343,7 +348,7 @@ $(document).on('click', '.btn-step', function(e) {
 
 $(document).on('click', '.btn-step-check', function(e) {
     $(this).toggleClass('active-blue');
-    json['step'+$(this).data('steps') - 1] =  $(this).data('content');
+    choices[$(this).data('name')] = $(this).data('content');
 });
 
 
@@ -409,7 +414,7 @@ $(document).on('click', '.btn-person', function(e) {
 
     $('ul.timeline li:nth-child(' + $(this).data('steps') + ')').addClass('complete');
 
-    json['step'+$(this).data('steps') - 1] =  $(this).data('content');
+    json[ 'step' + ($(this).data('steps') - 1)] =  $(this).data('content');
 
     progress.open();
     //console.log(progress.open());
@@ -482,6 +487,9 @@ $(document).on('click', '.btn-step-finish', function(e) {
 
 
     $('ul.timeline li:nth-child(' + $(this).data('steps') + ')').addClass('complete');
+
+
+    console.log(json);
 
     var jsonString = JSON.stringify(json);
     $.ajax

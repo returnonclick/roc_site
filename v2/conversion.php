@@ -51,6 +51,14 @@ $mail->Subject = 'New Lead from ROC website';
 
 
 $data = json_decode(stripslashes($_POST['data']), true);
+$step2STR = "";
+
+foreach ($data->step2 as $media) {
+    $step2STR += $media->media;
+    $step2STR += ", ";
+}
+
+
 var_dump($data);
 
 $mail->Body    = '
@@ -62,7 +70,7 @@ $mail->Body    = '
 
 
 	<p>Conversion Type: ' . $data->step1 . '</p>
-	<p>Where: ' . $data->step2 . '</p>
+	<p>Where: '.$step2STR.'</p>
 	<p>How many leads: ' . $data->step3 . '</p>
 	<p>Leads turned into a sales: ' . $data->step4 . '</p>
 
@@ -77,7 +85,7 @@ $mail->AltBody = '
 
 
 	<p>Conversion Type: ' . $data->step1 . '</p>
-	<p>Where: ' . $data->step2 . '</p>
+	<p>Where: '.$step2STR.'</p>
 	<p>How many leads: ' . $data->step3 . '</p>
 	<p>Leads turned into a sales: ' . $data->step4 . '</p>
 ';
