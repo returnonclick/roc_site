@@ -1,4 +1,4 @@
-var steps = [];
+var json = {};
 
 $(function(){
 
@@ -327,14 +327,7 @@ $(document).on('click', '.btn-step', function(e) {
 
     var attr = $(this).attr('data-content');
     if (typeof attr !== typeof undefined && attr !== false) {
-
-            steps.push({
-                step: $(this).data('steps') - 1,
-                data:[{
-                    content: $(this).data('content')
-                }]
-            });
-
+        json[$(this).data('steps') - 1] =  $(this).data('content')
     }
 
 
@@ -350,12 +343,7 @@ $(document).on('click', '.btn-step', function(e) {
 
 $(document).on('click', '.btn-step-check', function(e) {
     $(this).toggleClass('active-blue');
-    steps.push({
-        step: $(this).data('steps') - 1,
-        data:[{
-            content: $(this).data('content')
-        }]
-    });
+    json[$(this).data('steps') - 1] =  $(this).data('content')
 });
 
 
@@ -421,12 +409,7 @@ $(document).on('click', '.btn-person', function(e) {
 
     $('ul.timeline li:nth-child(' + $(this).data('steps') + ')').addClass('complete');
 
-    steps.push({
-        step: $(this).data('steps') - 1,
-        data:[{
-            content: $(this).data('content')
-        }]
-    });
+    json[$(this).data('steps') - 1] =  $(this).data('content')
 
     progress.open();
     //console.log(progress.open());
@@ -492,19 +475,15 @@ $(document).on('click', '.btn-person', function(e) {
  */
 $(document).on('click', '.btn-step-finish', function(e) {
 
-    steps.push({
-        step: $(this).data('steps') - 1,
-        data:[{
-            businessName:   $('#businessName').val(),
-            contactName:    $('#contactName').val(),
-            email:          $('#email').val(),
-            phone:          $('#phone').val()
-        }]
-    });
+    json['businessName']    =  $('#businessName').val();
+    json['contactName']     =  $('#contactName').val();
+    json['email']           =  $('#email').val();
+    json['phone']           =  $('#phone').val();
+
 
     $('ul.timeline li:nth-child(' + $(this).data('steps') + ')').addClass('complete');
 
-    var jsonString = JSON.stringify(steps);
+    var jsonString = JSON.stringify(json);
     $.ajax
     ({
         type: 'POST',
