@@ -493,10 +493,10 @@ $(document).on('click', '.btn-step-finish', function(e) {
     steps.push({
         step: $(this).data('steps') - 1,
         data:[{
-            businessName:   $(this).('#businessName').val(),
-            contactName:    $(this).('#contactName').val(),
-            email:          $(this).('#email').val(),
-            phone:          $(this).('#phone').val()
+            businessName:   $('#businessName').val(),
+            contactName:    $('#contactName').val(),
+            email:          $('#email').val(),
+            phone:          $('#phone').val()
         }]
     });
 
