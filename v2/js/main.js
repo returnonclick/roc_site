@@ -1,5 +1,5 @@
 var json = {};
-var choices = {};
+var choices = [];
 
 $(function(){
 
