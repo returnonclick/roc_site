@@ -122,6 +122,10 @@ p:last-child {
   .transition(all, 0.3s, ease);
 }
 
+.btn-call {
+  padding: 10px 30px 7px 30px;
+}
+
 .btn-transparent {
   .btn(transparent, @white);
   margin-right: 20px;
@@ -158,11 +162,11 @@ p:last-child {
 }
 
 .btn-black {
-  .btn(@white, @blue);
+  .btn(@white, transparent, @black);
 }
 
-.btn-black:hover{
-  .btn(@blue, @white, @black);
+.btn-black:hover {
+  .btn(@black, transparent, @white);
 }
 
 
@@ -170,8 +174,13 @@ p:last-child {
              GENERIC ELEMENTS
 *********************************************/
 
+a.phone {
+  color: @black;
+}
+
 .glyphicon {
   font-size: 20px;
+  color: @black;
 }
 
 .glyphicon-earphone {
@@ -217,7 +226,7 @@ p:last-child {
 /********** OVERLAY ***********/
 #vid-overlay {
   position: absolute;
-  .size(100%, 99%);
+  .size(100%, 100%);
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/297568/overlay-pattern.png);
 }
 
@@ -252,6 +261,11 @@ p:last-child {
   margin: 50px 0;
 }
 
+
+.header-main-page .glyphicon-earphone:before {
+  font-size: 18px;
+  margin: 0 0 0 20px;
+}
 
 @media (max-width: 698px){
 
@@ -686,4 +700,25 @@ a.arrow-scroll-down:hover, a.arrow-scroll-up:hover {
     top: 30%;
     .transition(all, 0.3s, ease-in);
   }
+}
+
+
+
+/*********************************************
+             CONTACT PAGE
+*********************************************/
+
+#header-contact {
+  color: @white;
+  margin-top: -20%;
+  padding: 0 20px;
+}
+@media (max-width: 698px){
+  #header-contact {
+    margin-top: -150%;
+  }
+}
+
+#header-contact h1 {
+  font-weight: 900;
 }

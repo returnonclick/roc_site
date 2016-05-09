@@ -54,7 +54,11 @@
                 <div class="logo-black col-md-6 col-sm-6 col-xs-6"></div>
             </a>
         </div>
-        <div class="col-md-6 col-sm-6 col-xs-6">
+        <div class="col-md-5 col-sm-5 col-xs-5">
+            <a href="#modal" class="btn btn-call btn-white">Request a Call</a>
+            <a class="phone" href="tel:1300021087"><span class="glyphicon glyphicon-earphone"></span> 1300 021 087</a>
+        </div>
+        <div class="col-md-1 col-sm-1 col-xs-1">
 
             <a class="cd-primary-nav-trigger pull-right" href="#0">
                 <span class="cd-menu-icon cd-menu-icon-black"></span>
@@ -65,18 +69,16 @@
 
 <nav>
     <ul class="cd-primary-nav">
-        <li class="cd-label"></li>
-        <li><a href="./contact.html">Let's Chat</a></li>
-        <li class="cd-label">Connect with us</li>
-        <li class="cd-social cd-facebook"><a href="#0">Facebook</a></li>
-        <li class="cd-social cd-instagram"><a href="#0">Instagram</a></li>
-        <li class="cd-social cd-dribbble"><a href="#0">Dribbble</a></li>
-        <li class="cd-social cd-twitter"><a href="#0">Twitter</a></li>
-        <li class="phone"><a href="tel:1300021087"><span class="glyphicon glyphicon-earphone"></span> 1300 021 087</a></li>
-        <li class="row-centered"><a href="./index.html" class="cd-house"></a></li>
+        <li class="cd-label"><a class="link link--roc" href="#" data-letters="about">about <span>return on cLick</span></a></li>
+        <li class="cd-label"><a class="link link--roc" href="#" data-letters="design">design <span>ui / ux / ue & uex</span></a></li>
+        <li class="cd-label"><a class="link link--roc" href="#" data-letters="web development">web development <span>designed for conversions</span></a></li>
+        <li class="cd-label"><a class="link link--roc" href="#" data-letters="lead source">lead source <span>targeted leads</span></a></li>
+        <li class="cd-label"><a class="link link--roc" href="#" data-letters="custom solution">custom solutions <span>anything is possible</span></a></li>
+        <li class="cd-label"><a class="link link--roc" href="#" data-letters="business analysis">business analyst <span>strategies to deliver an even greater ROI</span></a></li>
+        <li class="cd-label"><a class="link link--roc" href="#" data-letters="conversion calculator">conversion calculator <span>What is my conversion rate?</span></a></li>
+        <li class="cd-label"><a class="link link--roc" href="#" data-letters="contact">contact <span>Talk to us</span></a></li>
     </ul>
 </nav>
-
 
 
 <section class="container-fluid blue-bg title-conversion-rate not-display">
@@ -227,26 +229,26 @@
                 <div class="col-md-4 col-sm4 col-xs-12" >
                     <div class="row">
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                            <input type="text" class="form-control form-field" id="contactName" name="contactName" placeholder="Name"  />
+                            <input type="text" class="form-control form-field" id="contactName" name="contactName" placeholder="Name" required="required" />
                         </div>
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                            <input type="text" class="form-control form-field" id="email" name="email" placeholder="Email"  />
+                            <input type="text" class="form-control form-field" id="email" name="email" placeholder="Email" required="required" />
                         </div>
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                            <input type="text" class="form-control form-field" id="phone" name="phone" placeholder="Phone Number"  />
+                            <input type="text" class="form-control form-field" id="phone" name="phone" placeholder="Phone Number" required="required" />
                         </div>
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                            <input type="text" class="form-control form-field" id="website" name="website" placeholder="Website"  />
+                            <input type="text" class="form-control form-field" id="website" name="website" placeholder="Website" required="required" />
                         </div>
                     </div>
                 </div>
                 <div class="col-md-8 col-sm-8 col-xs-12" >
                     <div class="row">
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                            <input type="text" class="form-control form-field" id="companyName" name="companyName" placeholder="Company Name"  />
+                            <input type="text" class="form-control form-field" id="companyName" name="companyName" placeholder="Company Name" required="required" />
                         </div>
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                            <textarea class="form-control form-field" rows="5" id="comment" name="comment" placeholder="Your Message"></textarea>
+                            <textarea class="form-control form-field" rows="5" id="comment" name="comment" placeholder="Your Message" required="required" ></textarea>
                         </div>
                     </div>
                 </div>
@@ -279,6 +281,46 @@
         </div>
     </div>
 </footer>
+
+
+
+<!-- REQUEST A CALL -->
+<link rel="stylesheet" href="dist/remodal.css">
+<link rel="stylesheet" href="dist/remodal-default-theme.css">
+<script src="dist/remodal.min.js"></script>
+
+
+<!-- SECTION CONTACT FORM -->
+
+<div class="remodal remodal-is-initialized remodal-is-closed" data-remodal-id="modal" aria-labelledby="modalTitle" aria-describedby="modalDesc" tabindex="-1">
+    <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+    <h3>Request a call</h3>
+    <div class="container-fluid section-request-form">
+        <form role="form" id="form-request-call">
+            <div class="row">
+                <div class="col-md-12 col-sm12 col-xs-12" >
+                    <div class="row">
+                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                            <input type="text" class="form-control form-field" id="requestName" name="contactName" placeholder="Name" required="required" />
+                        </div>
+
+                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                            <input type="text" class="form-control form-field" id="requestPhone" name="phone" placeholder="Phone Number" required="required" />
+                        </div>
+
+                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                            <textarea class="form-control form-field" rows="5" id="requestComment" name="comment" placeholder="Your Message" required="required"></textarea>
+                        </div>
+                    </div>
+                    <input type="submit" class="btn btn-blue" value="Request a Call" />
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+
 
 <!-- Bootstrap core JavaScript
     ================================================== -->

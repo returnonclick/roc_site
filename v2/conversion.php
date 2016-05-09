@@ -21,12 +21,12 @@ $mail->Port = 465;                                    // TCP port to connect to
 
 
 
-$mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.gmail.com';   // Specify main and backup SMTP servers
-$mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'jossandro@gmail.com';       // SMTP username
-$mail->Password = 'kaewqkrghjrybylx';                    // SMTP password
-$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+$mail->isSMTP();                                        // Set mailer to use SMTP
+$mail->Host = 'smtp.gmail.com';                         // Specify main and backup SMTP servers
+$mail->SMTPAuth = true;                                 // Enable SMTP authentication
+$mail->Username = 'crm@returnonclick.com.au';           // SMTP username
+$mail->Password = 'littleJoey7';                        // SMTP password
+$mail->SMTPSecure = 'tls';                              // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;
 
 
@@ -35,7 +35,7 @@ $mail->Port = 587;
 
 
 
-$mail->setFrom('lucas@returnonclick.com.au', 'ROC Website Contact');
+$mail->setFrom('crm@returnonclick.com.au', 'ROC Website Contact');
 $mail->addAddress('lucas@returnonclick.com.au', 'Lucas');                 // Add a recipient
 //$mail->addAddress('jossandro@gmail.com');   // Name is optional
 // $mail->addReplyTo('info@example.com', 'Information');

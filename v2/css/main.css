@@ -44,7 +44,7 @@
 .cd-primary-nav-trigger {
   width: 20px;
   height: 20px;
-  padding: 5px 30px 0 0;
+  padding: 17px 30px 0 0;
 }
 .cd-primary-nav-trigger .cd-menu-icon {
   /* this span is the central line of the menu icon */
@@ -136,41 +136,31 @@
 }
 .cd-primary-nav li {
   list-style: none;
-  font-size: 2.000rem;
-  font-weight: 300;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  margin: .2em 0;
-  text-transform: capitalize;
+  margin: .1em 0;
 }
-.cd-house {
-  background: url("../images/home.png") center no-repeat;
-  background-size: 60%;
-  height: 50px;
-  text-align: center;
-}
-.cd-primary-nav li.phone {
-  font-size: 2.5rem;
-  bottom: 0px;
-}
+/*
 .cd-primary-nav a {
+  color: @white;
   display: inline-block;
-  padding: .4em 1em;
+  padding: .2em 1em;
   border-radius: 0.25em;
   -webkit-transition: background 0.2s;
   -moz-transition: background 0.2s;
   transition: background 0.2s;
 }
+*/
 .no-touch .cd-primary-nav a:hover {
   background-color: #e36767;
 }
+/*
 .cd-primary-nav .cd-label {
-  color: #01bded;
+  color: @white !important;
   text-transform: uppercase;
-  font-weight: 700;
-  font-size: 0.875rem;
-  margin: 2.4em 0 .8em;
+  font-weight: 900;
+  font-size: 2.5rem;
+  margin: 0 0 0 0;
 }
+*/
 .cd-primary-nav .cd-social {
   display: inline-block;
   margin: 0 .4em;
@@ -205,18 +195,78 @@
   -o-transform: translateY(0);
   transform: translateY(0);
 }
+/* ====================================
+          HOVER MENU TEXT
+==================================== */
+.link {
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  outline: none;
+  text-decoration: none;
+  position: relative;
+  line-height: 1;
+  color: #ffffff;
+  display: inline-block;
+  padding: .6em 1em;
+}
+/* ROC */
+.link--roc {
+  font-weight: 900;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+.link--roc:hover {
+  color: #01bded;
+}
+.link--roc::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  margin-top: -18px;
+  left: -10%;
+  z-index: -1;
+  background: #F9F9F9;
+  -webkit-transform: rotate3d(0, 0, 1, 45deg) scale3d(0, 1, 1);
+  transform: rotate3d(0, 0, 1, 45deg) scale3d(0, 1, 1);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+}
+.link--roc:hover::before {
+  -webkit-transform: rotate3d(0, 0, 1, 45deg) scale3d(1, 1, 1);
+  transform: rotate3d(0, 0, 1, 45deg) scale3d(1, 1, 1);
+}
+.link--roc span {
+  font-size: 30%;
+  font-weight: 500;
+  position: absolute;
+  right: 5px;
+  color: #ffffff;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transform: translate3d(0px, -20px, 0);
+  transform: translate3d(0px, -20px, 0);
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+}
+.link--roc:hover span {
+  opacity: 1;
+  -webkit-transform: translate3d(-40px, 0, 0);
+  transform: translate3d(-40px, 0, 0);
+}
 #form-home-page .form-field {
   padding: 25px 10px 24px 10px;
   border: 2px #ffffff solid !important;
 }
 .form-field {
-  color: #ffffff;
+  color: #333333;
   background: transparent;
   display: inline-block;
   font-size: 1rem;
   padding: 29px 10px;
   border-radius: 0px !important;
   border: 2px #01bded solid !important;
+  -webkit-appearance: none;
 }
 .form-button {
   padding: 10px 100px !important;
@@ -230,6 +280,134 @@
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+.warning {
+  border-color: red !important;
+}
+/* ========================================
+
+======================================== */
+#header-contact .form-field {
+  color: #ffffff;
+  border: 2px #ffffff solid !important;
+}
+.conversion-email,
+.conversion-phone,
+.btn-step-finish {
+  margin-top: 20px;
+}
+.input {
+  color: #333333;
+  background: transparent;
+  font-size: 1rem;
+  -webkit-appearance: none;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+.input__field {
+  position: relative;
+  display: block;
+  float: right;
+  padding: 0.8em;
+  border: none;
+  border-radius: 0;
+  color: #aaa;
+  font-weight: 400;
+  width: 100%;
+  -webkit-appearance: none;
+  /* for box shadows to show on iOS */
+}
+.input__field:focus {
+  outline: none;
+}
+.input__label {
+  text-transform: uppercase;
+  display: inline-block;
+  float: right;
+  padding: 0 .5em;
+  color: #696969;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.input__label-content {
+  position: relative;
+  display: block;
+  padding: 1.0em 0;
+  width: 100%;
+}
+/* Yoshiko */
+.input__field--roc {
+  border: 2px solid #01bded;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.input__label--roc {
+  width: 100%;
+  text-align: left;
+  position: absolute;
+  bottom: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 3em, 0);
+  transform: translate3d(0, 3em, 0);
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: transform 0.25s ;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.input__label-content--roc {
+  color: #8B8C8B;
+  text-transform: uppercase;
+  padding: 0.55em 0;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.input__label-content--roc::after {
+  content: attr(data-content);
+  position: absolute;
+  font-weight: 800;
+  bottom: 100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  color: #01bded;
+  padding: 1.5em 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85em;
+}
+.input__field--roc:focus + .input__label--roc,
+.input--filled .input__label--roc {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.input__field--roc:focus + .input__label--roc .input__label-content--roc,
+.input--filled .input__label-content--roc {
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+}
+.input__field--roc:focus + .input__field--roc {
+  background-color: transparent;
+  border-color: #eeeeee !important;
+}
+.input--filled .input__field--roc {
+  background-color: transparent;
+  border-color: #01bded;
+}
+.input--not-filled {
+  border-color: red;
 }
 @font-face {
   font-family: 'FoundryMonoline';
@@ -702,6 +880,9 @@ p:last-child {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+.btn-call {
+  padding: 10px 30px 7px 30px;
+}
 .btn-transparent {
   background-color: transparent;
   border: #ffffff 2px solid;
@@ -747,19 +928,23 @@ p:last-child {
 }
 .btn-black {
   background-color: #ffffff;
-  border: #01bded 2px solid;
-  color: #01bded;
+  border: transparent 2px solid;
+  color: #000000;
 }
 .btn-black:hover {
-  background-color: #01bded;
-  border: #ffffff 2px solid;
-  color: #000000;
+  background-color: #000000;
+  border: transparent 2px solid;
+  color: #ffffff;
 }
 /*********************************************
              GENERIC ELEMENTS
 *********************************************/
+a.phone {
+  color: #000000;
+}
 .glyphicon {
   font-size: 20px;
+  color: #000000;
 }
 .glyphicon-earphone {
   font-size: 1.6rem;
@@ -801,7 +986,7 @@ p:last-child {
 #vid-overlay {
   position: absolute;
   width: 100%;
-  height: 99%;
+  height: 100%;
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/297568/overlay-pattern.png);
 }
 /**
@@ -826,6 +1011,10 @@ p:last-child {
 }
 .img-logos-clients:nth-child(n+4):nth-child(-n+6) {
   margin: 50px 0;
+}
+.header-main-page .glyphicon-earphone:before {
+  font-size: 18px;
+  margin: 0 0 0 20px;
 }
 @media (max-width: 698px) {
   .header-main-page {
@@ -1257,4 +1446,20 @@ a.arrow-scroll-up:hover {
     -o-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
   }
+}
+/*********************************************
+             CONTACT PAGE
+*********************************************/
+#header-contact {
+  color: #ffffff;
+  margin-top: -20%;
+  padding: 0 20px;
+}
+@media (max-width: 698px) {
+  #header-contact {
+    margin-top: -150%;
+  }
+}
+#header-contact h1 {
+  font-weight: 900;
 }

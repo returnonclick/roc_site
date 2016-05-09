@@ -306,7 +306,7 @@ $(function(){
     $window.trigger('scroll');
 
 
-});
+})
 
 
 
@@ -387,6 +387,15 @@ $(document).on('mouseout', '.btn-person', function(e) {
 
 $(document).on('click', '.btn-person', function(e) {
 
+
+    $('ul.timeline li:nth-child(' + $(this).data('steps') + ')').addClass('complete');
+
+    json[ 'step' + ($(this).data('steps') - 1)] =  $(this).data('content');
+
+    $('#load-content').hide().html($('#' + $(this).data('type') + '-step-' + $(this).data('steps')).html()).fadeIn(500);
+
+
+    /*
     var dataValue = $(this).data('id') / 10;
     var myObj = $(this);
     var progress = new ElasticProgress($(this), {
@@ -457,6 +466,7 @@ $(document).on('click', '.btn-person', function(e) {
         };
         l();
     }
+    */
 
 });
 
@@ -478,7 +488,17 @@ $(document).on('click', '.btn-person', function(e) {
  * =========================================================================== *
  *
  */
-$(document).on('click', '.btn-step-finish', function(e) {
+$(document).on('click', '.btn-step-finish', function(ev) {
+
+    var isValid = true;
+    $('input.input__field').each( function(inputEl) {
+        if ( $(this).val() === '' ){
+            classie.add( inputEl.parentNode, 'input--not-filled' );
+            isValid = false;
+        }
+
+    });
+    return isValid;
 
     json['businessName']    =  $('#businessName').val();
     json['contactName']     =  $('#contactName').val();
@@ -510,4 +530,24 @@ $(document).on('click', '.btn-step-finish', function(e) {
         }
     });
 
+});
+
+
+/**
+ *
+ * =========================================================================== *
+ *                                  FORM CONVERSION
+ * =========================================================================== *
+ *
+ */
+
+$(document).on('focus', '.input__field', function(ev) {
+    classie.add(ev.target.parentNode, 'input--filled');
+    classie.remove(ev.target.parentNode, 'input--not-filled');
+});
+
+$(document).on('blur', '.input__field', function(ev) {
+    if( !$(this).val() ) {
+        classie.remove(ev.target.parentNode, 'input--filled');
+    }
 });
