@@ -43,9 +43,16 @@ h1 {
   font-size: 3rem;
   font-weight: 100
 }
+h1.thick {
+  font-weight: 900;
+  padding: 50px 0;
+}
 
 h2 {
   font-size: 2.0rem;
+}
+h2.thin {
+  font-weight: 100;
 }
 
 h3 {
@@ -65,6 +72,12 @@ p {
   p {  font-size: 1rem;  }
 }
 
+small {
+  font-size: .6rem;
+  padding-top: .5rem;
+  color: @gray-light;
+}
+
 
 
 
@@ -79,6 +92,7 @@ p {
 
 .white-bg {
   background-color: @white;
+  color: @black;
 }
 
 .blue-bg {
@@ -142,11 +156,11 @@ p {
 }
 
 .btn-blue {
-  .btn(@blue,@white);
+  .btn(@blue, transparent, @white);
 }
 
 .btn-blue:hover{
-  .btn(@white,@blue);
+  .btn(@white, @white @black);
 }
 
 .btn-gray {
@@ -165,6 +179,17 @@ p {
   .btn(@black, transparent, @white);
 }
 
+.btn-black-white {
+  .btn(@black, transparent, @white);
+}
+
+.btn-black-white:hover {
+  .btn(@white, @black, @black);
+}
+
+.btn-services {
+  margin: 50px 0;
+}
 
 /*********************************************
              GENERIC ELEMENTS
@@ -172,6 +197,10 @@ p {
 
 a.phone {
   color: @black;
+}
+
+a.phone-white, .glyphicon-white {
+  color: @white !important;
 }
 
 .glyphicon {
@@ -286,6 +315,10 @@ a.phone {
   }
 }
 
+
+.section-download-free-report {
+  padding: 200px 0;
+}
 
 
 /**
@@ -608,6 +641,29 @@ a.arrow-scroll-down:hover, a.arrow-scroll-up:hover {
 .copyright {
   font-size: .8rem;
   line-height: 4rem;
+}
+
+.footer-container p {
+  padding: 1px 0;
+}
+
+.title-footer-page {
+  font-size: 1rem;
+  color: @gray-lighter;
+  text-transform: uppercase;
+}
+
+.copyright-divider {
+  border-top: 1px solid @gray-dark;
+  padding: 20px;
+  margin: 10px 0 0 0;
+}
+.content-footer-page {
+  color: @gray-dark;
+  display: block;
+  font-size: .8rem;
+  text-transform: lowercase;
+  padding: 0;
 }
 
 

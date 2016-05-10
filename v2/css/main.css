@@ -11,6 +11,16 @@
   position: absolute;
   z-index: 10000;
 }
+.logo-footer {
+  background-size: contain;
+  width: 150px;
+  height: 100px;
+  position: absolute;
+  z-index: 10000;
+  width: 75px;
+  height: 50px;
+  margin-left: 25%;
+}
 .logo-black {
   background: url("../images/roc_logo.png") no-repeat;
   background-size: contain;
@@ -40,6 +50,17 @@
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
   */
+}
+.logo-footer-white {
+  background: url("../images/logo-white.png") no-repeat;
+  background-size: contain;
+  width: 150px;
+  height: 100px;
+  position: absolute;
+  z-index: 10000;
+  width: 75px;
+  height: 50px;
+  margin-left: 25%;
 }
 .cd-primary-nav-trigger {
   width: 20px;
@@ -840,8 +861,15 @@ h1 {
   font-size: 3rem;
   font-weight: 100;
 }
+h1.thick {
+  font-weight: 900;
+  padding: 50px 0;
+}
 h2 {
   font-size: 2.0rem;
+}
+h2.thin {
+  font-weight: 100;
 }
 h3 {
   font-size: 2.0rem;
@@ -866,6 +894,11 @@ p {
     font-size: 1rem;
   }
 }
+small {
+  font-size: .6rem;
+  padding-top: .5rem;
+  color: #777777;
+}
 /*********************************************
              BACKGROUND ELEMENTS
 *********************************************/
@@ -875,6 +908,7 @@ p {
 }
 .white-bg {
   background-color: #ffffff;
+  color: #000000;
 }
 .blue-bg {
   background-color: #01bded;
@@ -943,13 +977,13 @@ p {
 }
 .btn-blue {
   background-color: #01bded;
-  border: #ffffff 2px solid;
+  border: transparent 2px solid;
   color: #ffffff;
 }
 .btn-blue:hover {
   background-color: #ffffff;
-  border: #01bded 2px solid;
-  color: #01bded;
+  border: #ffffff #000000 2px solid;
+  color: #ffffff #000000;
 }
 .btn-gray {
   background-color: #555555;
@@ -971,11 +1005,28 @@ p {
   border: transparent 2px solid;
   color: #ffffff;
 }
+.btn-black-white {
+  background-color: #000000;
+  border: transparent 2px solid;
+  color: #ffffff;
+}
+.btn-black-white:hover {
+  background-color: #ffffff;
+  border: #000000 2px solid;
+  color: #000000;
+}
+.btn-services {
+  margin: 50px 0;
+}
 /*********************************************
              GENERIC ELEMENTS
 *********************************************/
 a.phone {
   color: #000000;
+}
+a.phone-white,
+.glyphicon-white {
+  color: #ffffff !important;
 }
 .glyphicon {
   font-size: 20px;
@@ -1067,6 +1118,9 @@ a.phone {
   .img-logos-clients:nth-child(n+4) {
     display: none;
   }
+}
+.section-download-free-report {
+  padding: 200px 0;
 }
 /**
  *
@@ -1382,6 +1436,26 @@ a.arrow-scroll-up:hover {
 .copyright {
   font-size: .8rem;
   line-height: 4rem;
+}
+.footer-container p {
+  padding: 1px 0;
+}
+.title-footer-page {
+  font-size: 1rem;
+  color: #eeeeee;
+  text-transform: uppercase;
+}
+.copyright-divider {
+  border-top: 1px solid #333333;
+  padding: 20px;
+  margin: 10px 0 0 0;
+}
+.content-footer-page {
+  color: #333333;
+  display: block;
+  font-size: .8rem;
+  text-transform: lowercase;
+  padding: 0;
 }
 /*********************************************
              SIDEBAR HOME PAGE
