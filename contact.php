@@ -7,16 +7,16 @@ $mail = new PHPMailer;
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'mail.conversionwebsites.com';  // Specify main and backup SMTP servers
+$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'contact@conversionwebsites.com';                 // SMTP username
-$mail->Password = 'cont.918273';                           // SMTP password
+$mail->Username = 'crm@returnonclick.com.au';                 // SMTP username
+$mail->Password = 'littleJoey7';                           // SMTP password
 $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;                                    // TCP port to connect to
 
-$mail->setFrom('contact@conversionwebsites.com', 'ROC Website Contact');
-$mail->addAddress('barrett@returnonclick.com.au', 'Barret');                 // Add a recipient
-$mail->addAddress('jossandro@gmail.com');   // Name is optional
+$mail->setFrom('sales@returnonclick.com.au', 'ROC Website Contact');
+$mail->addAddress('lucas@returnonclick.com.au', 'Lucas');                 // Add a recipient
+$mail->addAddress('barrett@returnonclick.com.au', 'Barrett');
 // $mail->addReplyTo('info@example.com', 'Information');
 // $mail->addCC('cc@example.com');
 // $mail->addBCC('bcc@example.com');
