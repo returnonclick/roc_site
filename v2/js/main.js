@@ -490,20 +490,35 @@ $(document).on('click', '.btn-person', function(e) {
  */
 $(document).on('click', '.btn-step-finish', function(ev) {
 
-    var isValid = true;
-    $('input.input__field').each( function(inputEl) {
-        if ( $(this).val() === '' ){
-            classie.add( inputEl.parentNode, 'input--not-filled' );
-            isValid = false;
-        }
 
-    });
-    return isValid;
+    var businessName = $('#businessName');
+    var contactName  = $('#contactName');
+    var email        = $('#email');
+    var phone        = $('#phone');
 
-    json['businessName']    =  $('#businessName').val();
-    json['contactName']     =  $('#contactName').val();
-    json['email']           =  $('#email').val();
-    json['phone']           =  $('#phone').val();
+
+    if ( !businessName.val() ) {
+        businessName.addClass('input--not-filled');
+        return false;
+    }
+
+    if ( !contactName.val() ){
+        contactName.addClass('input--not-filled');
+        return false;
+    }
+    if ( !email.val() ){
+        email.addClass('input--not-filled');
+        return false;
+    }
+    if ( !phone.val() ){
+        phone.addClass('input--not-filled');
+        return false;
+    }
+
+    json['businessName']    =  businessName.val();
+    json['contactName']     =  contactName.val();
+    json['email']           =  email.val();
+    json['phone']           =  phone.val();
 
 
     $('ul.timeline li:nth-child(' + $(this).data('steps') + ')').addClass('complete');
@@ -543,7 +558,7 @@ $(document).on('click', '.btn-step-finish', function(ev) {
 
 $(document).on('focus', '.input__field', function(ev) {
     classie.add(ev.target.parentNode, 'input--filled');
-    classie.remove(ev.target.parentNode, 'input--not-filled');
+    classie.remove(ev.target, 'input--not-filled');
 });
 
 $(document).on('blur', '.input__field', function(ev) {
