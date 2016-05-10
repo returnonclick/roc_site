@@ -15,10 +15,10 @@ $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, 
 $mail->Port = 587;                                    // TCP port to connect to
 
 $mail->setFrom('sales@returnonclick.com.au', 'ROC Website Contact');
-$mail->addAddress('lucas@returnonclick.com.au', 'Lucas');                 // Add a recipient
-$mail->addAddress('barrett@returnonclick.com.au', 'Barrett');
+//$mail->addAddress('lucas@returnonclick.com.au', 'Lucas');                 // Add a recipient
+$mail->addAddress('sales@returnonclick.com.au', 'Sales');
 // $mail->addReplyTo('info@example.com', 'Information');
-// $mail->addCC('cc@example.com');
+$mail->addCC('lucas@returnonclick.com.au', 'Lucas');
 // $mail->addBCC('bcc@example.com');
 
 // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
