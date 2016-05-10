@@ -237,6 +237,7 @@
   transform: rotate3d(0, 0, 1, 45deg) scale3d(1, 1, 1);
 }
 .link--roc span {
+  text-transform: lowercase;
   font-size: 30%;
   font-weight: 500;
   position: absolute;
