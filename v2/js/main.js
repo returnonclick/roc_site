@@ -133,10 +133,12 @@ $(function(){
      *
      */
 
-    var $animation_element_bear = $('.polar_bear-desktop');
+    var $animation_element_bear  = $('.polar_bear-desktop');
+    var $animation_element_on    = $('.on-desktop');
     var $animation_element_water = $('.polar_bear-water-desktop');
 
     TweenMax.delayedCall(0, bearDown);
+    TweenMax.delayedCall(0, onDown);
     TweenMax.delayedCall(0, waterMoveUp);
 
     function bearUp() {
@@ -146,6 +148,14 @@ $(function(){
     function bearDown() {
         $animation_element_bear.removeClass('in-view');
         TweenMax.delayedCall(1.5, bearUp);
+    }
+    function onUp() {
+        $animation_element_on.addClass('in-view');
+        TweenMax.delayedCall(1.5, onDown);
+    }
+    function onDown() {
+        $animation_element_on.removeClass('in-view');
+        TweenMax.delayedCall(1.5, onUp);
     }
     function waterMoveUp() {
         $animation_element_water.addClass('in-view');
@@ -308,6 +318,11 @@ $(function(){
 
 })
 
+
+
+$(document).on('click', '.on-desktop', function() {
+    window.location.href="http://www.returnonclick.com.au/calculator.html";
+});
 
 
 /**
