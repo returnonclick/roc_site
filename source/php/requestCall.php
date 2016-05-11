@@ -29,6 +29,8 @@ $mail->Subject = 'ROC -> Request a call';
 
 $data = json_decode($_POST['data']);
 
+var_dump($data);
+
 $mail->Body    = '
 	<h1>ROC -> Request a call</h1>
 	<p>Contact Name: '.$data->contactName.' </p>

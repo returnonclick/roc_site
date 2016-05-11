@@ -29,6 +29,8 @@ $mail->Subject = 'New Lead from ROC website';
 
 $data = json_decode($_POST['data']);
 
+var_dump($data);
+
 $mail->Body    = '
 	<h1>New lead from ROC website</h1>
 	<p>Contact Name: '.$data->contactName.' </p>
