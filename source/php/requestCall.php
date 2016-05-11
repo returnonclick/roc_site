@@ -14,9 +14,9 @@ $mail->Password = 'littleJoey7';                           // SMTP password
 $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;                                    // TCP port to connect to
 
-$mail->setFrom('sales@returnonclick.com.au', 'ROC Website Contact');
+//$mail->setFrom('sales@returnonclick.com.au', 'ROC Website Contact');
 $mail->addAddress('lucas@returnonclick.com.au', 'Lucas');                 // Add a recipient
-$mail->addAddress('barrett@returnonclick.com.au', 'Barrett');
+//$mail->addAddress('barrett@returnonclick.com.au', 'Barrett');
 // $mail->addReplyTo('info@example.com', 'Information');
 // $mail->addCC('cc@example.com');
 // $mail->addBCC('bcc@example.com');
@@ -26,16 +26,19 @@ $mail->addAddress('barrett@returnonclick.com.au', 'Barrett');
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'ROC -> Request a call';
+
+$data = json_decode($_POST['data']);
+
 $mail->Body    = '
 	<h1>ROC -> Request a call</h1>
-	<p>Contact Name: '.$_POST['contactName']. ' </p>
-	<p>Phone: '.$_POST['phone']. ' </p>
-	<p>Comment: '.$_POST['comment']. ' </p>
+	<p>Contact Name: '.$data->contactName.' </p>
+	<p>Phone: '.$data->phone.' </p>
+	<p>Comment: '.$data->comment.' </p>
 ';
 $mail->AltBody = 'ROC Request a call
-	Contact Name: '.$_POST['contactName']. '
-	Phone: '.$_POST['phone']. '
-	Comment: '.$_POST['comment']. '
+	Contact Name: '.$data->contactName.'
+	Phone: '.$data->phone.'
+	Comment: '.$data->comment.'
 ';
 
 if(!$mail->send()) {

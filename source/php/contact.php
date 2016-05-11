@@ -14,9 +14,9 @@ $mail->Password = 'littleJoey7';                           // SMTP password
 $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;                                    // TCP port to connect to
 
-$mail->setFrom('sales@returnonclick.com.au', 'ROC Website Contact');
+//$mail->setFrom('sales@returnonclick.com.au', 'ROC Website Contact');
 $mail->addAddress('lucas@returnonclick.com.au', 'Lucas');                 // Add a recipient
-$mail->addAddress('barrett@returnonclick.com.au', 'Barrett');                         // Name is optional
+//$mail->addAddress('barrett@returnonclick.com.au', 'Barrett');                         // Name is optional
 // $mail->addReplyTo('info@example.com', 'Information');
 // $mail->addCC('cc@example.com');
 // $mail->addBCC('bcc@example.com');
@@ -26,22 +26,22 @@ $mail->addAddress('barrett@returnonclick.com.au', 'Barrett');                   
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'New Lead from ROC website';
+
+$data = json_decode($_POST['data']);
+
 $mail->Body    = '
 	<h1>New lead from ROC website</h1>
-	<p>Contact Name: '.$_POST['contactName']. ' </p>
-	<p>Email: '.$_POST['email']. ' </p>
-	<p>Phone: '.$_POST['phone']. ' </p>
-	<p>Website: '.$_POST['website']. ' </p>
-	<p>Company: '.$_POST['companyName']. ' </p>
-	<p>Comment: '.$_POST['comment']. ' </p>
+	<p>Contact Name: '.$data->contactName.' </p>
+	<p>Email: '.$data->email.' </p>
+	<p>Phone: '.$data->phone.' </p>
+	<p>Website: '.$data->website.' </p>
 ';
+
 $mail->AltBody = 'New lead from ROC website
-	Contact Name: '.$_POST['contactName']. ' 
-	Email: '.$_POST['email']. ' 
-	Phone: '.$_POST['phone']. ' 
-	Website: '.$_POST['website']. ' 
-	Company: '.$_POST['companyName']. '
-	Comment: '.$_POST['comment']. '
+	Contact Name: '.$data->contactName.'
+	Email: '.$data->email.'
+	Phone: '.$data->phone.'
+	Website: '.$data->website.'
 ';
 
 if(!$mail->send()) {
