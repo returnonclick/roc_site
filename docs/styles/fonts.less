@@ -1,0 +1,84 @@
+
+@fonts-path : "../fonts/";
+@font-face {
+  font-family: 'FoundryMonoline';
+  src: url("@{fonts-path}FoundryMonoline-UltraLight.eot");
+  src: url("@{fonts-path}FoundryMonoline-UltraLight.eot?#iefix") format("embedded-opentype"),
+  url("@{fonts-path}FoundryMonoline-UltraLight.woff") format("woff"),
+  url("@{fonts-path}FoundryMonoline-UltraLight.ttf") format("truetype"),
+  url("@{fonts-path}FoundryMonoline-UltraLight.svg#2061161ee9c3092ca03a976cf2543519") format("svg");
+  font-style: normal;
+  font-weight: 100;
+}
+@font-face {
+  font-family: 'FoundryMonoline';
+  src: url("@{fonts-path}FoundryMonoline-Light.eot");
+  src: url("@{fonts-path}FoundryMonoline-Light.eot?#iefix") format("embedded-opentype"),
+  url("@{fonts-path}FoundryMonoline-Light.woff") format("woff"),
+  url("@{fonts-path}FoundryMonoline-Light.ttf") format("truetype"),
+  url("@{fonts-path}FoundryMonoline-Light.svg#b15753971c58aea08c08130fb54f7158") format("svg");
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'FoundryMonoline';
+  src: url("@{fonts-path}FoundryMonoline-Regular.eot");
+  src: url("@{fonts-path}FoundryMonoline-Regular.eot?#iefix") format("embedded-opentype"),
+  url("@{fonts-path}FoundryMonoline-Regular.woff") format("woff"),
+  url("@{fonts-path}FoundryMonoline-Regular.ttf") format("truetype"),
+  url("@{fonts-path}FoundryMonoline-Regular.svg#17727f8938e5af8a57278a4302b6e398") format("svg");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'FoundryMonoline';
+  src: url("@{fonts-path}FoundryMonoline-RegItalic.eot");
+  src: url("@{fonts-path}FoundryMonoline-RegItalic.eot?#iefix") format("embedded-opentype"),
+  url("@{fonts-path}FoundryMonoline-RegItalic.woff") format("woff"),
+  url("@{fonts-path}FoundryMonoline-RegItalic.ttf") format("truetype"),
+  url("@{fonts-path}FoundryMonoline-RegItalic.svg#17727f8938e5af8a57278a4302b6e398") format("svg");
+  font-style: italic;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'FoundryMonoline';
+  src: url("@{fonts-path}FoundryMonoline-Medium.eot");
+  src: url("@{fonts-path}FoundryMonoline-Medium.eot?#iefix") format("embedded-opentype"),
+  url("@{fonts-path}FoundryMonoline-Medium.woff") format("woff"),
+  url("@{fonts-path}FoundryMonoline-Medium.ttf") format("truetype"),
+  url("@{fonts-path}FoundryMonoline-Medium.svg#17727f8938e5af8a57278a4302b6e398") format("svg");
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'FoundryMonoline';
+  src: url("@{fonts-path}FoundryMonoline-Bold.eot");
+  src: url("@{fonts-path}FoundryMonoline-Bold.eot?#iefix") format("embedded-opentype"),
+  url("@{fonts-path}FoundryMonoline-Bold.woff") format("woff"),
+  url("@{fonts-path}FoundryMonoline-Bold.ttf") format("truetype"),
+  url("@{fonts-path}FoundryMonoline-Bold.svg#17727f8938e5af8a57278a4302b6e398") format("svg");
+  font-style: normal;
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'code_bold-webfont';
+  src: url("@{fonts-path}code_bold-webfont.eot");
+  src: url("@{fonts-path}code_bold-webfont.eot?#iefix") format("embedded-opentype"),
+  url("@{fonts-path}code_bold-webfont.woff") format("woff"),
+  url("@{fonts-path}code_bold-webfont.ttf") format("truetype"),
+  url("@{fonts-path}code_bold-webfont.svg#17727f8938e5af8a57278a4302b6e398") format("svg");
+  font-style: normal;
+  font-weight: 900;
+}
+
+.CodeBold() {
+  font-family: 'code_bold-webfont';
+}
+
+.FoundryMonoline(@weight) {
+  font-family: 'FoundryMonoline';
+  font-weight: @weight;
+}
+
+

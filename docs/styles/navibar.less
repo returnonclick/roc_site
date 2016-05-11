@@ -1,0 +1,292 @@
+@import "colours.less";
+@import "mixins.less";
+
+
+.header-contact-page {
+  height: 99%;
+  background: none;
+}
+
+.logo {
+  background-size: contain;
+  .size(150px, 100px);
+  position: absolute;
+  z-index: 10000;
+}
+
+.logo-footer {
+  .logo();
+  .size(75px, 50px);
+  margin-left: 25%;
+}
+
+
+.logo-black {
+  background: url("../images/roc_logo.png") no-repeat;
+  .logo();
+
+  /*
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  */
+}
+
+.logo-white {
+  background: url("../images/logo-white.png") no-repeat;
+  .logo();
+
+  /*
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  */
+}
+
+.logo-footer-white {
+  background: url("../images/logo-white.png") no-repeat;
+  .logo-footer();
+}
+
+.cd-primary-nav-trigger {
+  .size(20px,20px);
+  padding: 17px 30px 0 0;
+}
+
+
+.cd-primary-nav-trigger .cd-menu-icon {
+  /* this span is the central line of the menu icon */
+  display: inline-block;
+  position: absolute;
+  width: 30px;
+  height: 5px;
+  margin-top: 6px;
+  background-color: @white;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  z-index: 10000;
+  /* these are the upper and lower lines in the menu icon */
+}
+.cd-primary-nav-trigger .cd-menu-icon::before, .cd-primary-nav-trigger .cd-menu-icon:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  right: 0;
+  -webkit-transition: -webkit-transform .3s, top .3s, background-color 0s;
+  -moz-transition: -moz-transform .3s, top .3s, background-color 0s;
+  transition: transform .3s, top .3s, background-color 0s;
+}
+.cd-primary-nav-trigger .cd-menu-icon::before {
+  top: -10px;
+}
+.cd-primary-nav-trigger .cd-menu-icon::after {
+  top: 10px;
+}
+
+.cd-primary-nav-trigger .cd-menu-icon-black::before,
+.cd-primary-nav-trigger .cd-menu-icon-black:after,
+.cd-primary-nav-trigger .cd-menu-icon-black {
+  background-color: @black;
+}
+
+.cd-primary-nav-trigger .cd-menu-icon.is-clicked {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.cd-primary-nav-trigger .cd-menu-icon.is-clicked::before, .cd-primary-nav-trigger .cd-menu-icon.is-clicked::after {
+  background-color: white;
+}
+
+
+.cd-primary-nav-trigger .cd-menu-icon.is-clicked::before {
+  top: 0;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.cd-primary-nav-trigger .cd-menu-icon.is-clicked::after {
+  top: 0;
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
+
+.cd-primary-nav {
+  /* by default it's hidden - on top of the viewport */
+  z-index: 4;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 100px 0;
+  height: 100%;
+  width: 100%;
+  background: @blue-transparent;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+.cd-primary-nav li {
+  list-style: none;
+  //font-size: 1.575rem;
+  //font-size: 2.000rem;
+  //font-weight: 900;
+  //-webkit-font-smoothing: antialiased;
+  //-moz-osx-font-smoothing: grayscale;
+  margin: .1em 0;
+  //text-transform: capitalize;
+}
+
+/*
+.cd-primary-nav a {
+  color: @white;
+  display: inline-block;
+  padding: .2em 1em;
+  border-radius: 0.25em;
+  -webkit-transition: background 0.2s;
+  -moz-transition: background 0.2s;
+  transition: background 0.2s;
+}
+*/
+.no-touch .cd-primary-nav a:hover {
+  background-color: #e36767;
+}
+
+/*
+.cd-primary-nav .cd-label {
+  color: @white !important;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 2.5rem;
+  margin: 0 0 0 0;
+}
+*/
+.cd-primary-nav .cd-social {
+  display: inline-block;
+  margin: 0 .4em;
+}
+.cd-primary-nav .cd-social a {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background-image: url("../images/cd-socials.svg");
+  background-repeat: no-repeat;
+  /* image replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+.cd-primary-nav .cd-facebook a {
+  background-position: 0 0;
+}
+.cd-primary-nav .cd-instagram a {
+  background-position: -44px 0;
+}
+.cd-primary-nav .cd-dribbble a {
+  background-position: -88px 0;
+}
+.cd-primary-nav .cd-twitter a {
+  background-position: -132px 0;
+}
+.cd-primary-nav.is-visible {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+
+/* ====================================
+          HOVER MENU TEXT
+==================================== */
+
+.link {
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  outline: none;
+  text-decoration: none;
+  position: relative;
+  line-height: 1;
+  color: @white;
+  display: inline-block;
+  padding: .6em 1em;
+}
+
+/* ROC */
+.link--roc {
+  font-weight: 900;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.link--roc:hover {
+  color: @blue;
+}
+
+.link--roc::before {
+  content: '';
+  position: absolute;
+  //height: 10px;
+  width: 100%;
+  top: 50%;
+  margin-top: -18px;
+  left: -10%;
+  z-index: -1;
+  background: #F9F9F9;
+  -webkit-transform: rotate3d(0,0,1,45deg) scale3d(0,1,1);
+  transform: rotate3d(0,0,1,45deg) scale3d(0,1,1);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+}
+
+.link--roc:hover::before {
+  -webkit-transform: rotate3d(0,0,1,45deg) scale3d(1,1,1);
+  transform: rotate3d(0,0,1,45deg) scale3d(1,1,1);
+}
+
+.link--roc span {
+  text-transform: lowercase;
+  font-size: 30%;
+  font-weight: 500;
+  position: absolute;
+  right: 5px;
+  color: @white;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transform: translate3d(0px, -20px, 0);
+  transform: translate3d(0px, -20px, 0);
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.link--roc:hover span {
+  opacity: 1;
+  -webkit-transform: translate3d(-40px,0,0);
+  transform: translate3d(-40px,0,0);
+}
+
