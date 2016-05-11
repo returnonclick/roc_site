@@ -534,9 +534,6 @@ $(document).on('click', '.btn-step-finish', function(ev) {
 
     $('ul.timeline li:nth-child(' + $(this).data('steps') + ')').addClass('complete');
 
-
-    console.log(json);
-
     var jsonString = JSON.stringify(json);
     $.ajax
     ({

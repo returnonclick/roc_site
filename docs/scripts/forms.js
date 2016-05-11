@@ -28,7 +28,6 @@ btnFormClick.on('click', function () {
     if (validFields(fields, data))
         sendData(data, $(this).data('url'), form);
 
-
     return false;
 
 });
@@ -52,6 +51,8 @@ function validFields (fields, data) {
             if ( !$(this).val()) {
                 $(this).addClass('is-not-valid');
                 isValid = false;
+            } else {
+                data[$(this).attr('name')] = $(this).val();
             }
         } else {
             data[$(this).attr('name')] = $(this).val();
