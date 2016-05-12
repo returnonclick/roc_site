@@ -18,7 +18,7 @@ $mail->setFrom('sales@returnonclick.com.au', 'ROC Website Contact');
 $mail->addAddress('lucas@returnonclick.com.au', 'Lucas');                 // Add a recipient
 //$mail->addAddress('barrett@returnonclick.com.au', 'Barrett');
 // $mail->addReplyTo('info@example.com', 'Information');
-// $mail->addCC('cc@example.com');
+ $mail->addCC('nick@returnonclick.com.au', 'Nick');
 // $mail->addBCC('bcc@example.com');
 
 // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
