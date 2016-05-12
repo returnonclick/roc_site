@@ -63,9 +63,10 @@
   margin-left: 25%;
 }
 .cd-primary-nav-trigger {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 40px;
   padding: 17px 30px 0 0;
+  z-index: 20000;
 }
 .cd-primary-nav-trigger .cd-menu-icon {
   /* this span is the central line of the menu icon */
@@ -173,48 +174,54 @@
 .no-touch .cd-primary-nav a:hover {
   background-color: #e36767;
 }
-/*
-.cd-primary-nav .cd-label {
-  color: @white !important;
-  text-transform: uppercase;
-  font-weight: 900;
-  font-size: 2.5rem;
-  margin: 0 0 0 0;
+.cd-primary-nav ul {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 50%;
 }
-*/
-.cd-primary-nav .cd-social {
-  display: inline-block;
-  margin: 0 .4em;
+.back {
+  position: absolute !important;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
-.cd-primary-nav .cd-social a {
-  width: 44px;
-  height: 44px;
-  padding: 0;
-  background-image: url("../images/cd-socials.svg");
-  background-repeat: no-repeat;
-  /* image replacement */
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
+.is-visible {
+  -moz-transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
 }
-.cd-primary-nav .cd-facebook a {
-  background-position: 0 0;
+.visible {
+  -moz-transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
 }
-.cd-primary-nav .cd-instagram a {
-  background-position: -44px 0;
-}
-.cd-primary-nav .cd-dribbble a {
-  background-position: -88px 0;
-}
-.cd-primary-nav .cd-twitter a {
-  background-position: -132px 0;
-}
-.cd-primary-nav.is-visible {
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -o-transform: translateY(0);
-  transform: translateY(0);
+.invisible {
+  -moz-transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  -moz-transform: translate3d(-2000px, 0px, 0px);
+  -webkit-transform: translate3d(-2000px, 0px, 0px);
+  -o-transform: translate(-2000px, 0px);
+  -ms-transform: translate(-2000px, 0px);
+  transform: translate3d(-2000px, 0px, 0px);
 }
 /* ====================================
           HOVER MENU TEXT
@@ -967,6 +974,11 @@ p {
   font-weight: 300;
   padding: 20px 0;
 }
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none !important;
+}
 @media (max-width: 698px) {
   h1 {
     font-size: 2.5rem;
@@ -1229,6 +1241,9 @@ a.phone-white,
     margin: 50px 0;
   }
   .img-logos-clients:nth-child(n+4) {
+    display: none;
+  }
+  .request-call-phone {
     display: none;
   }
 }

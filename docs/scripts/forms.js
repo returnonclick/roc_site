@@ -21,8 +21,12 @@ btnFormClick.on('click', function () {
     });
 
     fields.on('blur', function() {
-        if( !$(this).val() )
-            $(this).addClass('is-not-valid');
+
+        var require = $(this).attr('required');
+        if ( typeof require !== typeof undefined && require !== false )
+            if( !$(this).val() )
+                $(this).addClass('is-not-valid');
+
     });
 
     if (validFields(fields, data))
