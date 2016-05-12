@@ -11,7 +11,7 @@
   font-size: 1rem;
   padding: 29px 10px;
   border-radius: 0px !important;
-  border: 2px #01bded solid !important;
+  border: 2px #01bded solid;
   -webkit-appearance: none;
 }
 .form-free-report .form-field {
@@ -42,10 +42,6 @@
 /* ========================================
 
 ======================================== */
-#header-contact .form-field {
-  color: #ffffff;
-  border: 2px #ffffff solid !important;
-}
 .conversion-email,
 .conversion-phone,
 .btn-step-finish {
@@ -163,4 +159,8 @@
 }
 .input--not-filled {
   border-color: red;
+}
+#header-contact .form-field {
+  color: #ffffff;
+  border: 2px #ffffff solid;
 }

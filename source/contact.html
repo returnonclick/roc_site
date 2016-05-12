@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Return on Click</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>ReturnOnClick</title>
-
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="">
+    <meta name="description" content="">
+    <link rel="canonical" href="">
+    <link rel="shortlink" href="">
+    <link rel="author" href="">
+    <meta property="og:site_name" content="Return on Click">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.returnonclick.com.au">
+    <meta property="og:title" content="Return on Click">
+    <meta property="og:description" content="">
+    <meta property="og:updated_time" content="">
+    <meta property="og:image" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@returnonclick">
+    <meta name="twitter:site:id" content="">
+    <meta name="twitter:url" content="http://www.returnonclick.com.au">
+    <meta name="twitter:title" content="Return on Click">
+    <meta name="twitter:description" content="A">
+    <meta name="twitter:image:src" content="">
+    <meta name="twitter:image:width" content="1500">
+    <meta name="twitter:image:height" content="1500">
+    <link rel="apple-touch-icon-precomposed" href="">
+    <link rel="icon" type="image/png" sizes="32x32" href="../docs/images/favicon-32x32.png">
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../components/bootstrap/css/bootstrap.min.css">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../components/font-awesome/css/font-awesome.min.css">
 
     <!-- JQUERY -->
-    <script
-            src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
-
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <script src="../components/jquery/jquery-2.2.3.min.js"></script>
 
     <!-- main CSS -->
-    <!-- STYLES VIMEO AND PARALLAX  -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="../docs/styles/main.css">
+    <!-- <link rel="stylesheet" href="../docs/styles/animate.css">
+    <link rel="stylesheet" href="../docs/styles/icons.css"> -->
 
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -49,34 +59,74 @@
 
 <body>
 
+
     <div id="vid-overlay"></div>
 
-    <header class="container header-contact-page">
+    <header class="container header-main-page">
         <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-6">
-                <a class="pull-left" href="#0">
+                <a class="pull-left" href="./index.html">
                     <div class="logo-white col-md-6 col-sm-6 col-xs-6"></div>
                 </a>
             </div>
-            <div class="col-md-6 col-sm-6 col-xs-6">
+
+            <div class="col-md-5 col-sm-6 col-xs-6">
                 <a class="cd-primary-nav-trigger pull-right" href="#0">
-                    <span class="cd-menu-icon"></span>
+                    <span class="cd-menu-icon cd-menu-icon-white"></span>
                 </a>
             </div>
         </div>
     </header>
 
-    <nav>
-        <ul class="cd-primary-nav">
+    <nav class="cd-primary-nav">
+
+        <ul class="visible">
             <li class="cd-label"><a class="link link--roc" href="#" data-letters="about">about <span>return on cLick</span></a></li>
-            <li class="cd-label"><a class="link link--roc" href="#" data-letters="design">design <span>ui / ux / ue & uex</span></a></li>
-            <li class="cd-label"><a class="link link--roc" href="#" data-letters="web development">web development <span>designed for conversions</span></a></li>
-            <li class="cd-label"><a class="link link--roc" href="#" data-letters="lead source">lead source <span>targeted leads</span></a></li>
-            <li class="cd-label"><a class="link link--roc" href="#" data-letters="custom solution">custom solutions <span>anything is possible</span></a></li>
-            <li class="cd-label"><a class="link link--roc" href="#" data-letters="business analysis">business analyst <span>strategies to deliver an even greater ROI</span></a></li>
-            <li class="cd-label"><a class="link link--roc" href="#" data-letters="conversion calculator">conversion calculator <span>What is my conversion rate?</span></a></li>
-            <li class="cd-label"><a class="link link--roc" href="#" data-letters="contact">contact <span>Talk to us</span></a></li>
+            <li class="cd-label"><a class="link link--roc" href="#" data-letters="services" data-submenu="true">services <span>#conversionagency</span></a></li>
+            <li class="cd-label"><a class="link link--roc" href="./calculator.html" data-letters="conversion-rate">conversion rate <span>what's mine?</span></a></li>
+            <li class="cd-label"><a class="link link--roc" href="./contact.html" data-letters="contact">contact <span>Talk to us</span></a></li>
         </ul>
+
+        <ul class="invisible" data-parent="services">
+            <li class="cd-label"><a class="link link--roc" href="#" data-letters="design" data-submenu="true">design <span>complete branding</span></a></li>
+            <li class="cd-label"><a class="link link--roc" href="#" data-letters="web-development">web development <span>built differently from the ground up</span></a></li>
+            <li class="cd-label"><a class="link link--roc" href="#" data-letters="lead-source" data-submenu="true">lead strategy <span>strategies other than smoke signals</span></a></li>
+            <li class="cd-label"><a class="link link--roc" href="#" data-letters="custom-solution" data-submenu="true">custom solutions <span>if we build it, they will come</span></a></li>
+            <li class="cd-label"><a class="link link--roc" href="#" data-letters="business-analysis" data-submenu="true">conversion path marketing <span>architecturally formulated to convert visitors</span></a></li>
+        </ul>
+
+        <ul class="invisible" data-parent="design">
+            <li class="cd-label"><a class="link link--roc" href="#" data-letters="graphic-design">graphic design <span>brand conceptualisation</span></a></li>
+            <li class="cd-label"><a class="link link--roc" href="#" data-letters="wire-frame">wire framing <span>paper before code</span></a></li>
+            <li class="cd-label"><a class="link link--roc" href="#" data-letters="ui-/-ux-&-web-design">ui / ux & web design <span>user interface and experience</span></a></li>
+            <li class="cd-label"><a class="link link--roc" href="#" data-letters="copyright">copywriting <span>your message is critical</span></a></li>
+            <li class="cd-label"><a class="link link--roc" href="#" data-letters="video">video <span>why not?</span></a></li>
+        </ul>
+
+        <ul class="invisible" data-parent="lead-source">
+            <li class="cd-label"><a class="link link--roc" href="#" data-letters="seo">seo <span>optimisation</span></a></li>
+            <li class="cd-label"><a class="link link--roc" href="#" data-letters="sem">sem <span>marketing</span></a></li>
+            <li class="cd-label"><a class="link link--roc" href="#" data-letters="social-media">social media <span>influence</span></a></li>
+            <li class="cd-label"><a class="link link--roc" href="#" data-letters="edm-s">edm's <span>funnel process</span></a></li>
+        </ul>
+
+        <ul class="invisible" data-parent="custom-solution">
+            <li class="cd-label"><a class="link link--roc" href="#" data-letters="crm">crm <span>customer engagement</span></a></li>
+            <li class="cd-label"><a class="link link--roc" href="#" data-letters="cms">cms <span>content management</span></a></li>
+            <li class="cd-label"><a class="link link--roc" href="#" data-letters="app">apps <span>android and ios</span></a></li>
+            <li class="cd-label"><a class="link link--roc" href="#" data-letters="mobile-customisation">mobile customisation <span>responsive design</span></a></li>
+        </ul>
+
+        <ul class="invisible" data-parent="business-analysis">
+            <li class="cd-label"><a class="link link--roc" href="#" data-letters="tracking">tracking <span>data capture</span></a></li>
+            <li class="cd-label"><a class="link link--roc" href="#" data-letters="lead-magnets">lead magnets <span>low threshold</span></a></li>
+            <li class="cd-label"><a class="link link--roc" href="#" data-letters="call-tracking">call tracking <span>make better decisions</span></a></li>
+            <li class="cd-label"><a class="link link--roc" href="#" data-letters="trip-wires">trip wires <span>real incentives</span></a></li>
+            <li class="cd-label"><a class="link link--roc" href="#" data-letters="split-testing">split testing <span>A/B testing</span></a></li>
+        </ul>
+
+        <a class="link link--roc back invisible" href="#" data-parent="back">BACK</a></li>
+
     </nav>
 
 
@@ -84,50 +134,67 @@
         <div class="row row-centered">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+                    <div id="form-contact" class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
                         <h1>TALK TO US</h1>
                         <div class="row">
                             <div class="form-group col-md-4 col-sm-4 col-xs-12">
-                                <input type="text" class="form-control form-field" id="contactName" name="contactName" placeholder="Name" required="required">
+                                <input type="text" class="form-control form-field" id="contactName" name="contactName" placeholder="Name" required >
                             </div>
                             <div class="form-group col-md-4 col-sm-4 col-xs-12">
-                                <input type="text" class="form-control form-field" id="email" name="email" placeholder="Email" required="required">
+                                <input type="text" class="form-control form-field" id="email" name="email" placeholder="Email" required >
                             </div>
                             <div class="form-group col-md-4 col-sm-4 col-xs-12">
-                                <input type="text" class="form-control form-field" id="phone" name="phone" placeholder="Phone" required="required">
+                                <input type="text" class="form-control form-field" id="phone" name="phone" placeholder="Phone" required >
                             </div>
                         </div>
                         <div class="row">
-                            <a class="btn btn-black">send</a>
+                            <a href="#" class="btn-forms btn-black" data-form="form-contact" data-url="../../source/php/contact.php">send</a>
                         </div>
                     </div>
                 </div>
+                <div class="load-message-form-report"></div>
             </div>
         </div>
     </div>
 
-<!-- Bootstrap core JavaScript
+
+
+    <!-- Bootstrap core JavaScript
     ================================================== -->
 
+
     <!-- Latest compiled and minified JavaScript -->
-    <script
-            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../components/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 
 
     <!-- main JS -->
 
-    <script src="js/jquery.mb.YTPlayer.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
-    <script src="js/elastic-progress.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-
+    <script src="../components/tweenmax/TweenMax.min.js"></script>
+    <script src="../docs/scripts/jquery.mb.YTPlayer.js"></script>
+    <script src="../docs/scripts/elastic-progress.min.js"></script>
+    <script src="../docs/scripts/classie.js"></script>
+    <script src="../docs/scripts/main.js"></script>
+    <script src="../docs/scripts/menu.js"></script>
+    <script src="../docs/scripts/forms.js"></script>
+    <script src="../docs/scripts/contact.js"></script>
 
 
     <!-- Put background video URL here  -->
     <a class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=3pLNbFU430Q',containment:'body',autoPlay:true, quality:'large',  mute:true, startAt:0,opacity:1}"></a>
 
-    <script src="js/mo.min.js"></script>
-    <script src="js/icons.js"></script>  <!-- load SVG definitions for many icons in the "icons" variable -->
+
+
+    <!--  MESSAGES  -->
+    <div id="success-message" class="not-display">
+        <h4>Sent successfully</h4>
+    </div>
+    <div id="error-message" class="not-display">
+        <h4>Send unsuccessful</h4>
+    </div>
+    <div id="loading-message" class="not-display">
+        <h4>Sending...</h4>
+    </div>
+
 
 </body>
 </html>

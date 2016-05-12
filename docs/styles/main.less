@@ -123,6 +123,7 @@ input[type=number]::-webkit-outer-spin-button {
 *********************************************/
 
 .btn {
+  text-decoration: none;
   border-radius: 0;
   cursor: pointer;
   display: inline-block;
@@ -133,9 +134,17 @@ input[type=number]::-webkit-outer-spin-button {
   .transition(all, 0.3s, ease);
 }
 
+.btn:hover, .btn.visited, .btn.active {
+  text-decoration: none ;
+}
+
 .btn-forms {
   .btn();
   padding: 15px 50px 12px 50px;
+}
+
+.btn-forms:hover, .btn-forms.visited, .btn-forms.active {
+  text-decoration: none !important;
 }
 
 @media (max-width: 698px){
@@ -791,12 +800,23 @@ a.arrow-scroll-down:hover, a.arrow-scroll-up:hover {
 
 #header-contact {
   color: @white;
-  margin-top: -20%;
   padding: 0 20px;
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left:0;
+  right:0;
+  margin: auto;
+  height: 50%;
+
+
 }
+
+
+
 @media (max-width: 698px){
   #header-contact {
-    margin-top: -150%;
+    //margin-top: -150%;
   }
 }
 

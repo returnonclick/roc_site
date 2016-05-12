@@ -71,6 +71,8 @@ function sendData (json, url, form) {
 
     var jsonString = JSON.stringify(json);
 
+    $('.load-message-'+form).show().html($('#loading-message').html()).fadeIn(500);
+
     $.ajax
     ({
         type: 'POST',
@@ -78,12 +80,12 @@ function sendData (json, url, form) {
         data: {data : jsonString},
         success: function (data) {
             setTimeout( function() {
-                $('.load-message-'+form).show().html($('#success-message').html()).fadeIn(500)
+                $('.load-message-'+form).show().html($('#success-message').html()).fadeIn(500);
             }, 1000);
         },
         error: function() {
             setTimeout( function() {
-                $('.load-message-'+form).show().html($('#error-message').html()).fadeIn(500)
+                $('.load-message-'+form).show().html($('#error-message').html()).fadeIn(500);
             }, 1000);
         }
     });

@@ -294,7 +294,7 @@
   font-size: 1rem;
   padding: 29px 10px;
   border-radius: 0px !important;
-  border: 2px #01bded solid !important;
+  border: 2px #01bded solid;
   -webkit-appearance: none;
 }
 .form-free-report .form-field {
@@ -325,10 +325,6 @@
 /* ========================================
 
 ======================================== */
-#header-contact .form-field {
-  color: #ffffff;
-  border: 2px #ffffff solid !important;
-}
 .conversion-email,
 .conversion-phone,
 .btn-step-finish {
@@ -446,6 +442,10 @@
 }
 .input--not-filled {
   border-color: red;
+}
+#header-contact .form-field {
+  color: #ffffff;
+  border: 2px #ffffff solid;
 }
 @font-face {
   font-family: 'FoundryMonoline';
@@ -1028,6 +1028,7 @@ input[type=number]::-webkit-outer-spin-button {
              BTN ELEMENTS
 *********************************************/
 .btn {
+  text-decoration: none;
   border-radius: 0;
   cursor: pointer;
   display: inline-block;
@@ -1042,7 +1043,13 @@ input[type=number]::-webkit-outer-spin-button {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+.btn:hover,
+.btn.visited,
+.btn.active {
+  text-decoration: none ;
+}
 .btn-forms {
+  text-decoration: none;
   border-radius: 0;
   cursor: pointer;
   display: inline-block;
@@ -1057,6 +1064,11 @@ input[type=number]::-webkit-outer-spin-button {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   padding: 15px 50px 12px 50px;
+}
+.btn-forms:hover,
+.btn-forms.visited,
+.btn-forms.active {
+  text-decoration: none !important;
 }
 @media (max-width: 698px) {
   .btn {
@@ -1692,13 +1704,14 @@ a.arrow-scroll-up:hover {
 *********************************************/
 #header-contact {
   color: #ffffff;
-  margin-top: -20%;
   padding: 0 20px;
-}
-@media (max-width: 698px) {
-  #header-contact {
-    margin-top: -150%;
-  }
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 50%;
 }
 #header-contact h1 {
   font-weight: 900;
