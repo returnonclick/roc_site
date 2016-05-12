@@ -157,7 +157,7 @@ $(document).on('click', '.btn-step-finish', function() {
     $.ajax
     ({
         type: 'POST',
-        url: 'conversion.php',
+        url: '../../source/php/conversion.php',
         data: {data : jsonString},
         success: function (data) {
             setTimeout( function() {
