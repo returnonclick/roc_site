@@ -44,7 +44,60 @@ $(function(){
      *
      */
 
+    /**
+     *
+     * =========================================================================== *
+     *                                  DETECTING CLICK "ON"
+     * =========================================================================== *
+     *
+     */
+
     var $animation_element_bear  = $('.polar_bear-desktop');
+
+    var ON_INICIAL_X = 450;
+    var ON_FINAL_X = 500;
+    var ON_INICIAL_Y = 470;
+    var ON_FINAL_Y = 520;
+
+
+    $animation_element_bear
+        .click( function(e) {
+
+            var offset = $(this).offset();
+            var current_x = e.pageX - offset.left;
+            var current_y = e.pageY - offset.top;
+
+            if( current_x > ON_INICIAL_X && current_x < ON_FINAL_X && current_y > ON_INICIAL_Y && current_y < ON_FINAL_Y ) {
+                //alert('entrou');
+                //$('selector').css( 'cursor', 'pointer' );
+                window.location.href = "http://www.returnonclick.com.au/source/calculator.html";
+            }
+        });
+    /*
+    $animation_element_bear
+        .mouseover( function(e) {
+
+            var offset = $(this).offset();
+            var current_x = e.pageX - offset.left;
+            var current_y = e.pageY - offset.top;
+
+            if( current_x > ON_INICIAL_X && current_x < ON_FINAL_X && current_y > ON_INICIAL_Y && current_y < ON_FINAL_Y ) {
+
+                alert('entrou');
+                $('selector').css( 'cursor', 'pointer' );
+                //window.location.href = "http://www.returnonclick.com.au/source/calculator.html";
+            }
+
+        })
+
+      */
+
+
+
+
+
+
+
     var $animation_element_on    = $('.on-desktop');
     var $animation_element_water = $('.polar_bear-water-desktop');
 
@@ -237,6 +290,6 @@ $(function(){
 });
 
 
-$(document).on('click', '.click-on-desktop', function() {
-    window.location.href="http://www.returnonclick.com.au/calculator.html";
-});
+//$(document).on('click', '.click-on-desktop', function() {
+  //  window.location.href="http://www.returnonclick.com.au/calculator.html";
+//});

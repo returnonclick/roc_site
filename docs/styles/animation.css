@@ -24,31 +24,37 @@
   margin-left: 60%;
   overflow-x: hidden;
 }
-.on-desktop {
+/*.on-desktop {
+  background-color: #000;
   background-size: cover;
   text-indent: -5000px;
   display: block;
-  width: 25%;
+  width:25%;
   height: 47px;
   margin-top: -500px;
   right: 0px;
   left: auto;
   margin-left: 60%;
+  //margin-left: 93%;
   overflow-x: hidden;
+
 }
-.click-on-desktop {
+
+.click-on-desktop{
+  background-color: #fff;
   background-size: cover;
   text-indent: -5000px;
   display: block;
-  width: 47px;
+  width:47px;
   height: 47px;
   right: 0px;
   left: auto;
   overflow-x: hidden;
 }
+
 .click-on-desktop:hover {
   cursor: pointer;
-}
+}*/
 .polar_bear-water-desktop {
   background: transparent url("../images/water.png") 45% no-repeat;
   background-size: cover;
@@ -73,7 +79,7 @@
   background-size: 50% 50%;
   display: block;
   height: 176px;
-  margin-top: 150px;
+  margin-top: -300px;
   text-indent: -5000px;
   width: 292px;
   z-index: 2;

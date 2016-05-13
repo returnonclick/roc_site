@@ -212,8 +212,8 @@
 </footer>
 
 <div id="content-step-0" class="not-display">
-    <div class="col-md-8 col-sm-12 col-xs-12">
-        <h1>First, Let’s Calculate Your Conversions</h1>
+    <div class="col-md-10 col-sm-12 col-xs-12">
+        <h1>Let’s Calculate Your Conversion Rate</h1>
         <p>We know you want to get the ball rolling, but before we chat, let’s see how many conversions you’re receiving at the moment. Don’t worry if it’s pretty low, we’re here to fix that.</p>
         <a class="btn btn-white btn-step" data-steps="1" data-type="content">Next</a>
     </div>
@@ -342,6 +342,41 @@
     </div>
 </div>
 
+
+<!-- REQUEST A CALL -->
+<link rel="stylesheet" href="../docs/styles/remodal.css">
+<link rel="stylesheet" href="../docs/styles/remodal-default-theme.css">
+<script src="../docs/scripts/remodal.min.js"></script>
+
+<!-- SECTION CONTACT FORM -->
+
+<div class="remodal remodal-is-initialized remodal-is-closed" data-remodal-id="modal" aria-labelledby="modalTitle" aria-describedby="modalDesc" tabindex="-1">
+    <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+    <h3>Request a call</h3>
+    <div class="container-fluid section-request-form">
+        <div id="form-request-call" class="col-md-12 col-sm12 col-xs-12" >
+            <div class="row">
+                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                    <input type="text" class="form-control form-field" id="requestName" name="contactName" placeholder="Name" required/>
+                </div>
+
+                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                    <input type="text" class="form-control form-field" id="requestPhone" name="phone" placeholder="Phone Number" required/>
+                </div>
+
+                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                    <textarea class="form-control form-field" rows="5" id="requestComment" name="comment" placeholder="Your Message" required></textarea>
+                </div>
+                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                    <a href="#" class="btn-forms btn-blue" data-form="form-request-call" data-url="../../source/php/requestCall.php">Request a call</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="load-message-form-request-call"></div>
+</div>
+
+
 <!-- Bootstrap core JavaScript
     ================================================== -->
 
@@ -359,10 +394,9 @@
 <script src="../components/tweenmax/TweenMax.min.js"></script>
 <!-- <script src="../docs/scripts/elastic-progress.min.js"></script> -->
 <script src="../docs/scripts/classie.js"></script>
-<script src="../docs/scripts/menu.js"></script>
 <script src="../docs/scripts/main.js"></script>
+<script src="../docs/scripts/menu.js"></script>
 <script src="../docs/scripts/conversion-calculator.js"></script>
-
 <script src="../docs/scripts/forms.js"></script>
 <!-- <script src="../docs/scripts/jquery.mb.YTPlayer.js"></script> -->
 
@@ -375,7 +409,7 @@
     <h4>Send unsuccessful</h4>
 </div>
 <div id="loading-message" class="not-display">
-    <h4>Sending...</h4>
+    <h4><img class="sending" src="../docs/images/sending.gif"></h4>
 </div>
 
 </body>
