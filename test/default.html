@@ -37,16 +37,20 @@
     }(document, 'script', 'facebook-jssdk'));
 
     function testAPI() {
+
+
         FB.api('/me', function(response) {
             console.log(response);
             console.log('Good to see you, ' + response.name + '.');
+
+
+
         });
-        FB.api(
-                "/me/likes",
+        FB.api("/me/likes",
                 function (response) {
                     if (response && !response.error) {
                         /* handle the result */
-                        console.log(response.data);
+                        console.log(response);
                     }
                 }
         );
@@ -64,7 +68,10 @@
                 }
         );*/
         FB.api('/me/likes/1726985444245205', function(response) {
-            console.log(response.data);
+            if (response && !response.error) {
+                /* handle the result */
+                console.log(response);
+            }
         });
     }
 </script>
