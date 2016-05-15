@@ -38,20 +38,17 @@
 
     function testAPI() {
 
-
-        FB.api('/me/likes', function(response) {
-            console.log(response);
-            console.log('Good to see you, ' + response.name + '.');
+        FB.api('/me/likes/1726985444245205',function(response) {
+            if( response.data ) {
+                if( !isEmpty(response.data) )
+                    alert('You are a fan!');
+                else
+                    alert('Not a fan!');
+            } else {
+                alert('ERROR!');
+            }
         });
-        FB.api(
-                "/{user-id}/likes/{page-id}",
-                function (response) {
-                    if (response && !response.error) {
-                        /* handle the result */
-                    }
-                }
-        );
-
+        
     }
 </script>
 </body>
