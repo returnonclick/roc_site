@@ -39,40 +39,19 @@
     function testAPI() {
 
 
-        FB.api('/me', function(response) {
+        FB.api('/{user-id}', function(response) {
             console.log(response);
             console.log('Good to see you, ' + response.name + '.');
-
-
-
         });
-        FB.api("/me/likes",
+        FB.api(
+                "/{user-id}/likes/{page-id}",
                 function (response) {
                     if (response && !response.error) {
                         /* handle the result */
-                        console.log(response);
                     }
                 }
         );
-        /*
-        FB.api({
-                    method:  'pages.isFan',
-                    page_id: '1726985444245205',
-                },  function(response) {
-                    console.log(response);
-                    if(response){
-                        console.log('You Likey');
-                    } else {
-                        console.log('You not Likey :(');
-                    }
-                }
-        );*/
-        FB.api('/me/likes/1726985444245205', function(response) {
-            if (response && !response.error) {
-                /* handle the result */
-                console.log(response);
-            }
-        });
+
     }
 </script>
 </body>
