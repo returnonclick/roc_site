@@ -8,7 +8,6 @@
         FB.login(function(response) {
             if (response.authResponse) {
 
-                console.log(response);
                 testAPI();
 
                 alert('You are logged in and cookie set!');
@@ -43,10 +42,11 @@
             console.log('Good to see you, ' + response.name + '.');
         });
         FB.api(
-                "/"+response.userID+"/likes",
+                "/"+response.id+"/likes",
                 function (response) {
                     if (response && !response.error) {
                         /* handle the result */
+                        console.log(response.data);
                     }
                 }
         );
