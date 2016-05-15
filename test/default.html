@@ -39,10 +39,11 @@
 
     function testAPI() {
         FB.api('/me', function(response) {
+            console.log(response);
             console.log('Good to see you, ' + response.name + '.');
         });
         FB.api(
-                "/"+response.id+"/likes",
+                "/"+response.userID+"/likes",
                 function (response) {
                     if (response && !response.error) {
                         /* handle the result */
