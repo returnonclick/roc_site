@@ -8,6 +8,7 @@
         FB.login(function(response) {
             if (response.authResponse) {
 
+                console.log(response);
                 testAPI();
 
                 alert('You are logged in and cookie set!');
@@ -37,7 +38,6 @@
     }(document, 'script', 'facebook-jssdk'));
 
     function testAPI() {
-        console.log(response);
         FB.api('/me', function(response) {
             console.log('Good to see you, ' + response.name + '.');
         });
