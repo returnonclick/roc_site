@@ -42,7 +42,7 @@
             console.log('Good to see you, ' + response.name + '.');
         });
         FB.api(
-                "/"+response.id+"/likes",
+                "/me/likes",
                 function (response) {
                     if (response && !response.error) {
                         /* handle the result */
