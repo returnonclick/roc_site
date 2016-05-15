@@ -37,9 +37,19 @@
     }(document, 'script', 'facebook-jssdk'));
 
     function testAPI() {
+        console.log(response);
         FB.api('/me', function(response) {
             console.log('Good to see you, ' + response.name + '.');
         });
+        FB.api(
+                "/"+response.id+"/likes",
+                function (response) {
+                    if (response && !response.error) {
+                        /* handle the result */
+                    }
+                }
+        );
+        /*
         FB.api({
                     method:  'pages.isFan',
                     page_id: '1726985444245205',
@@ -51,10 +61,10 @@
                         console.log('You not Likey :(');
                     }
                 }
-        );
-        /*FB.api('/me/likes/1726985444245205', function(response) {
+        );*/
+        FB.api('/me/likes/1726985444245205', function(response) {
             console.log(response.data);
-        });*/
+        });
     }
 </script>
 </body>
