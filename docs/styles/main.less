@@ -37,6 +37,7 @@ section {
 
 footer {
   padding: 20px 0;
+  box-shadow: 4px 0 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 h1 {
@@ -117,6 +118,14 @@ input[type=number]::-webkit-outer-spin-button {
   color: @white;
 }
 
+.white-lighter-gray-bg {
+    background: @white; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(@white, @gray-lighter); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(@white, @gray-lighter); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(@white, @gray-lighter); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(@white, @gray-lighter); /* Standard syntax */
+}
+
 
 /*********************************************
              BTN ELEMENTS
@@ -132,6 +141,7 @@ input[type=number]::-webkit-outer-spin-button {
   text-transform: uppercase;
   .FoundryMonoline(900);
   .transition(all, 0.3s, ease);
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.3), 0 6px 20px 0 rgba(255, 255, 255, 0.29);
 }
 
 .btn:hover, .btn.visited, .btn.active {
@@ -609,7 +619,7 @@ a.arrow-scroll-down:hover, a.arrow-scroll-up:hover {
   .size(300px, 500px);
   position: absolute;
   right: -150px;
-  top:-320px;
+  top:-333px;
 }
 
 
@@ -709,7 +719,7 @@ a.arrow-scroll-down:hover, a.arrow-scroll-up:hover {
              SECTION 1
 *********************************************/
 #load-content {
-  min-height: 300px;
+  min-height: 620px;
 }
 
 
@@ -818,5 +828,31 @@ a.arrow-scroll-down:hover, a.arrow-scroll-up:hover {
 }
 
 #header-contact h1 {
-  font-weight: 900;
+  font-weight: 500;
+  text-shadow: 0 4px 8px rgba(255, 255, 255, 0.3), 0 6px 20px rgba(255, 255, 255, 0.29);
+}
+
+/*********************************************
+             SERVICE PAGE
+*********************************************/
+
+.img-services {
+  margin: auto;
+  width: auto;
+  height: 50%;
+  margin-top: -20px;
+}
+
+.img-wd-1 {
+  width: 90%;
+  margin-top: -80px;
+}
+
+.img-wd-2 {
+  width: 70%;
+  margin: 0 0 0 -40px;
+}
+
+.img-wd-3 {
+  margin: -450px 0 0 400px;
 }

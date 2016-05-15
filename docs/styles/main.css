@@ -956,6 +956,7 @@ section {
 }
 footer {
   padding: 20px 0;
+  box-shadow: 4px 0 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 h1 {
   font-size: 3rem;
@@ -1030,6 +1031,18 @@ input[type=number]::-webkit-outer-spin-button {
   background-color: #333333;
   color: #ffffff;
 }
+.white-lighter-gray-bg {
+  background: #ffffff;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#ffffff, #eeeeee);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#ffffff, #eeeeee);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#ffffff, #eeeeee);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#ffffff, #eeeeee);
+  /* Standard syntax */
+}
 /*********************************************
              BTN ELEMENTS
 *********************************************/
@@ -1048,6 +1061,7 @@ input[type=number]::-webkit-outer-spin-button {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.3), 0 6px 20px 0 rgba(255, 255, 255, 0.29);
 }
 .btn:hover,
 .btn.visited,
@@ -1069,6 +1083,7 @@ input[type=number]::-webkit-outer-spin-button {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.3), 0 6px 20px 0 rgba(255, 255, 255, 0.29);
   padding: 15px 50px 12px 50px;
 }
 .btn-forms:hover,
@@ -1526,7 +1541,7 @@ a.arrow-scroll-up:hover {
   height: 500px;
   position: absolute;
   right: -150px;
-  top: -320px;
+  top: -333px;
 }
 /**
 *
@@ -1610,7 +1625,7 @@ a.arrow-scroll-up:hover {
              SECTION 1
 *********************************************/
 #load-content {
-  min-height: 300px;
+  min-height: 620px;
 }
 /*********************************************
              SECTION 2
@@ -1719,5 +1734,26 @@ a.arrow-scroll-up:hover {
   margin: auto;
 }
 #header-contact h1 {
-  font-weight: 900;
+  font-weight: 500;
+  text-shadow: 0 4px 8px rgba(255, 255, 255, 0.3), 0 6px 20px rgba(255, 255, 255, 0.29);
+}
+/*********************************************
+             SERVICE PAGE
+*********************************************/
+.img-services {
+  margin: auto;
+  width: auto;
+  height: 50%;
+  margin-top: -20px;
+}
+.img-wd-1 {
+  width: 90%;
+  margin-top: -80px;
+}
+.img-wd-2 {
+  width: 70%;
+  margin: 0 0 0 -40px;
+}
+.img-wd-3 {
+  margin: -450px 0 0 400px;
 }
