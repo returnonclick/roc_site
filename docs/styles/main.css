@@ -1774,15 +1774,13 @@ a.arrow-scroll-up:hover {
 .img-wd-3 {
   margin: -400px 0 0 250px;
 }
-.sec-wd-4 {
-  padding-bottom: 0;
-}
-.txt-wd-4 {
-  padding: 100px 0 0 0;
-}
-.img-wd-4 {
+.img-wd-7 {
   width: 90%;
-  margin: 0 0 -10px 0;
+  margin-top: 100px;
+}
+.img-wd-8 {
+  width: 90%;
+  margin-top: 200px;
 }
 /*********************************************
                   WEB DEVELOPMENT
