@@ -1043,6 +1043,19 @@ input[type=number]::-webkit-outer-spin-button {
   background: linear-gradient(#ffffff, #eeeeee);
   /* Standard syntax */
 }
+.gray-darker-gray-bg {
+  color: #ffffff;
+  background: #333333;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#333333, #222222);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#333333, #222222);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#333333, #222222);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#333333, #222222);
+  /* Standard syntax */
+}
 /*********************************************
              BTN ELEMENTS
 *********************************************/
@@ -1773,3 +1786,38 @@ a.arrow-scroll-up:hover {
 /*********************************************
                   WEB DESIGN
 *********************************************/
+/*********************************************
+                  APP
+*********************************************/
+.img-app-1 {
+  width: 90%;
+  margin-top: -80px;
+}
+.img-app-2 {
+  position: absolute;
+  width: 90%;
+  height: auto;
+  margin-top: -10px;
+  z-index: 3;
+}
+.img-app-2-a {
+  position: absolute;
+  width: 70%;
+  height: auto;
+  margin-top: 300px;
+  margin-left: -200px;
+}
+.img-app-2-b {
+  position: absolute;
+  width: 60%;
+  height: auto;
+  margin-top: -100px;
+  z-index: 1;
+}
+/*********************************************
+                 SOCIAL MEDIA
+*********************************************/
+.img-sm-1 {
+  width: 100%;
+  margin-top: 0px;
+}
