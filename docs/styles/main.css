@@ -2054,6 +2054,9 @@ a.arrow-scroll-up:hover {
   margin-left: -25px;
 }
 .sec-2-wf {
-  padding-bottom: 0px;
   padding-top: 0px;
+  padding-bottom: 0px;
+}
+.sec-1-wf {
+  padding-top: 50px;
 }
