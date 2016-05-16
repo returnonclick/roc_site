@@ -1796,55 +1796,250 @@ a.arrow-scroll-up:hover {
 *********************************************/
 .img-app-1 {
   width: 90%;
-  margin-top: -80px;
+  margin-top: 160px;
 }
 .img-app-2 {
-  position: absolute;
   width: 90%;
-  height: auto;
-  margin-top: -10px;
-  z-index: 3;
+  margin-top: 50px;
 }
-.img-app-2-a {
-  position: absolute;
-  width: 70%;
-  height: auto;
-  margin-top: 300px;
-  margin-left: -200px;
-}
-.img-app-2-b {
-  position: absolute;
-  width: 60%;
-  height: auto;
-  margin-top: -100px;
-  z-index: 1;
+.sec-2-app {
+  padding-bottom: 100px;
 }
 /*********************************************
-                 SOCIAL MEDIA
+                  CALL TRACKING
 *********************************************/
-.img-sm-1 {
-  width: 100%;
-  margin-top: 0px;
+.img-ct-1 {
+  width: 90%;
+  margin-top: 160px;
 }
-.img-sm-3 {
-  width: 94px;
-  height: 94px;
-  background: url('../images/services/social-media/sm3.png');
-  position: absolute;
+.img-ct-2 {
+  width: 90%;
+  margin-top: 50px;
 }
-.img-sm-3-a {
-  width: 94px;
-  height: 94px;
-  background: url('../images/services/social-media/sm3.png');
-  position: absolute;
-  background-position: 0 0;
-  margin-top: -40px;
+.sec-2-ct {
+  padding-bottom: 100px;
 }
-.img-sm-3-b {
-  width: 94px;
-  height: 94px;
-  background: url('../images/services/social-media/sm3.png');
-  position: absolute;
-  background-position: 94px 0;
-  margin-left: 70px;
+/*********************************************
+                  CMS
+*********************************************/
+.img-cms-1 {
+  width: 90%;
+  margin-top: 160px;
+}
+.img-cms-2 {
+  width: 90%;
+  margin-top: 50px;
+}
+.sec-2-cms {
+  padding-bottom: 100px;
+}
+/*********************************************
+              COPYWRITING
+*********************************************/
+.img-cw-1 {
+  width: 90%;
+  margin-top: 160px;
+}
+.img-cw-2 {
+  width: 90%;
+  margin-top: 50px;
+}
+.sec-2-cw {
+  padding-bottom: 100px;
+}
+/*********************************************
+                    CRM
+*********************************************/
+.img-crm-1 {
+  width: 90%;
+  margin-top: 160px;
+}
+.img-crm-2 {
+  width: 90%;
+  margin-top: 50px;
+}
+.sec-2-crm {
+  padding-bottom: 100px;
+}
+/*********************************************
+                    EDM
+*********************************************/
+.img-edm-1 {
+  width: 90%;
+  margin-top: 160px;
+}
+.img-edm-2 {
+  width: 90%;
+  margin-top: 50px;
+}
+.sec-2-edm {
+  padding-bottom: 100px;
+}
+/*********************************************
+               GRAPHIC DESIGN
+*********************************************/
+.img-gd-1 {
+  width: 90%;
+  margin-top: 160px;
+}
+.img-gd-2 {
+  width: 90%;
+  margin-top: 50px;
+}
+.sec-2-gd {
+  padding-bottom: 100px;
+}
+/*********************************************
+                LEAD MAGNETS
+*********************************************/
+.img-lm-1 {
+  width: 90%;
+  margin-top: 160px;
+}
+.img-lm-2 {
+  width: 90%;
+  margin-top: 50px;
+}
+.sec-2-lm {
+  padding-bottom: 100px;
+}
+/*********************************************
+           MOBILE CUSTOMISATION
+*********************************************/
+.img-mc-1 {
+  width: 90%;
+  margin-top: 160px;
+}
+.img-mc-2 {
+  width: 90%;
+  margin-top: 50px;
+}
+.sec-2-mc {
+  padding-bottom: 100px;
+}
+/*********************************************
+                    sem
+*********************************************/
+.img-sem-1 {
+  width: 90%;
+  margin-top: 160px;
+}
+.img-sem-2 {
+  width: 90%;
+  margin-top: 50px;
+}
+.sec-2-sem {
+  padding-bottom: 100px;
+}
+/*********************************************
+                    SEO
+*********************************************/
+.img-seo-1 {
+  width: 90%;
+  margin-top: 160px;
+}
+.img-seo-2 {
+  width: 90%;
+  margin-top: 50px;
+}
+.sec-2-seo {
+  padding-bottom: 100px;
+}
+/*********************************************
+               SOCIAL MEDIA
+*********************************************/
+.img-sc-1 {
+  width: 90%;
+  margin-top: 160px;
+}
+.img-sc-2 {
+  width: 90%;
+  margin-top: 50px;
+}
+.sec-2-sc {
+  padding-bottom: 100px;
+}
+/*********************************************
+             SPLIT TESTING
+*********************************************/
+.img-st-1 {
+  width: 90%;
+  margin-top: 160px;
+}
+.img-st-2 {
+  width: 90%;
+  margin-top: 50px;
+}
+.sec-2-st {
+  padding-bottom: 100px;
+}
+/*********************************************
+                 TRACKING
+*********************************************/
+.img-trc-1 {
+  width: 90%;
+  margin-top: 160px;
+}
+.img-trc-2 {
+  width: 90%;
+  margin-top: 50px;
+}
+.sec-2-trc {
+  padding-bottom: 100px;
+}
+/*********************************************
+                TRIP WIRES
+*********************************************/
+.img-tw-1 {
+  width: 90%;
+  margin-top: 160px;
+}
+.img-tw-2 {
+  width: 90%;
+  margin-top: 50px;
+}
+.sec-2-tw {
+  padding-bottom: 100px;
+}
+/*********************************************
+                    VIDEO
+*********************************************/
+.img-vd-1 {
+  width: 90%;
+  margin-top: 160px;
+}
+.img-vd-2 {
+  width: 90%;
+  margin-top: 50px;
+}
+.sec-2-vd {
+  padding-bottom: 100px;
+}
+/*********************************************
+                 WEB DESIGN
+*********************************************/
+.img-wds-1 {
+  width: 90%;
+  margin-top: 160px;
+}
+.img-wds-2 {
+  width: 90%;
+  margin-top: 50px;
+}
+.sec-2-wds {
+  padding-bottom: 100px;
+}
+/*********************************************
+                  WIREFRAMING
+*********************************************/
+.img-wf-1 {
+  width: 90%;
+  margin-top: 160px;
+}
+.img-wf-2 {
+  width: 90%;
+  margin-top: 50px;
+}
+.sec-2-wf {
+  padding-bottom: 100px;
 }
