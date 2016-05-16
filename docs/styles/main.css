@@ -1754,6 +1754,7 @@ a.arrow-scroll-up:hover {
              SERVICE PAGE
 *********************************************/
 .img-services {
+  border: none;
   margin: auto;
   width: auto;
   height: 50%;
@@ -1820,4 +1821,26 @@ a.arrow-scroll-up:hover {
 .img-sm-1 {
   width: 100%;
   margin-top: 0px;
+}
+.img-sm-3 {
+  width: 94px;
+  height: 94px;
+  background: url('../images/services/social-media/sm3.png');
+  position: absolute;
+}
+.img-sm-3-a {
+  width: 94px;
+  height: 94px;
+  background: url('../images/services/social-media/sm3.png');
+  position: absolute;
+  background-position: 0 0;
+  margin-top: -40px;
+}
+.img-sm-3-b {
+  width: 94px;
+  height: 94px;
+  background: url('../images/services/social-media/sm3.png');
+  position: absolute;
+  background-position: 94px 0;
+  margin-left: 70px;
 }
