@@ -1886,6 +1886,11 @@ a.arrow-scroll-up:hover {
   width: 90%;
   margin-top: 50px;
 }
+.img-gd-3 {
+  width: 100%;
+  margin-top: 20px;
+  margin-left: -25px;
+}
 .sec-2-gd {
   padding-bottom: 100px;
 }
