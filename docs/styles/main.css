@@ -1765,15 +1765,21 @@ a.arrow-scroll-up:hover {
 *********************************************/
 .img-wd-1 {
   width: 90%;
-  margin-top: 110px;
+  margin-top: 90px;
 }
 .img-wd-2 {
   width: 90%;
-  margin-top: 200px;
+  margin-top: 230px;
 }
 .img-wd-3 {
   width: 100%;
-  margin-top: 115px;
+  margin-top: 45px;
+}
+.sec-page-title {
+  padding-bottom: 0px;
+}
+.sec-wd-1 {
+  padding-top: 50px;
 }
 /*********************************************
                   WEB DEVELOPMENT
