@@ -1777,10 +1777,11 @@ a.arrow-scroll-up:hover {
   margin-left: -25px;
 }
 .sec-page-title {
+  padding-top: 75px;
   padding-bottom: 0px;
 }
 .sec-wd-1 {
-  padding-top: 50px;
+  padding-top: 25px;
 }
 /*********************************************
                   WEB DEVELOPMENT
