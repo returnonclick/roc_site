@@ -2034,8 +2034,11 @@ a.arrow-scroll-up:hover {
   margin-left: -25px;
 }
 .sec-2-wds {
-  padding-bottom: 0px;
   padding-top: 0px;
+  padding-bottom: 0px;
+}
+.sec-1-wds {
+  padding-top: 50px;
 }
 /*********************************************
                   WIREFRAMING
