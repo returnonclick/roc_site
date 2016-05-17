@@ -2017,14 +2017,23 @@ a.arrow-scroll-up:hover {
 *********************************************/
 .img-vd-1 {
   width: 90%;
-  margin-top: 160px;
+  margin-top: 200px;
 }
 .img-vd-2 {
   width: 90%;
-  margin-top: 50px;
+  margin-top: 190px;
+}
+.img-vd-3 {
+  width: 100%;
+  margin-top: 60px;
+  margin-left: -25px;
+}
+.sec-1-vd {
+  padding-top: 50px;
 }
 .sec-2-vd {
-  padding-bottom: 100px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 /*********************************************
                  WEB DESIGN
