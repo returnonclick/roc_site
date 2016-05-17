@@ -1074,7 +1074,6 @@ input[type=number]::-webkit-outer-spin-button {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.3), 0 6px 20px 0 rgba(255, 255, 255, 0.29);
 }
 .btn:hover,
 .btn.visited,
@@ -1096,7 +1095,6 @@ input[type=number]::-webkit-outer-spin-button {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.3), 0 6px 20px 0 rgba(255, 255, 255, 0.29);
   padding: 15px 50px 12px 50px;
 }
 .btn-forms:hover,
@@ -1771,6 +1769,23 @@ a.arrow-scroll-up:hover {
   padding-top: 0px;
   padding-bottom: 0px;
 }
+@media (max-width: 698px) {
+  .sec-1,
+  .sec-2,
+  .sec-3,
+  .sec-1 p,
+  .sec-2 p,
+  .sec-3 p,
+  .sec-page-title h1,
+  .sec-1 h2,
+  .sec-2 h2,
+  .sec-3 h2 {
+    padding: 10px !important;
+  }
+  .img-services {
+    margin: 5px 0 10px 0 !important;
+  }
+}
 /*********************************************
                 WEB DEVELOPMENT
 *********************************************/
@@ -1929,6 +1944,13 @@ a.arrow-scroll-up:hover {
   width: 100%;
   margin-top: 100px;
   margin-left: -25px;
+}
+.sec-1-gd {
+  padding-top: 50px;
+}
+.sec-2-gd {
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 /*********************************************
                 LEAD MAGNETS
