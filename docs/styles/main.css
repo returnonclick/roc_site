@@ -1854,6 +1854,20 @@ a.arrow-scroll-up:hover {
 .img-3 {
   width: 100%;
 }
+@media (max-width: 480px) {
+  .img-1,
+  .img-2,
+  .img-3 {
+    padding-top: 50px !important;
+  }
+}
+@media (max-width: 768px) {
+  .img-1,
+  .img-2,
+  .img-3 {
+    padding-top: 50px !important;
+  }
+}
 /*********************************************
                 WEB DEVELOPMENT
 *********************************************/
