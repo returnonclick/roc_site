@@ -271,7 +271,6 @@
 
     var link = document.querySelector('link[rel="import"]');
 
-
     // Clone the <template> in the import.
     var templateHeader = link.import.querySelector('template#header');
     var menu = link.import.querySelector('template#menu');
@@ -279,15 +278,11 @@
     var requestCall = link.import.querySelector('template#request-call');
     var messages = link.import.querySelector('template#messages');
 
-
-
     var cloneHeader = document.importNode(templateHeader.content, true);
     var cloneMenu = document.importNode(menu.content, true);
     var cloneFooter = document.importNode(footer.content, true);
     var cloneRequestCall = document.importNode(requestCall.content, true);
     var cloneMessages = document.importNode(messages.content, true);
-
-
 
     document.querySelector('.header-main-page').appendChild(cloneHeader);
     document.querySelector('.cd-primary-nav').appendChild(cloneMenu);
