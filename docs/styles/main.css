@@ -1724,7 +1724,7 @@ a.arrow-scroll-up:hover {
              SECTION 1
 *********************************************/
 #load-content {
-  min-height: 620px;
+  height: auto;
 }
 /*********************************************
              SECTION 2
