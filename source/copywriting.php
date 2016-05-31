@@ -53,27 +53,25 @@
         ga('send', 'pageview');
 
     </script>
-    <script>
-        function handleLoad(e) {
-            console.log('Loaded import: ' + e.target.href);
-        }
-        function handleError(e) {
-            console.log('Error loading import: ' + e.target.href);
-        }
-    </script>
-
-    <link rel="import" href="./templates/template.html" onload="handleLoad(event)" onerror="handleError(event)">
 
 </head>
 
 
 <body>
 
+<!-- HEADER -->
 <header class="container header-main-page">
+    <?php include './templates/header.php'; ?>
 </header>
+
+<!-- MENU -->
 <nav class="cd-primary-nav">
+    <?php include './templates/menu.php'; ?>
 </nav>
+
+<!-- SERVICE REPORT -->
 <section class="container-fluid blue-bg services-report">
+    <?php include './templates/service-report.php'; ?>
 </section>
 
 
@@ -82,7 +80,7 @@
         <div class="container">
             <div  class="row">
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <h1>Web Design</h1>
+                    <h1>Copywriting</h1>
                 </div>
             </div>
         </div>
@@ -94,8 +92,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-12 col-xs-12 col-sm-height col-lg-height">
-                    <h2>Conversion Path Marketing</h2>
-                    <p>Did you know that recent industry studies have shown that website visitors spend an average of just seven seconds or less on 90% of the websites they view? That means that you’ve only got a few crucial moments to make a strong and lasting impression before a potential customer disappears forever. That might be placing a lot of pressure onto you, but luckily, we’re here to lighten the load for you.</p>
+                    <h2>High-Class Content</h2>
+                    <p>Enough of the buzzwords - copywriting is essentially the written content that you find on a variety of digital outlets. It’s primarily used for the purpose of advertising, and is your best bet when it comes to the power of persuasion. Acting as a gateway between your company and your client, innovative copy is the most authentic way of tugging your customers heartstrings. They’ll be calling you up for a date in no time - be sure to wear your finest shoes.</p>
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12 col-sm-height col-lg-height col-sm-bottom col-lg-bottom">
                     <img src="../docs/images/services/web-development/wd1.png" class="img-responsive img-1" />
@@ -110,8 +108,8 @@
         <div class="container">
             <div  class="row">
                 <div class="col-md-6 col-md-push-6 col-sm-6 col-sm-push-6 col-xs-12 col-sm-height col-lg-height">
-                    <h2>Turn Browsers Into Buyers</h2>
-                    <p>We’re going to be frank with you - it’s a dog eat dog world. With so much increased competition in industries today, it is essential for every business to have a solid understand of what situates them outside the box. We ensure that your website reflects your market and clientele and is extremely clear about who you are, what it is that you do and, of course, what separates you from others. We know that every business is different, and we’re here to celebrate that.</p>
+                    <h2>Science and an Art</h2>
+                    <p>But copywriting goes far beyond what you just see on this page - it is the foundation to everything you read, like direct mail pieces, taglines, online advertisements, scripts, brochures - the list could go on (but we’ll stop it here, just for you). But it isn’t as simple as it seems; copywriting is both a science and an art. Why sign up for a generic weekly newsletter when you can sign up to the weekly buzz? It sounds more appealing, doesn’t it?</p>
                 </div>
                 <div class="col-md-6 col-md-pull-6 col-sm-6 col-sm-pull-6 col-xs-12 col-sm-height col-lg-height col-sm-middle col-lg-middle">
                     <img src="../docs/images/services/web-development/wd2.png" class="img-responsive img-2" />
@@ -126,8 +124,8 @@
         <div class="container">
             <div  class="row">
                 <div class="col-md-6 col-sm-6 col-xs-12 col-sm-height col-lg-height">
-                    <h2>The Heartbeat of Your Business</h2>
-                    <p>We can understand your audience even before they first land on your website. How do we do this? No, it’s not through telepathy. It’s through our wealth of industry knowledge and consistent endeavour to not just be innovative, but to invent new marketing solutions.</p>
+                    <h2>Live and Breathe Words</h2>
+                    <p>Our in-house copywriters live and breathe words. They’re adamant that wordsmithery should be considered a legitimate title for the type of work that they do; whilst blacksmiths create objects from steel, wordsmiths create experiences from words. Our writers don’t just geek out at good puns, they are also experts in the field of marketing, giving them a distinct edge when it comes to creating copy that inspires action.</p>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12 col-sm-height col-lg-height col-sm-bottom col-lg-bottom">
                     <img src="../docs/images/services/web-development/wd3.png" class="img-responsive img-3" />
@@ -138,46 +136,21 @@
 </section>
 
 
+<!-- FREE OFER -->
 <section class="container-fluid gray-darker-gray-bg free-offer">
+    <?php include './templates/free-offer.php'; ?>
 </section>
 
-
-
-<!-- END CONTENT -->
-
+<!-- FOOTER -->
 <footer class="container-fluid footer-container white-bg">
+    <?php include './templates/footer.php'; ?>
 </footer>
 
-<script>
+<!-- REQUEST CALL -->
+<?php include './templates/request-call.php'; ?>
 
-    var link = document.querySelector('link[rel="import"]');
-
-    // Clone the <template> in the import.
-    var templateHeader = link.import.querySelector('template#header');
-    var menu = link.import.querySelector('template#menu');
-    var servicesReport = link.import.querySelector('template#services-report');
-    var freeOffer = link.import.querySelector('template#free-offer');
-    var footer = link.import.querySelector('template#footer');
-    var requestCall = link.import.querySelector('template#request-call');
-    var messages = link.import.querySelector('template#messages');
-
-    var cloneHeader = document.importNode(templateHeader.content, true);
-    var cloneMenu = document.importNode(menu.content, true);
-    var cloneServicesReport = document.importNode(servicesReport.content, true);
-    var cloneFreeOffer = document.importNode(freeOffer.content, true);
-    var cloneFooter = document.importNode(footer.content, true);
-    var cloneRequestCall = document.importNode(requestCall.content, true);
-    var cloneMessages = document.importNode(messages.content, true);
-
-    document.querySelector('.header-main-page').appendChild(cloneHeader);
-    document.querySelector('.cd-primary-nav').appendChild(cloneMenu);
-    document.querySelector('.services-report').appendChild(cloneServicesReport);
-    document.querySelector('.free-offer').appendChild(cloneFreeOffer);
-    document.querySelector('.footer-container').appendChild(cloneFooter);
-    document.querySelector('body').appendChild(cloneRequestCall);
-    document.querySelector('body').appendChild(cloneMessages);
-
-</script>
+<!-- MESSAGES -->
+<?php include './templates/messages.php'; ?>
 
 
 <!-- Latest compiled and minified JavaScript -->

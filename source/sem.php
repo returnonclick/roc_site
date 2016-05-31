@@ -53,36 +53,33 @@
         ga('send', 'pageview');
 
     </script>
-    <script>
-        function handleLoad(e) {
-            console.log('Loaded import: ' + e.target.href);
-        }
-        function handleError(e) {
-            console.log('Error loading import: ' + e.target.href);
-        }
-    </script>
-
-    <link rel="import" href="./templates/template.html" onload="handleLoad(event)" onerror="handleError(event)">
 
 </head>
 
 
 <body>
 
+<!-- HEADER -->
 <header class="container header-main-page">
+    <?php include './templates/header.php'; ?>
 </header>
-<nav class="cd-primary-nav">
-</nav>
-<section class="container-fluid blue-bg services-report">
-</section>
 
+<!-- MENU -->
+<nav class="cd-primary-nav">
+    <?php include './templates/menu.php'; ?>
+</nav>
+
+<!-- SERVICE REPORT -->
+<section class="container-fluid blue-bg services-report">
+    <?php include './templates/service-report.php'; ?>
+</section>
 
 <section class="container-fluid white-bg sec-page-title">
     <div class="row">
         <div class="container">
             <div  class="row">
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <h1>Video</h1>
+                    <h1>SEM</h1>
                 </div>
             </div>
         </div>
@@ -94,8 +91,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-12 col-xs-12 col-sm-height col-lg-height">
-                <h2>Information and Entertainment</h2>
-                    <p>Question: If a picture paints a thousand words, then how many words can a video paint? <br>Answer: A lot. No, really. <br>It’s generally accepted that online video is going to be the future of marketing; but being the forward thinkers that we are, video marketing is our here and now. It’s not hard to understand why - as an easy, accessible format, people can satisfy their information and entertainment needs in a timely fashion. Easy on the eye + easy on the brain = easy customer conversions.</p>
+                    <h2>Search Engine Marketing</h2>
+                    <p>If you’re selling Christmas trees, you can expect your demand will dwindle a bit in March. Given this, why would you bother paying money for year round advertising, when you can concentrate your campaign to the relevant time period, maximising your sales for when they count? If you provide certain niche or seasonal products, some of the best results we elicit derive from a well planned Search Engine Marketing (SEM) campaign.</p>
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12 col-sm-height col-lg-height col-sm-bottom col-lg-bottom">
                     <img src="../docs/images/services/web-development/wd1.png" class="img-responsive img-1" />
@@ -110,8 +107,8 @@
         <div class="container">
             <div  class="row">
                 <div class="col-md-6 col-md-push-6 col-sm-6 col-sm-push-6 col-xs-12 col-sm-height col-lg-height">
-                    <h2>Video On Social Media</h2>
-                    <p>Video content is rife on Facebook and Instagram, allowing for accessibility on multiple devices. In fact, half of video traffic now originates from a mobile phone or tablet. That’s why we’re harnessing this trend, producing video content that is consumer driven, meaning that your brand doesn’t just stay on your website - it pervades social media too. But for some reason, this channel still remains untapped. Even though videos increase click-through rates whilst simultaneously reducing unsubscribe rates in email marketing, some companies still haven’t climbed aboard this train of success.</p>
+                    <h2>Online Strategies</h2>
+                    <p>That’s why our SEM team works very closely with our Search Engine Optimisation specialists and conversion web designers, creating unbeatable, collaborative online strategies whose core aim is to maximise your marketing returns for the minimum amount of advertising spend. But this can only occur through having a conversion website specialist, as it is us who build up your AdWords campaign, and ensure that the advertisement that we orchestrate especially for your business garners the exact customer that you’re after. </p>
                 </div>
                 <div class="col-md-6 col-md-pull-6 col-sm-6 col-sm-pull-6 col-xs-12 col-sm-height col-lg-height col-sm-middle col-lg-middle">
                     <img src="../docs/images/services/web-development/wd2.png" class="img-responsive img-2" />
@@ -126,8 +123,8 @@
         <div class="container">
             <div  class="row">
                 <div class="col-md-6 col-sm-6 col-xs-12 col-sm-height col-lg-height">
-                    <h2>Lights, camera, conversions!</h2>
-                    <p>But we’re actually commandeering these trains, whilst our passengers relax in their cabins, enjoying an increased brand awareness, lead generation, and online engagement. Choo choo! Although most people possess some sort of video camera these days, not just anyone can create a video marketing campaign. The science to capturing the attention and emotion of a client is complex and requires years of extensive training, a keen eye for detail, and an innovative mind that craves creativity.</p>
+                    <h2>Keep The Money In Your Pocket</h2>
+                    <p>It may sound complicated, but we promise it’s actually a lot simpler than it sounds. Through the use of AdWords paid advertising on Google - or Pay Per Click (PPC) marketing - you can concentrate your advertising to the period where it really matters, making it more cost effective for you. SEM has a 100% performance based cost component; you only pay when someone clicks your ad, meaning that the only time you’re out of pocket is when a customer is serious about purchasing your product (and no one’s going to complain about that!). It’s essentially the Holy Grail of constrained advertising, keeping more money in your pocket, whilst attracting only serious paying customers.</p>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12 col-sm-height col-lg-height col-sm-bottom col-lg-bottom">
                     <img src="../docs/images/services/web-development/wd3.png" class="img-responsive img-3" />
@@ -137,48 +134,21 @@
     </div>
 </section>
 
-
+<!-- FREE OFER -->
 <section class="container-fluid gray-darker-gray-bg free-offer">
+    <?php include './templates/free-offer.php'; ?>
 </section>
 
-
-
-<!-- END CONTENT -->
-
+<!-- FOOTER -->
 <footer class="container-fluid footer-container white-bg">
+    <?php include './templates/footer.php'; ?>
 </footer>
 
-<script>
+<!-- REQUEST CALL -->
+<?php include './templates/request-call.php'; ?>
 
-    var link = document.querySelector('link[rel="import"]');
-
-    // Clone the <template> in the import.
-    var templateHeader = link.import.querySelector('template#header');
-    var menu = link.import.querySelector('template#menu');
-    var servicesReport = link.import.querySelector('template#services-report');
-    var freeOffer = link.import.querySelector('template#free-offer');
-    var footer = link.import.querySelector('template#footer');
-    var requestCall = link.import.querySelector('template#request-call');
-    var messages = link.import.querySelector('template#messages');
-
-    var cloneHeader = document.importNode(templateHeader.content, true);
-    var cloneMenu = document.importNode(menu.content, true);
-    var cloneServicesReport = document.importNode(servicesReport.content, true);
-    var cloneFreeOffer = document.importNode(freeOffer.content, true);
-    var cloneFooter = document.importNode(footer.content, true);
-    var cloneRequestCall = document.importNode(requestCall.content, true);
-    var cloneMessages = document.importNode(messages.content, true);
-
-    document.querySelector('.header-main-page').appendChild(cloneHeader);
-    document.querySelector('.cd-primary-nav').appendChild(cloneMenu);
-    document.querySelector('.services-report').appendChild(cloneServicesReport);
-    document.querySelector('.free-offer').appendChild(cloneFreeOffer);
-    document.querySelector('.footer-container').appendChild(cloneFooter);
-    document.querySelector('body').appendChild(cloneRequestCall);
-    document.querySelector('body').appendChild(cloneMessages);
-
-</script>
-
+<!-- MESSAGES -->
+<?php include './templates/messages.php'; ?>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="../components/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>

@@ -53,36 +53,32 @@
         ga('send', 'pageview');
 
     </script>
-    <script>
-        function handleLoad(e) {
-            console.log('Loaded import: ' + e.target.href);
-        }
-        function handleError(e) {
-            console.log('Error loading import: ' + e.target.href);
-        }
-    </script>
-
-    <link rel="import" href="./templates/template.html" onload="handleLoad(event)" onerror="handleError(event)">
 
 </head>
 
-
 <body>
 
+<!-- HEADER -->
 <header class="container header-main-page">
+    <?php include './templates/header.php'; ?>
 </header>
-<nav class="cd-primary-nav">
-</nav>
-<section class="container-fluid blue-bg services-report">
-</section>
 
+<!-- MENU -->
+<nav class="cd-primary-nav">
+    <?php include './templates/menu.php'; ?>
+</nav>
+
+<!-- SERVICE REPORT -->
+<section class="container-fluid blue-bg services-report">
+    <?php include './templates/service-report.php'; ?>
+</section>
 
 <section class="container-fluid white-bg sec-page-title">
     <div class="row">
         <div class="container">
             <div  class="row">
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <h1>APPs</h1>
+                    <h1>CRM</h1>
                 </div>
             </div>
         </div>
@@ -94,8 +90,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-12 col-xs-12 col-sm-height col-lg-height">
-                    <h2>Innovation and Creativity</h2>
-                    <p>Have you ever walked behind a person walking really slowly on the street, transfixed on their smart phone? Though it might be one of the most universally frustrating human experiences, there is a plus to this (hear us out). Imagine that the reason why they were so mesmerised with their phone is because of your app. With our team of hand-picked, innovative team of web and mobile developers, we create beautiful, seamless software that maximises your business.</p>
+                    <h2>Customer Relationship Management</h2>
+                    <p>We might not be a matchmaking agency, but that doesn’t mean that we can’t foster real, genuine relationships. Forget love gurus - we’re conversion gurus. A core element of ensuring conversions is through facilitating positive interactions between a company and their current and future customers. But politeness is just one element - you also have to be able to really get into a customer's head and understand their wants and needs. Unfortunately, telepathy is a rare commodity these days. But that’s where CRM comes in.</p>
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12 col-sm-height col-lg-height col-sm-bottom col-lg-bottom">
                     <img src="../docs/images/services/web-development/wd1.png" class="img-responsive img-1" />
@@ -110,8 +106,8 @@
         <div class="container">
             <div  class="row">
                 <div class="col-md-6 col-md-push-6 col-sm-6 col-sm-push-6 col-xs-12 col-sm-height col-lg-height">
-                    <h2>Challenge us to build your dream</h2>
-                    <p>We feel that your involvement is critical to the success of every project; we are more than competent to take the reins during stages of the project, but for the ultimate success of any app, our relationship with you, the client, is just as important. Our preferred specialisation is Ruby on Rails, iOS, and Android development, however if our discussions with you call for a different technology, we can handle that too. We are the ultimate multi-taskers, after all.</p>
+                    <h2>Understanding Your Information</h2>
+                    <p>Effective CRM analyses data about a customer's history in a company, which leads to improved business relationships with them as a focus is placed specifically on retaining their loyalty, driving sales growth. Through tracking and analytics, we gather information from your website, telephone interactions, email threads and social media trends, which allows us to really understand your clients. With this understanding, marketing campaigns can be tailored to your demographic, resulting in more leads and conversions.</p>
                 </div>
                 <div class="col-md-6 col-md-pull-6 col-sm-6 col-sm-pull-6 col-xs-12 col-sm-height col-lg-height col-sm-middle col-lg-middle">
                     <img src="../docs/images/services/web-development/wd2.png" class="img-responsive img-2" />
@@ -121,48 +117,37 @@
     </div>
 </section>
 
-
-<section class="container-fluid gray-darker-gray-bg free-offer">
+<section class="container-fluid white-bg sec-3">
+    <div class="row">
+        <div class="container">
+            <div  class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12 col-sm-height col-lg-height">
+                    <h2>Make Better Decisions</h2>
+                    <p>This valuable information is gathered through our innovative CRM software, which condenses all this information into an easily accessible database. Through our software, you’re able to keep track of customer activity like website visits, phone calls, and emails. It’s the perfect tool to really understand purchasing patterns, which leads to a more successful marketing strategy on your end. Find more leads, close more deals, keep more customers, and grow your business - who’s going to object to that?</p>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12 col-sm-height col-lg-height col-sm-bottom col-lg-bottom">
+                    <img src="../docs/images/services/web-development/wd3.png" class="img-responsive img-3" />
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
+<!-- FREE OFER -->
+<section class="container-fluid gray-darker-gray-bg free-offer">
+    <?php include './templates/free-offer.php'; ?>
+</section>
 
-
-<!-- END CONTENT -->
-
+<!-- FOOTER -->
 <footer class="container-fluid footer-container white-bg">
+    <?php include './templates/footer.php'; ?>
 </footer>
 
-<script>
+<!-- REQUEST CALL -->
+<?php include './templates/request-call.php'; ?>
 
-    var link = document.querySelector('link[rel="import"]');
-
-    // Clone the <template> in the import.
-    var templateHeader = link.import.querySelector('template#header');
-    var menu = link.import.querySelector('template#menu');
-    var servicesReport = link.import.querySelector('template#services-report');
-    var freeOffer = link.import.querySelector('template#free-offer');
-    var footer = link.import.querySelector('template#footer');
-    var requestCall = link.import.querySelector('template#request-call');
-    var messages = link.import.querySelector('template#messages');
-
-    var cloneHeader = document.importNode(templateHeader.content, true);
-    var cloneMenu = document.importNode(menu.content, true);
-    var cloneServicesReport = document.importNode(servicesReport.content, true);
-    var cloneFreeOffer = document.importNode(freeOffer.content, true);
-    var cloneFooter = document.importNode(footer.content, true);
-    var cloneRequestCall = document.importNode(requestCall.content, true);
-    var cloneMessages = document.importNode(messages.content, true);
-
-    document.querySelector('.header-main-page').appendChild(cloneHeader);
-    document.querySelector('.cd-primary-nav').appendChild(cloneMenu);
-    document.querySelector('.services-report').appendChild(cloneServicesReport);
-    document.querySelector('.free-offer').appendChild(cloneFreeOffer);
-    document.querySelector('.footer-container').appendChild(cloneFooter);
-    document.querySelector('body').appendChild(cloneRequestCall);
-    document.querySelector('body').appendChild(cloneMessages);
-
-</script>
-
+<!-- MESSAGES -->
+<?php include './templates/messages.php'; ?>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="../components/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>

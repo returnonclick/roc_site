@@ -53,16 +53,6 @@
         ga('send', 'pageview');
 
     </script>
-    <script>
-        function handleLoad(e) {
-            console.log('Loaded import: ' + e.target.href);
-        }
-        function handleError(e) {
-            console.log('Error loading import: ' + e.target.href);
-        }
-    </script>
-
-    <link rel="import" href="./templates/template.html" onload="handleLoad(event)" onerror="handleError(event)">
 
 </head>
 
@@ -70,15 +60,15 @@
 <body>
 
 
-    <div id="vid-overlay"></div>
+<!-- HEADER -->
+<header class="container header-main-page">
+    <?php include './templates/header-white.php'; ?>
+</header>
 
-    <header class="container header-main-page">
-    </header>
-    <nav class="cd-primary-nav">
-    </nav>
-
-
-
+<!-- MENU -->
+<nav class="cd-primary-nav">
+    <?php include './templates/menu.php'; ?>
+</nav>
 
 
     <div id="header-contact">
@@ -108,32 +98,8 @@
         </div>
     </div>
 
-    <script>
-
-        var link = document.querySelector('link[rel="import"]');
-
-
-        // Clone the <template> in the import.
-        var templateHeader = link.import.querySelector('template#header-white');
-        var menu = link.import.querySelector('template#menu');
-        var messages = link.import.querySelector('template#messages');
-
-
-
-        var cloneHeader = document.importNode(templateHeader.content, true);
-        var cloneMenu = document.importNode(menu.content, true);
-        var cloneMessages = document.importNode(messages.content, true);
-
-
-
-        document.querySelector('.header-main-page').appendChild(cloneHeader);
-        document.querySelector('.cd-primary-nav').appendChild(cloneMenu);
-        document.querySelector('body').appendChild(cloneMessages);
-
-    </script>
-
-
-
+<!-- MESSAGES -->
+<?php include './templates/messages.php'; ?>
 
 
     <!-- Bootstrap core JavaScript

@@ -53,36 +53,33 @@
         ga('send', 'pageview');
 
     </script>
-    <script>
-        function handleLoad(e) {
-            console.log('Loaded import: ' + e.target.href);
-        }
-        function handleError(e) {
-            console.log('Error loading import: ' + e.target.href);
-        }
-    </script>
-
-    <link rel="import" href="./templates/template.html" onload="handleLoad(event)" onerror="handleError(event)">
 
 </head>
 
 
 <body>
 
+<!-- HEADER -->
 <header class="container header-main-page">
+    <?php include './templates/header.php'; ?>
 </header>
-<nav class="cd-primary-nav">
-</nav>
-<section class="container-fluid blue-bg services-report">
-</section>
 
+<!-- MENU -->
+<nav class="cd-primary-nav">
+    <?php include './templates/menu.php'; ?>
+</nav>
+
+<!-- SERVICE REPORT -->
+<section class="container-fluid blue-bg services-report">
+    <?php include './templates/service-report.php'; ?>
+</section>
 
 <section class="container-fluid white-bg sec-page-title">
     <div class="row">
         <div class="container">
             <div  class="row">
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <h1>Lead Magnets</h1>
+                    <h1>SEO</h1>
                 </div>
             </div>
         </div>
@@ -94,8 +91,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-12 col-xs-12 col-sm-height col-lg-height">
-                    <h2>Innovative and Intelligent Design</h2>
-                    <p>It might sound like a creative role, but in reality, there’s a fine line all designers must walk down in cultivating a cutting edge graphic and brand design; not only do they need to look as fashionable as a Vogue runway, they also need to elicit the exact emotions required from those exposed to it. That might sound easy to some, but in reality, it’s an incredibly complicated and meticulous process. Beautiful graphic design can draw in the eye, but innovative and intelligent design can also draw in the mind.</p>
+                    <h2>Search Engine Optimisation</h2>
+                    <p>We know how fantastic your business’ products are, but the rest of the Internet might not share that same knowledge. It’s every businesses dream to be amongst the first of millions of results on Google; but each and every day, new businesses are trying their hardest to be found online more quickly, easily and directly by new customers, and this for as little of their marketing spend as possible. It’s an unfortunate truth that this competition to get on the front page of Google is only going to increase over time, particularly for industries with little obvious differentiation between their product and service offerings. But we’re not ones to say no to a challenge. It might sound unimaginable - and with the wrong approach, it is - but we relish in making the impossible, possible.</p>
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12 col-sm-height col-lg-height col-sm-bottom col-lg-bottom">
                     <img src="../docs/images/services/web-development/wd1.png" class="img-responsive img-1" />
@@ -110,8 +107,8 @@
         <div class="container">
             <div  class="row">
                 <div class="col-md-6 col-md-push-6 col-sm-6 col-sm-push-6 col-xs-12 col-sm-height col-lg-height">
-                    <h2>Be Singular</h2>
-                    <p>We pride ourselves on our powerful architecture of various design and branding services, from simple company logos, to complete brand revamps. Did you know that the smallest things, such as the type or size of a font used for a logo can affect the type of clientele you receive on a day-to-day basis? This knowledge is directly attributable to our hand picked, expert designers with significant experience providing design work for businesses in more than twenty industries. Every time you engage us for our design services, our sole focus is to develop your business in the direction you want to take it. It’s an added bonus that we happen to do this as beautifully and precisely as possible.</p>
+                    <h2>Online Strategies</h2>
+                    <p>The harsh reality is that being on the second page of Google is like being on the last page; the magic happens on the first page - this is where the you get real results. This is why Search Engine Optimisation (SEO) is so critical to the overall results any business’ website can deliver; when done properly by our professional, highly experienced SEO specialists, it provides the most cost-effective, long-term solution to being found by your exact target market for the precise products and services your business offers. WIth results like these, it’s hard to understand why everyone hasn’t climbed aboard this technological train.</p>
                 </div>
                 <div class="col-md-6 col-md-pull-6 col-sm-6 col-sm-pull-6 col-xs-12 col-sm-height col-lg-height col-sm-middle col-lg-middle">
                     <img src="../docs/images/services/web-development/wd2.png" class="img-responsive img-2" />
@@ -126,8 +123,8 @@
         <div class="container">
             <div  class="row">
                 <div class="col-md-6 col-sm-6 col-xs-12 col-sm-height col-lg-height">
-                    <h2>Your Branding, Your Vision</h2>
-                    <p>Of all the services we offer, our design process is the most collaborative. We understand how important branding is to you - both in the personal and commercial sphere - and how this branding affects your vision as a business. We don’t just want to satisfy your expectations, we want to reconfigure them in their entirety. That’s why we continue to explore and educate ourselves on a wide range of markets and industries, enabling us to deliver a unique product that will get your customers talking (but this time, it will be for all the right reasons!). Whether you are interested in small, one-off design jobs or require ongoing design work to be orchestrated, we’re certain that our relentless pursuit for success will deliver results that you can see - both on and off the computer screen.</p>
+                    <h2>Learn About Your Business</h2>
+                    <p>While SEO does admittedly take some time for search engines to learn about your business and will not provide immediate returns for your marketing budget like pay-per-click advertising can (after all, you can’t rush perfection), it is by far much more sustainable and cost-effective in the long run for many businesses to choose SEO when they want to be found on page 1 of Google - a feat which has astronomical advantages. Think of it like this: pay-per-click advertising is the yo-yo diet of the internet world, whilst search engine optimisation is that change in lifestyle that all personal trainers and nutritionists recommend. It’s the option that provides the most customer conversions in the long run.</p>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12 col-sm-height col-lg-height col-sm-bottom col-lg-bottom">
                     <img src="../docs/images/services/web-development/wd3.png" class="img-responsive img-3" />
@@ -137,48 +134,21 @@
     </div>
 </section>
 
-
+<!-- FREE OFER -->
 <section class="container-fluid gray-darker-gray-bg free-offer">
+    <?php include './templates/free-offer.php'; ?>
 </section>
 
-
-
-<!-- END CONTENT -->
-
+<!-- FOOTER -->
 <footer class="container-fluid footer-container white-bg">
+    <?php include './templates/footer.php'; ?>
 </footer>
 
-<script>
+<!-- REQUEST CALL -->
+<?php include './templates/request-call.php'; ?>
 
-    var link = document.querySelector('link[rel="import"]');
-
-    // Clone the <template> in the import.
-    var templateHeader = link.import.querySelector('template#header');
-    var menu = link.import.querySelector('template#menu');
-    var servicesReport = link.import.querySelector('template#services-report');
-    var freeOffer = link.import.querySelector('template#free-offer');
-    var footer = link.import.querySelector('template#footer');
-    var requestCall = link.import.querySelector('template#request-call');
-    var messages = link.import.querySelector('template#messages');
-
-    var cloneHeader = document.importNode(templateHeader.content, true);
-    var cloneMenu = document.importNode(menu.content, true);
-    var cloneServicesReport = document.importNode(servicesReport.content, true);
-    var cloneFreeOffer = document.importNode(freeOffer.content, true);
-    var cloneFooter = document.importNode(footer.content, true);
-    var cloneRequestCall = document.importNode(requestCall.content, true);
-    var cloneMessages = document.importNode(messages.content, true);
-
-    document.querySelector('.header-main-page').appendChild(cloneHeader);
-    document.querySelector('.cd-primary-nav').appendChild(cloneMenu);
-    document.querySelector('.services-report').appendChild(cloneServicesReport);
-    document.querySelector('.free-offer').appendChild(cloneFreeOffer);
-    document.querySelector('.footer-container').appendChild(cloneFooter);
-    document.querySelector('body').appendChild(cloneRequestCall);
-    document.querySelector('body').appendChild(cloneMessages);
-
-</script>
-
+<!-- MESSAGES -->
+<?php include './templates/messages.php'; ?>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="../components/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>

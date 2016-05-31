@@ -54,35 +54,20 @@
         ga('send', 'pageview');
 
     </script>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-55878006-1', 'auto');
-        ga('send', 'pageview');
-
-    </script>
-    <script>
-        function handleLoad(e) {
-            console.log('Loaded import: ' + e.target.href);
-        }
-        function handleError(e) {
-            console.log('Error loading import: ' + e.target.href);
-        }
-    </script>
-
-    <link rel="import" href="./templates/template.html" onload="handleLoad(event)" onerror="handleError(event)">
 
 </head>
 
 
 <body>
 
+<!-- HEADER -->
 <header class="container header-main-page">
+    <?php include './templates/header.php'; ?>
 </header>
+
+<!-- MENU -->
 <nav class="cd-primary-nav">
+    <?php include './templates/menu.php'; ?>
 </nav>
 
 
@@ -260,35 +245,16 @@
 
 </section>
 
+<!-- FOOTER -->
 <footer class="container-fluid footer-container white-bg">
+    <?php include './templates/footer.php'; ?>
 </footer>
 
+<!-- REQUEST CALL -->
+<?php include './templates/request-call.php'; ?>
 
-<script>
-
-    var link = document.querySelector('link[rel="import"]');
-
-    // Clone the <template> in the import.
-    var templateHeader = link.import.querySelector('template#header');
-    var menu = link.import.querySelector('template#menu');
-    var footer = link.import.querySelector('template#footer');
-    var requestCall = link.import.querySelector('template#request-call');
-    var messages = link.import.querySelector('template#messages');
-
-    var cloneHeader = document.importNode(templateHeader.content, true);
-    var cloneMenu = document.importNode(menu.content, true);
-    var cloneFooter = document.importNode(footer.content, true);
-    var cloneRequestCall = document.importNode(requestCall.content, true);
-    var cloneMessages = document.importNode(messages.content, true);
-
-    document.querySelector('.header-main-page').appendChild(cloneHeader);
-    document.querySelector('.cd-primary-nav').appendChild(cloneMenu);
-    document.querySelector('.footer-container').appendChild(cloneFooter);
-    document.querySelector('body').appendChild(cloneRequestCall);
-    document.querySelector('body').appendChild(cloneMessages);
-
-</script>
-
+<!-- MESSAGES -->
+<?php include './templates/messages.php'; ?>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="../components/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>

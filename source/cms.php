@@ -53,36 +53,33 @@
         ga('send', 'pageview');
 
     </script>
-    <script>
-        function handleLoad(e) {
-            console.log('Loaded import: ' + e.target.href);
-        }
-        function handleError(e) {
-            console.log('Error loading import: ' + e.target.href);
-        }
-    </script>
-
-    <link rel="import" href="./templates/template.html" onload="handleLoad(event)" onerror="handleError(event)">
 
 </head>
 
 
 <body>
 
+<!-- HEADER -->
 <header class="container header-main-page">
+    <?php include './templates/header.php'; ?>
 </header>
-<nav class="cd-primary-nav">
-</nav>
-<section class="container-fluid blue-bg services-report">
-</section>
 
+<!-- MENU -->
+<nav class="cd-primary-nav">
+    <?php include './templates/menu.php'; ?>
+</nav>
+
+<!-- SERVICE REPORT -->
+<section class="container-fluid blue-bg services-report">
+    <?php include './templates/service-report.php'; ?>
+</section>
 
 <section class="container-fluid white-bg sec-page-title">
     <div class="row">
         <div class="container">
             <div  class="row">
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <h1>Social Media</h1>
+                    <h1>CMS</h1>
                 </div>
             </div>
         </div>
@@ -94,8 +91,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-12 col-xs-12 col-sm-height col-lg-height">
-                    <h2>Social Media Campaigns</h2>
-                    <p>If we could tweet, like, and reblog our social media marketing campaigns a thousand times, then trust us, we would. But unfortunately that role is already filled - by your future customers.Let’s cut to the chase; social media isn’t just for memes and crazy cat videos. It’s way more than that, acting as a crucial arena to gaining website traffic. The importance of socials to a successful marketing campaign has blown up in the past few years, creating an entirely new realm where branding is defined. As pioneers in our field, we welcome this change - after all, it’s about time the rest of the world caught up with us. </p>
+                    <h2>Content Management System</h2>
+                    <p>A content management system is a computer application that allows for the creation and modification of digital content through the use of a common user interface. It’s capable of supporting multiple users, meaning that you and your team can all simultaneously upload quality content on your webpage, allowing for greater success when it comes to the wide world of Google.</p>
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12 col-sm-height col-lg-height col-sm-bottom col-lg-bottom">
                     <img src="../docs/images/services/web-development/wd1.png" class="img-responsive img-1" />
@@ -110,8 +107,8 @@
         <div class="container">
             <div  class="row">
                 <div class="col-md-6 col-md-push-6 col-sm-6 col-sm-push-6 col-xs-12 col-sm-height col-lg-height">
-                    <h2>World Engagement</h2>
-                    <p>As Australia’s leaders in conversions, social media is an essential component of our repertoire. We are the ultimate trendsetters in this field, ensuring that you find your voice in a world that demands engagement, entertainment, and rewards. Our creative team are well endowed with new tech trends, formulating advertising campaigns that aim to do one core thing - to build a loyal and captive community. It’s through the creation of an invested community that web traffic are increased, which in turn generates sales. It’s that simple (for you that is, not us!). </p>
+                    <h2>Control Your Content</h2>
+                    <p>Our CMS has two major components: a content management application (CMA) that allows a user to add, modify and remove content from a website all by themselves; and a content delivery application (CDA) that updates the website. CMSes are also vital for storing, controlling, revising a publishing documentation like movies, pictures, and data. This makes them a useful piece of technology for those entrepreneurs with ants in their pants, allowing them to always have access to their content and change it whenever they desire.</p>
                 </div>
                 <div class="col-md-6 col-md-pull-6 col-sm-6 col-sm-pull-6 col-xs-12 col-sm-height col-lg-height col-sm-middle col-lg-middle">
                     <img src="../docs/images/services/web-development/wd2.png" class="img-responsive img-2" />
@@ -126,8 +123,8 @@
         <div class="container">
             <div  class="row">
                 <div class="col-md-6 col-sm-6 col-xs-12 col-sm-height col-lg-height">
-                    <h2>Social Media</h2>
-                    <p>But generating a bunch of winning, effective content on your socials is just one component to our marketing campaigns. Through a cutting edge suite of tools like tracking, split testing, and trip wires, we ensure that you’re getting tangibly more business through social media campaigns.</p>
+                    <h2>Have Power Over Your Brand</h2>
+                    <p>It’s a critical component to the success of almost any website, yet many organisations are still unfamiliar with this technology. In reality, it isn’t as daunting as it sounds. The appeal of our CMS systems are that they are incredibly easy to use, providing a non-technical way of creating new pages or uploading content. Even though we eliminate the need to worry - covering all aspects of web development - we completely understand wanting to have power over your brand. It is like an extra child, after all.</p>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12 col-sm-height col-lg-height col-sm-bottom col-lg-bottom">
                     <img src="../docs/images/services/web-development/wd3.png" class="img-responsive img-3" />
@@ -137,47 +134,21 @@
     </div>
 </section>
 
-
+<!-- FREE OFER -->
 <section class="container-fluid gray-darker-gray-bg free-offer">
+    <?php include './templates/free-offer.php'; ?>
 </section>
 
-
-
-<!-- END CONTENT -->
-
+<!-- FOOTER -->
 <footer class="container-fluid footer-container white-bg">
+    <?php include './templates/footer.php'; ?>
 </footer>
 
-<script>
+<!-- REQUEST CALL -->
+<?php include './templates/request-call.php'; ?>
 
-    var link = document.querySelector('link[rel="import"]');
-
-    // Clone the <template> in the import.
-    var templateHeader = link.import.querySelector('template#header');
-    var menu = link.import.querySelector('template#menu');
-    var servicesReport = link.import.querySelector('template#services-report');
-    var freeOffer = link.import.querySelector('template#free-offer');
-    var footer = link.import.querySelector('template#footer');
-    var requestCall = link.import.querySelector('template#request-call');
-    var messages = link.import.querySelector('template#messages');
-
-    var cloneHeader = document.importNode(templateHeader.content, true);
-    var cloneMenu = document.importNode(menu.content, true);
-    var cloneServicesReport = document.importNode(servicesReport.content, true);
-    var cloneFreeOffer = document.importNode(freeOffer.content, true);
-    var cloneFooter = document.importNode(footer.content, true);
-    var cloneRequestCall = document.importNode(requestCall.content, true);
-    var cloneMessages = document.importNode(messages.content, true);
-
-    document.querySelector('.header-main-page').appendChild(cloneHeader);
-    document.querySelector('.cd-primary-nav').appendChild(cloneMenu);
-    document.querySelector('.services-report').appendChild(cloneServicesReport);
-    document.querySelector('.free-offer').appendChild(cloneFreeOffer);
-    document.querySelector('.footer-container').appendChild(cloneFooter);
-    document.querySelector('body').appendChild(cloneRequestCall);
-    document.querySelector('body').appendChild(cloneMessages);
-
-</script>
+<!-- MESSAGES -->
+<?php include './templates/messages.php'; ?>
 
 
 <!-- Latest compiled and minified JavaScript -->

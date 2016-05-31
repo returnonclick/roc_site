@@ -53,36 +53,32 @@
         ga('send', 'pageview');
 
     </script>
-    <script>
-        function handleLoad(e) {
-            console.log('Loaded import: ' + e.target.href);
-        }
-        function handleError(e) {
-            console.log('Error loading import: ' + e.target.href);
-        }
-    </script>
-
-    <link rel="import" href="./templates/template.html" onload="handleLoad(event)" onerror="handleError(event)">
 
 </head>
 
-
 <body>
 
+<!-- HEADER -->
 <header class="container header-main-page">
+    <?php include './templates/header.php'; ?>
 </header>
-<nav class="cd-primary-nav">
-</nav>
-<section class="container-fluid blue-bg services-report">
-</section>
 
+<!-- MENU -->
+<nav class="cd-primary-nav">
+    <?php include './templates/menu.php'; ?>
+</nav>
+
+<!-- SERVICE REPORT -->
+<section class="container-fluid blue-bg services-report">
+    <?php include './templates/service-report.php'; ?>
+</section>
 
 <section class="container-fluid white-bg sec-page-title">
     <div class="row">
         <div class="container">
             <div  class="row">
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <h1>Trip Wires</h1>
+                    <h1>Tracking</h1>
                 </div>
             </div>
         </div>
@@ -94,8 +90,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-12 col-xs-12 col-sm-height col-lg-height">
-                    <h2>Garnering a Lead</h2>
-                    <p>Okay, so this concept might sound a wee bit sinister - but we promise, it’s anything but. Tripwires are essentially the term for garnering a lead from a customer by making them a low-cost, relatively painless offer, followed by upselling them once they are spiralling down your sales funnel. It’s appealing because it makes the act of buying far less intimidating for your customer, leading to proportionately more sales than those who don’t implement the tripwire strategy - though, we’re not sure why you wouldn’t!</p>
+                    <h2>Which Keywords to Use</h2>
+                    <p>Move over James Bond, our crew are better at tracking calls than you ever will be - and that’s saying a lot. Call tracking let’s you know exactly which ads are leading to phone calls. Our cutting edge software tracks calls back to website visitors, highlighting exactly how your visitor came across your page, what keywords they used, the advertisement that lead to the call, and the pages they viewed on your website.</p>
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12 col-sm-height col-lg-height col-sm-bottom col-lg-bottom">
                     <img src="../docs/images/services/web-development/wd1.png" class="img-responsive img-1" />
@@ -110,8 +106,8 @@
         <div class="container">
             <div  class="row">
                 <div class="col-md-6 col-md-push-6 col-sm-6 col-sm-push-6 col-xs-12 col-sm-height col-lg-height">
-                    <h2>Low Risk Offer</h2>
-                    <p>The Trip Wire is an irresistible, low risk offer that is one of the most important steps in your sales funnel because it’s the most underdone. In today’s world, many marketers tend to rely on a lead magnet - a compelling free offer in exchange for customer contact information - in order to gain leads. Then along the way, they hope to convert these customers to make purchases through customer relationship management. But the reason why we’re all about Trip Wires is because they not only have the potential to transform your leads into customers immediately, but also allow you to breakeven on your traffic because you are converting them to dollars upfront. It essentially bypasses the extremely long conversion process in aiming to convert customers right here, right now.</p>
+                    <h2>Knowledge Is Power</h2>
+                    <p>In this case, knowledge is power. This means that they’re great to prove how your online campaign is faring in the world. Whether you’re utilising AdWords, PPC, organic, mobile, or social, our technology means that you don’t have to waste money on fruitless campaigns. Their consumer journey is in your fingertips. This sophisticated technology is developed in-house by our experts who are pioneers in the field of conversion marketing.</p>
                 </div>
                 <div class="col-md-6 col-md-pull-6 col-sm-6 col-sm-pull-6 col-xs-12 col-sm-height col-lg-height col-sm-middle col-lg-middle">
                     <img src="../docs/images/services/web-development/wd2.png" class="img-responsive img-2" />
@@ -121,48 +117,21 @@
     </div>
 </section>
 
-
+<!-- FREE OFER -->
 <section class="container-fluid gray-darker-gray-bg free-offer">
+    <?php include './templates/free-offer.php'; ?>
 </section>
 
-
-
-<!-- END CONTENT -->
-
+<!-- FOOTER -->
 <footer class="container-fluid footer-container white-bg">
+    <?php include './templates/footer.php'; ?>
 </footer>
 
-<script>
+<!-- REQUEST CALL -->
+<?php include './templates/request-call.php'; ?>
 
-    var link = document.querySelector('link[rel="import"]');
-
-    // Clone the <template> in the import.
-    var templateHeader = link.import.querySelector('template#header');
-    var menu = link.import.querySelector('template#menu');
-    var servicesReport = link.import.querySelector('template#services-report');
-    var freeOffer = link.import.querySelector('template#free-offer');
-    var footer = link.import.querySelector('template#footer');
-    var requestCall = link.import.querySelector('template#request-call');
-    var messages = link.import.querySelector('template#messages');
-
-    var cloneHeader = document.importNode(templateHeader.content, true);
-    var cloneMenu = document.importNode(menu.content, true);
-    var cloneServicesReport = document.importNode(servicesReport.content, true);
-    var cloneFreeOffer = document.importNode(freeOffer.content, true);
-    var cloneFooter = document.importNode(footer.content, true);
-    var cloneRequestCall = document.importNode(requestCall.content, true);
-    var cloneMessages = document.importNode(messages.content, true);
-
-    document.querySelector('.header-main-page').appendChild(cloneHeader);
-    document.querySelector('.cd-primary-nav').appendChild(cloneMenu);
-    document.querySelector('.services-report').appendChild(cloneServicesReport);
-    document.querySelector('.free-offer').appendChild(cloneFreeOffer);
-    document.querySelector('.footer-container').appendChild(cloneFooter);
-    document.querySelector('body').appendChild(cloneRequestCall);
-    document.querySelector('body').appendChild(cloneMessages);
-
-</script>
-
+<!-- MESSAGES -->
+<?php include './templates/messages.php'; ?>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="../components/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>

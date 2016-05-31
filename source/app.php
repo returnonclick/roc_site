@@ -53,36 +53,33 @@
         ga('send', 'pageview');
 
     </script>
-    <script>
-        function handleLoad(e) {
-            console.log('Loaded import: ' + e.target.href);
-        }
-        function handleError(e) {
-            console.log('Error loading import: ' + e.target.href);
-        }
-    </script>
-
-    <link rel="import" href="./templates/template.html" onload="handleLoad(event)" onerror="handleError(event)">
 
 </head>
 
 
 <body>
 
+<!-- HEADER -->
 <header class="container header-main-page">
+    <?php include './templates/header.php'; ?>
 </header>
-<nav class="cd-primary-nav">
-</nav>
-<section class="container-fluid blue-bg services-report">
-</section>
 
+<!-- MENU -->
+<nav class="cd-primary-nav">
+    <?php include './templates/menu.php'; ?>
+</nav>
+
+<!-- SERVICE REPORT -->
+<section class="container-fluid blue-bg services-report">
+    <?php include './templates/service-report.php'; ?>
+</section>
 
 <section class="container-fluid white-bg sec-page-title">
     <div class="row">
         <div class="container">
             <div  class="row">
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <h1>Split Testing</h1>
+                    <h1>APPs</h1>
                 </div>
             </div>
         </div>
@@ -94,8 +91,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-12 col-xs-12 col-sm-height col-lg-height">
-                    <h2>Comparing Multiple Versions</h2>
-                    <p>Split testing is a way of comparing multiple versions of a web page to find out which one converts visitors best. When the test is run, traffic to the page is split among the different versions and their performance is tracked. Whichever version converts the most at the end of the test, wins. We might even award it a gold medal - though the benefits will be enough of a reward!</p>
+                    <h2>Innovation and Creativity</h2>
+                    <p>Have you ever walked behind a person walking really slowly on the street, transfixed on their smart phone? Though it might be one of the most universally frustrating human experiences, there is a plus to this (hear us out). Imagine that the reason why they were so mesmerised with their phone is because of your app. With our team of hand-picked, innovative team of web and mobile developers, we create beautiful, seamless software that maximises your business.</p>
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12 col-sm-height col-lg-height col-sm-bottom col-lg-bottom">
                     <img src="../docs/images/services/web-development/wd1.png" class="img-responsive img-1" />
@@ -110,8 +107,8 @@
         <div class="container">
             <div  class="row">
                 <div class="col-md-6 col-md-push-6 col-sm-6 col-sm-push-6 col-xs-12 col-sm-height col-lg-height">
-                    <h2>Operates Under Logic</h2>
-                    <p>If you’re finding yourself asking your friends whether they like your dreary and ineffective website then it’s time for some tough love - you’re not going to get any real answers from them. Conversion rate optimisation operates under the logic of finding ways to convert web visitors to paying customers, and split testing remains a fundamental component to this marketing technique. Whether you’re driving customers away with a ill-phrased CTA or a terrible user experience, split testing can overcome such barriers to conversion and feasibly solve them. </p>
+                    <h2>Challenge us to build your dream</h2>
+                    <p>We feel that your involvement is critical to the success of every project; we are more than competent to take the reins during stages of the project, but for the ultimate success of any app, our relationship with you, the client, is just as important. Our preferred specialisation is Ruby on Rails, iOS, and Android development, however if our discussions with you call for a different technology, we can handle that too. We are the ultimate multi-taskers, after all.</p>
                 </div>
                 <div class="col-md-6 col-md-pull-6 col-sm-6 col-sm-pull-6 col-xs-12 col-sm-height col-lg-height col-sm-middle col-lg-middle">
                     <img src="../docs/images/services/web-development/wd2.png" class="img-responsive img-2" />
@@ -121,64 +118,21 @@
     </div>
 </section>
 
-<section class="container-fluid white-bg sec-3">
-    <div class="row">
-        <div class="container">
-            <div  class="row">
-                <div class="col-md-6 col-sm-6 col-xs-12 col-sm-height col-lg-height">
-                    <h2>Increase Conversion With More Variations</h2>
-                    <p>The best way to charge these conversions is through creating one or more variations with the changes you believe will increase conversions - whether that be the copy, layout, or graphics selected. These different pages are then hosted on different platforms, and traffic is split between the different pages to find reliable conclusions.</p>
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-12 col-sm-height col-lg-height col-sm-bottom col-lg-bottom">
-                    <img src="../docs/images/services/web-development/wd3.png" class="img-responsive img-3" />
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
+<!-- FREE OFER -->
 <section class="container-fluid gray-darker-gray-bg free-offer">
+    <?php include './templates/free-offer.php'; ?>
 </section>
 
-
-
-<!-- END CONTENT -->
-
+<!-- FOOTER -->
 <footer class="container-fluid footer-container white-bg">
+    <?php include './templates/footer.php'; ?>
 </footer>
 
-<script>
+<!-- REQUEST CALL -->
+<?php include './templates/request-call.php'; ?>
 
-    var link = document.querySelector('link[rel="import"]');
-
-    // Clone the <template> in the import.
-    var templateHeader = link.import.querySelector('template#header');
-    var menu = link.import.querySelector('template#menu');
-    var servicesReport = link.import.querySelector('template#services-report');
-    var freeOffer = link.import.querySelector('template#free-offer');
-    var footer = link.import.querySelector('template#footer');
-    var requestCall = link.import.querySelector('template#request-call');
-    var messages = link.import.querySelector('template#messages');
-
-    var cloneHeader = document.importNode(templateHeader.content, true);
-    var cloneMenu = document.importNode(menu.content, true);
-    var cloneServicesReport = document.importNode(servicesReport.content, true);
-    var cloneFreeOffer = document.importNode(freeOffer.content, true);
-    var cloneFooter = document.importNode(footer.content, true);
-    var cloneRequestCall = document.importNode(requestCall.content, true);
-    var cloneMessages = document.importNode(messages.content, true);
-
-    document.querySelector('.header-main-page').appendChild(cloneHeader);
-    document.querySelector('.cd-primary-nav').appendChild(cloneMenu);
-    document.querySelector('.services-report').appendChild(cloneServicesReport);
-    document.querySelector('.free-offer').appendChild(cloneFreeOffer);
-    document.querySelector('.footer-container').appendChild(cloneFooter);
-    document.querySelector('body').appendChild(cloneRequestCall);
-    document.querySelector('body').appendChild(cloneMessages);
-
-</script>
-
+<!-- MESSAGES -->
+<?php include './templates/messages.php'; ?>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="../components/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>

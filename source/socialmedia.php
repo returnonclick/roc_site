@@ -53,36 +53,33 @@
         ga('send', 'pageview');
 
     </script>
-    <script>
-        function handleLoad(e) {
-            console.log('Loaded import: ' + e.target.href);
-        }
-        function handleError(e) {
-            console.log('Error loading import: ' + e.target.href);
-        }
-    </script>
-
-    <link rel="import" href="./templates/template.html" onload="handleLoad(event)" onerror="handleError(event)">
 
 </head>
 
 
 <body>
 
+<!-- HEADER -->
 <header class="container header-main-page">
+    <?php include './templates/header.php'; ?>
 </header>
-<nav class="cd-primary-nav">
-</nav>
-<section class="container-fluid blue-bg services-report">
-</section>
 
+<!-- MENU -->
+<nav class="cd-primary-nav">
+    <?php include './templates/menu.php'; ?>
+</nav>
+
+<!-- SERVICE REPORT -->
+<section class="container-fluid blue-bg services-report">
+    <?php include './templates/service-report.php'; ?>
+</section>
 
 <section class="container-fluid white-bg sec-page-title">
     <div class="row">
         <div class="container">
             <div  class="row">
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <h1>Graphic Design</h1>
+                    <h1>Social Media</h1>
                 </div>
             </div>
         </div>
@@ -94,8 +91,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-12 col-xs-12 col-sm-height col-lg-height">
-                    <h2>Innovative and Intelligent Design</h2>
-                    <p>It might sound like a creative role, but in reality, there’s a fine line all designers must walk down in cultivating a cutting edge graphic and brand design; not only do they need to look as fashionable as a Vogue runway, they also need to elicit the exact emotions required from those exposed to it. That might sound easy to some, but in reality, it’s an incredibly complicated and meticulous process. Beautiful graphic design can draw in the eye, but innovative and intelligent design can also draw in the mind.</p>
+                    <h2>Social Media Campaigns</h2>
+                    <p>If we could tweet, like, and reblog our social media marketing campaigns a thousand times, then trust us, we would. But unfortunately that role is already filled - by your future customers.Let’s cut to the chase; social media isn’t just for memes and crazy cat videos. It’s way more than that, acting as a crucial arena to gaining website traffic. The importance of socials to a successful marketing campaign has blown up in the past few years, creating an entirely new realm where branding is defined. As pioneers in our field, we welcome this change - after all, it’s about time the rest of the world caught up with us. </p>
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12 col-sm-height col-lg-height col-sm-bottom col-lg-bottom">
                     <img src="../docs/images/services/web-development/wd1.png" class="img-responsive img-1" />
@@ -110,8 +107,8 @@
         <div class="container">
             <div  class="row">
                 <div class="col-md-6 col-md-push-6 col-sm-6 col-sm-push-6 col-xs-12 col-sm-height col-lg-height">
-                    <h2>Be Singular</h2>
-                    <p>We pride ourselves on our powerful architecture of various design and branding services, from simple company logos, to complete brand revamps. Did you know that the smallest things, such as the type or size of a font used for a logo can affect the type of clientele you receive on a day-to-day basis? This knowledge is directly attributable to our hand picked, expert designers with significant experience providing design work for businesses in more than twenty industries. Every time you engage us for our design services, our sole focus is to develop your business in the direction you want to take it. It’s an added bonus that we happen to do this as beautifully and precisely as possible.</p>
+                    <h2>World Engagement</h2>
+                    <p>As Australia’s leaders in conversions, social media is an essential component of our repertoire. We are the ultimate trendsetters in this field, ensuring that you find your voice in a world that demands engagement, entertainment, and rewards. Our creative team are well endowed with new tech trends, formulating advertising campaigns that aim to do one core thing - to build a loyal and captive community. It’s through the creation of an invested community that web traffic are increased, which in turn generates sales. It’s that simple (for you that is, not us!). </p>
                 </div>
                 <div class="col-md-6 col-md-pull-6 col-sm-6 col-sm-pull-6 col-xs-12 col-sm-height col-lg-height col-sm-middle col-lg-middle">
                     <img src="../docs/images/services/web-development/wd2.png" class="img-responsive img-2" />
@@ -126,8 +123,8 @@
         <div class="container">
             <div  class="row">
                 <div class="col-md-6 col-sm-6 col-xs-12 col-sm-height col-lg-height">
-                    <h2>Your Branding, Your Vision</h2>
-                    <p>Of all the services we offer, our design process is the most collaborative. We understand how important branding is to you - both in the personal and commercial sphere - and how this branding affects your vision as a business. We don’t just want to satisfy your expectations, we want to reconfigure them in their entirety. That’s why we continue to explore and educate ourselves on a wide range of markets and industries, enabling us to deliver a unique product that will get your customers talking (but this time, it will be for all the right reasons!). Whether you are interested in small, one-off design jobs or require ongoing design work to be orchestrated, we’re certain that our relentless pursuit for success will deliver results that you can see - both on and off the computer screen.</p>
+                    <h2>Social Media</h2>
+                    <p>But generating a bunch of winning, effective content on your socials is just one component to our marketing campaigns. Through a cutting edge suite of tools like tracking, split testing, and trip wires, we ensure that you’re getting tangibly more business through social media campaigns.</p>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12 col-sm-height col-lg-height col-sm-bottom col-lg-bottom">
                     <img src="../docs/images/services/web-development/wd3.png" class="img-responsive img-3" />
@@ -137,48 +134,21 @@
     </div>
 </section>
 
-
+<!-- FREE OFER -->
 <section class="container-fluid gray-darker-gray-bg free-offer">
+    <?php include './templates/free-offer.php'; ?>
 </section>
 
-
-
-<!-- END CONTENT -->
-
+<!-- FOOTER -->
 <footer class="container-fluid footer-container white-bg">
+    <?php include './templates/footer.php'; ?>
 </footer>
 
-<script>
+<!-- REQUEST CALL -->
+<?php include './templates/request-call.php'; ?>
 
-    var link = document.querySelector('link[rel="import"]');
-
-    // Clone the <template> in the import.
-    var templateHeader = link.import.querySelector('template#header');
-    var menu = link.import.querySelector('template#menu');
-    var servicesReport = link.import.querySelector('template#services-report');
-    var freeOffer = link.import.querySelector('template#free-offer');
-    var footer = link.import.querySelector('template#footer');
-    var requestCall = link.import.querySelector('template#request-call');
-    var messages = link.import.querySelector('template#messages');
-
-    var cloneHeader = document.importNode(templateHeader.content, true);
-    var cloneMenu = document.importNode(menu.content, true);
-    var cloneServicesReport = document.importNode(servicesReport.content, true);
-    var cloneFreeOffer = document.importNode(freeOffer.content, true);
-    var cloneFooter = document.importNode(footer.content, true);
-    var cloneRequestCall = document.importNode(requestCall.content, true);
-    var cloneMessages = document.importNode(messages.content, true);
-
-    document.querySelector('.header-main-page').appendChild(cloneHeader);
-    document.querySelector('.cd-primary-nav').appendChild(cloneMenu);
-    document.querySelector('.services-report').appendChild(cloneServicesReport);
-    document.querySelector('.free-offer').appendChild(cloneFreeOffer);
-    document.querySelector('.footer-container').appendChild(cloneFooter);
-    document.querySelector('body').appendChild(cloneRequestCall);
-    document.querySelector('body').appendChild(cloneMessages);
-
-</script>
-
+<!-- MESSAGES -->
+<?php include './templates/messages.php'; ?>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="../components/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>

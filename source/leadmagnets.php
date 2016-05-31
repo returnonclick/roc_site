@@ -53,36 +53,33 @@
         ga('send', 'pageview');
 
     </script>
-    <script>
-        function handleLoad(e) {
-            console.log('Loaded import: ' + e.target.href);
-        }
-        function handleError(e) {
-            console.log('Error loading import: ' + e.target.href);
-        }
-    </script>
-
-    <link rel="import" href="./templates/template.html" onload="handleLoad(event)" onerror="handleError(event)">
 
 </head>
 
 
 <body>
 
+<!-- HEADER -->
 <header class="container header-main-page">
+    <?php include './templates/header.php'; ?>
 </header>
-<nav class="cd-primary-nav">
-</nav>
-<section class="container-fluid blue-bg services-report">
-</section>
 
+<!-- MENU -->
+<nav class="cd-primary-nav">
+    <?php include './templates/menu.php'; ?>
+</nav>
+
+<!-- SERVICE REPORT -->
+<section class="container-fluid blue-bg services-report">
+    <?php include './templates/service-report.php'; ?>
+</section>
 
 <section class="container-fluid white-bg sec-page-title">
     <div class="row">
         <div class="container">
             <div  class="row">
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <h1>CRM</h1>
+                    <h1>Lead Magnets</h1>
                 </div>
             </div>
         </div>
@@ -94,8 +91,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-12 col-xs-12 col-sm-height col-lg-height">
-                    <h2>Customer Relationship Management</h2>
-                    <p>We might not be a matchmaking agency, but that doesn’t mean that we can’t foster real, genuine relationships. Forget love gurus - we’re conversion gurus. A core element of ensuring conversions is through facilitating positive interactions between a company and their current and future customers. But politeness is just one element - you also have to be able to really get into a customer's head and understand their wants and needs. Unfortunately, telepathy is a rare commodity these days. But that’s where CRM comes in.</p>
+                    <h2>Innovative and Intelligent Design</h2>
+                    <p>It might sound like a creative role, but in reality, there’s a fine line all designers must walk down in cultivating a cutting edge graphic and brand design; not only do they need to look as fashionable as a Vogue runway, they also need to elicit the exact emotions required from those exposed to it. That might sound easy to some, but in reality, it’s an incredibly complicated and meticulous process. Beautiful graphic design can draw in the eye, but innovative and intelligent design can also draw in the mind.</p>
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12 col-sm-height col-lg-height col-sm-bottom col-lg-bottom">
                     <img src="../docs/images/services/web-development/wd1.png" class="img-responsive img-1" />
@@ -110,8 +107,8 @@
         <div class="container">
             <div  class="row">
                 <div class="col-md-6 col-md-push-6 col-sm-6 col-sm-push-6 col-xs-12 col-sm-height col-lg-height">
-                    <h2>Understanding Your Information</h2>
-                    <p>Effective CRM analyses data about a customer's history in a company, which leads to improved business relationships with them as a focus is placed specifically on retaining their loyalty, driving sales growth. Through tracking and analytics, we gather information from your website, telephone interactions, email threads and social media trends, which allows us to really understand your clients. With this understanding, marketing campaigns can be tailored to your demographic, resulting in more leads and conversions.</p>
+                    <h2>Be Singular</h2>
+                    <p>We pride ourselves on our powerful architecture of various design and branding services, from simple company logos, to complete brand revamps. Did you know that the smallest things, such as the type or size of a font used for a logo can affect the type of clientele you receive on a day-to-day basis? This knowledge is directly attributable to our hand picked, expert designers with significant experience providing design work for businesses in more than twenty industries. Every time you engage us for our design services, our sole focus is to develop your business in the direction you want to take it. It’s an added bonus that we happen to do this as beautifully and precisely as possible.</p>
                 </div>
                 <div class="col-md-6 col-md-pull-6 col-sm-6 col-sm-pull-6 col-xs-12 col-sm-height col-lg-height col-sm-middle col-lg-middle">
                     <img src="../docs/images/services/web-development/wd2.png" class="img-responsive img-2" />
@@ -126,8 +123,8 @@
         <div class="container">
             <div  class="row">
                 <div class="col-md-6 col-sm-6 col-xs-12 col-sm-height col-lg-height">
-                    <h2>Make Better Decisions</h2>
-                    <p>This valuable information is gathered through our innovative CRM software, which condenses all this information into an easily accessible database. Through our software, you’re able to keep track of customer activity like website visits, phone calls, and emails. It’s the perfect tool to really understand purchasing patterns, which leads to a more successful marketing strategy on your end. Find more leads, close more deals, keep more customers, and grow your business - who’s going to object to that?</p>
+                    <h2>Your Branding, Your Vision</h2>
+                    <p>Of all the services we offer, our design process is the most collaborative. We understand how important branding is to you - both in the personal and commercial sphere - and how this branding affects your vision as a business. We don’t just want to satisfy your expectations, we want to reconfigure them in their entirety. That’s why we continue to explore and educate ourselves on a wide range of markets and industries, enabling us to deliver a unique product that will get your customers talking (but this time, it will be for all the right reasons!). Whether you are interested in small, one-off design jobs or require ongoing design work to be orchestrated, we’re certain that our relentless pursuit for success will deliver results that you can see - both on and off the computer screen.</p>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12 col-sm-height col-lg-height col-sm-bottom col-lg-bottom">
                     <img src="../docs/images/services/web-development/wd3.png" class="img-responsive img-3" />
@@ -137,48 +134,21 @@
     </div>
 </section>
 
-
+<!-- FREE OFER -->
 <section class="container-fluid gray-darker-gray-bg free-offer">
+    <?php include './templates/free-offer.php'; ?>
 </section>
 
-
-
-<!-- END CONTENT -->
-
+<!-- FOOTER -->
 <footer class="container-fluid footer-container white-bg">
+    <?php include './templates/footer.php'; ?>
 </footer>
 
-<script>
+<!-- REQUEST CALL -->
+<?php include './templates/request-call.php'; ?>
 
-    var link = document.querySelector('link[rel="import"]');
-
-    // Clone the <template> in the import.
-    var templateHeader = link.import.querySelector('template#header');
-    var menu = link.import.querySelector('template#menu');
-    var servicesReport = link.import.querySelector('template#services-report');
-    var freeOffer = link.import.querySelector('template#free-offer');
-    var footer = link.import.querySelector('template#footer');
-    var requestCall = link.import.querySelector('template#request-call');
-    var messages = link.import.querySelector('template#messages');
-
-    var cloneHeader = document.importNode(templateHeader.content, true);
-    var cloneMenu = document.importNode(menu.content, true);
-    var cloneServicesReport = document.importNode(servicesReport.content, true);
-    var cloneFreeOffer = document.importNode(freeOffer.content, true);
-    var cloneFooter = document.importNode(footer.content, true);
-    var cloneRequestCall = document.importNode(requestCall.content, true);
-    var cloneMessages = document.importNode(messages.content, true);
-
-    document.querySelector('.header-main-page').appendChild(cloneHeader);
-    document.querySelector('.cd-primary-nav').appendChild(cloneMenu);
-    document.querySelector('.services-report').appendChild(cloneServicesReport);
-    document.querySelector('.free-offer').appendChild(cloneFreeOffer);
-    document.querySelector('.footer-container').appendChild(cloneFooter);
-    document.querySelector('body').appendChild(cloneRequestCall);
-    document.querySelector('body').appendChild(cloneMessages);
-
-</script>
-
+<!-- MESSAGES -->
+<?php include './templates/messages.php'; ?>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="../components/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
