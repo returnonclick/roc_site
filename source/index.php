@@ -40,7 +40,7 @@
 
     <!-- main CSS -->
     <!-- STYLES VIMEO AND PARALLAX  -->
-    <link rel="stylesheet" href="../docs/styles/main.css">
+    <link rel="stylesheet" href="http://www.returnonclick.com.au/docs/styles/main.css">
     <!-- <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/icons.css"> -->
 
