@@ -36,7 +36,8 @@ $mail->Port = 587;
 
 
 $mail->setFrom('crm@returnonclick.com.au', 'ROC Website Contact');
-$mail->addAddress('lucas@returnonclick.com.au', 'Lucas');                 // Add a recipient
+$mail->addAddress('lucas@returnonclick.com.au', 'Lucas');
+$mail->addAddress('barrett@returnonclick.com.au', 'Barrett'); // Add a recipient
 //$mail->addAddress('jossandro@gmail.com');   // Name is optional
 // $mail->addReplyTo('info@example.com', 'Information');
 // $mail->addCC('cc@example.com');
