@@ -14,11 +14,13 @@ $mail->Password = 'theBrazilian3';                          // SMTP password
 $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;                                    // TCP port to connect to
 
-$mail->setFrom('sales@returnonclick.com.au', 'ROC Website Contact');
-$mail->addAddress('lucas@returnonclick.com.au', 'Lucas');                 // Add a recipient
+$mail->setFrom('teamreturnonclick@gmail.com', 'ROC Website Contact');
 $mail->addAddress('barrett@returnonclick.com.au', 'Barrett');                         // Name is optional
+$mail->addCC('lucas@returnonclick.com.au', 'Lucas');                 // Add a recipient
+$mail->addCC('joe@returnonclick.com.au', 'Joe');
+// $mail->addAddress('barrett@returnonclick.com.au', 'Barrett');                         // Name is optional
 // $mail->addReplyTo('info@example.com', 'Information');
-//$mail->addCC('nick@returnonclick.com.au', 'Nick');
+
 // $mail->addCC('cc@example.com');
 // $mail->addBCC('bcc@example.com');
 
