@@ -10,7 +10,7 @@ $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = 'teamreturnonclick@gmail.com';                 // SMTP username
-$mail->Password = 'theBrazilian3';                           // SMTP password
+$mail->Password = 'theBrazilian3';                          // SMTP password
 $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;                                    // TCP port to connect to
 
@@ -20,22 +20,25 @@ $mail->addBCC('jossandro@gmail.com', 'Jossandro');
 
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'ROC -> Request a call';
+$mail->Subject = 'ROC -> Free Report';
 
 $data = json_decode($_POST['data']);
 
 var_dump($data);
 
 $mail->Body    = '
-	<h1>ROC -> Request a call</h1>
+	<h1>New lead from ROC website</h1>
 	<p>Contact Name: '.$data->contactName.' </p>
+	<p>Email: '.$data->email.' </p>
 	<p>Phone: '.$data->phone.' </p>
-	<p>Comment: '.$data->comment.' </p>
+	<p>Website: '.$data->website.' </p>
 ';
-$mail->AltBody = 'ROC Request a call
+
+$mail->AltBody = 'New lead from ROC website
 	Contact Name: '.$data->contactName.'
+	Email: '.$data->email.'
 	Phone: '.$data->phone.'
-	Comment: '.$data->comment.'
+	Website: '.$data->website.'
 ';
 
 if(!$mail->send()) {

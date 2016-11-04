@@ -70,7 +70,7 @@ $(function(){
             if( current_x > ON_INICIAL_X && current_x < ON_FINAL_X && current_y > ON_INICIAL_Y && current_y < ON_FINAL_Y ) {
                 //alert('entrou');
                 //$('selector').css( 'cursor', 'pointer' );
-                window.location.href = "http://www.returnonclick.com.au/source/calculator.html";
+                window.location.href = "http://www.spacenow.com.au";
             }
         });
     /*

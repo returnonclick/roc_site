@@ -44,6 +44,11 @@
     <!-- JQUERY -->
     <script src="../components/jquery/jquery-2.2.3.min.js"></script>
 
+    <!-- owl.carousel CSS -->
+    <link rel="stylesheet" href="../docs/styles/owl.carousel.css">
+    <link rel="stylesheet" href="../docs/styles/owl.theme.css">
+    <link rel="stylesheet" href="../docs/styles/owl.transitions.css">
+
     <!-- main CSS -->
     <link rel="stylesheet" href="../docs/styles/main-compiled.css">
 

@@ -29,25 +29,13 @@ $mail->Password = 'theBrazilian3';                        // SMTP password
 $mail->SMTPSecure = 'tls';                              // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;
 
+$mail->addAddress('barrett@returnonclick.com.au', 'Barrett');
+$mail->addBCC('lucas@returnonclick.com.au', 'Lucas');
+$mail->addBCC('jossandro@gmail.com', 'Jossandro');
 
-
-
-
-
-
-$mail->setFrom('crm@returnonclick.com.au', 'ROC Website Contact');
-$mail->addAddress('lucas@returnonclick.com.au', 'Lucas');
-$mail->addAddress('barrett@returnonclick.com.au', 'Barrett'); // Add a recipient
-//$mail->addAddress('jossandro@gmail.com');   // Name is optional
-// $mail->addReplyTo('info@example.com', 'Information');
-// $mail->addCC('cc@example.com');
-// $mail->addBCC('bcc@example.com');
-
-// $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-// $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'New Lead from ROC website';
+$mail->Subject = 'ROC -> New Lead';
 
 $data = json_decode($_POST['data']);
 $arr = (array)$data->step2;

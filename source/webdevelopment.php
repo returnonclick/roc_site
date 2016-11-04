@@ -17,9 +17,9 @@
     <?php include './templates/menu.php'; ?>
 </nav>
 
-<!-- SERVICE REPORT -->
-<section class="container-fluid blue-bg services-report">
-    <?php include './templates/service-report.php'; ?>
+<!-- FREE OFFER -->
+<section class="container-fluid blue-bg free-offer">
+    <?php include './templates/free-offer.php'; ?>
 </section>
 
 <section class="container-fluid white-bg sec-page-title">
@@ -82,9 +82,9 @@
     </div>
 </section>
 
-<!-- FREE OFER -->
-<section class="container-fluid gray-darker-gray-bg free-offer">
-    <?php include './templates/free-offer.php'; ?>
+<!-- SERVICE REPORT -->
+<section class="container-fluid gray-bg services-report">
+    <?php include './templates/service-report.php'; ?>
 </section>
 
 <!-- FOOTER -->

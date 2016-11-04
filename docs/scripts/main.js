@@ -99,3 +99,37 @@ $(document).on('blur', '.input__field', function(ev) {
         classie.remove(ev.target.parentNode, 'input--filled');
     }
 });
+
+
+/**
+ *
+ * =========================================================================== *
+ *                                  CAROUSEL
+ * =========================================================================== *
+ *
+ */
+
+$(document).ready(function() {
+
+
+    if($("#owl-demo").length > 0) {
+        var owl = $("#owl-demo");
+
+        owl.owlCarousel({
+            pagination: false,
+            navigation : false,
+            slideSpeed : 800,
+            paginationSpeed : 800,
+            singleItem:true
+        });
+
+        // Custom Navigation Events
+        $(".next").click(function(){
+            owl.trigger('owl.next');
+        })
+        $(".prev").click(function(){
+            owl.trigger('owl.prev');
+        })
+    }
+
+});

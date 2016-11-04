@@ -117,6 +117,39 @@ a:active,
 a:visited {
     text-decoration: none;
 }
+::-webkit-input-placeholder {
+    color: #fff !important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: #fff !important;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color: #fff !important;
+}
+
+:-ms-input-placeholder {
+    color: #fff !important;
+}
+
+.section-request-form ::-webkit-input-placeholder {
+    color: #01bded !important;
+}
+
+.section-request-form :-moz-placeholder { /* Firefox 18- */
+    color: #01bded !important;
+}
+
+.section-request-form ::-moz-placeholder {  /* Firefox 19+ */
+    color: #01bded !important;
+}
+
+.section-request-form :-ms-input-placeholder {
+    color: #01bded !important;
+}
+
+
 /************ MIXINS ************/
 .header-contact-page {
     height: 99%;
@@ -145,7 +178,7 @@ a:visited {
     width: 150px;
     height: 100px;
     position: absolute;
-    z-index: 10000;
+    margin-left: 15px;
     /*
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
@@ -303,10 +336,10 @@ a:visited {
 }
 .back {
     position: absolute !important;
-    bottom: 0;
+    top: 0;
     left: 0;
-    right: 0;
-    margin: auto;
+    margin-top: -80px;
+    z-index: 999999999999 !important;
 }
 .is-visible {
     -moz-transition: all 500ms ease-in-out;
@@ -454,16 +487,21 @@ a:visited {
     padding: 25px 10px 24px 10px;
     border: 2px #ffffff solid !important;
 }
-.form-field {
+.form-field, .form-field:focus {
     color: #333333;
     background: transparent;
     display: inline-block;
     font-size: 1rem;
     padding: 29px 10px;
     border-radius: 0px !important;
-    border: 2px #01bded solid;
+    border: 2px #fff solid;
     -webkit-appearance: none;
 }
+
+.form-field.blue-border {
+    border: 2px #01bded solid;
+}
+
 .form-free-report .form-field {
     color: #eeeeee;
 }
@@ -608,7 +646,7 @@ a:visited {
     border-color: #01bded;
 }
 .input--not-filled {
-    border-color: red;
+    border-color: red !important;
 }
 #header-contact .form-field {
     color: #ffffff;
@@ -815,6 +853,10 @@ a:visited {
     transform: translate3d(0px, 0px, 0px);
     overflow-x: hidden;
 }
+.sec-clients {
+    padding: 100px 0 170px 0;
+}
+
 @media (max-width: 698px) {
     .polar_bear-desktop {
         margin-top: 0px;
@@ -828,7 +870,7 @@ a:visited {
     }
     .polar_bear-water-desktop {
         height: 200px;
-        margin-top: -300px;
+        margin-top: -570px;
         width: 100%;
     }
     .tiger {
@@ -854,7 +896,7 @@ a:visited {
     }
     .polar_bear-water-desktop {
         height: 200px;
-        margin-top: -300px;
+        margin-top: -570px;
         width: 100%;
     }
     .tiger {
@@ -878,7 +920,7 @@ a:visited {
     overflow-x: hidden;
 }
 .five-things {
-    margin-top: 150px;
+    margin: 100px 0;
     opacity: 1;
     -moz-transition: all 500ms ease-in-out;
     -webkit-transition: all 500ms ease-in-out;
@@ -903,7 +945,7 @@ a:visited {
     transform: translate3d(2000px, 0px, 0px);
 }
 .form-free-report {
-    margin-top: -400px;
+    margin-top: -475px;
     opacity: 0;
     -moz-transition: all 500ms ease-in-out;
     -webkit-transition: all 500ms ease-in-out;
@@ -930,11 +972,56 @@ a:visited {
 @media (max-width: 698px) {
     .form-free-report {
         padding: 20px;
+        margin-top: -575px;
+    }
+    .img-book-report {
+        display: none !important;
+    }
+    .next, .prev {
+        margin-top: 50px !important;
     }
 }
 /*********************************************
               ROC MAIN CSS
 *********************************************/
+
+#owl-demo {
+    text-align: center;
+    pointer-events: none;
+}
+
+#owl-demo .owl-item{
+    margin: 3px;
+    text-align: -webkit-center;
+}
+#owl-demo .item div img{
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0 100px;
+}
+
+.next, .prev {
+    pointer-events: auto;
+    position: absolute;
+    margin-top: 100px;
+}
+.next {
+    right: 0
+}
+.prev{
+    left:0;
+}
+
+.img-book-report {
+    background: url("../images/book_360.png") no-repeat;
+    display: block;
+    height: 516px;
+    margin-top: 50px;
+    position: absolute;
+    width: 405px;
+}
+
 /*********************************************
              ALL ELEMENTS
 *********************************************/
@@ -966,6 +1053,9 @@ h1 {
 h1.thick {
     font-weight: 900;
     padding: 50px 0;
+}
+h1.thick-no-padding {
+    font-weight: 900;
 }
 h2 {
     font-size: 2.0rem;
@@ -1149,8 +1239,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .btn-blue:hover {
     background-color: #ffffff;
-    border: #ffffff #000000 2px solid;
-    color: #ffffff #000000;
+    border: #01bded 2px solid;
+    color: #01bded;
 }
 .btn-gray {
     background-color: #555555;

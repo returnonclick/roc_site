@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-6 col-sm-6 col-xs-6">
-        <a class="pull-left" href="./index.html">
+        <a class="pull-left" href="./index.php">
             <div class="logo-white col-md-6 col-sm-6 col-xs-6"></div>
         </a>
     </div>
