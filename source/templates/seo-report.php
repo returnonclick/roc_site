@@ -10,7 +10,7 @@
                     <div class="row row-centered">
                         <div class="col-md-8 col-md-offset-2 col-sm-8 com-sm-offset-2 com-xs-12">
                             <a id="btn-get-free-report" class="btn btn-blue">
-                                Get My Free Report
+                                Get My Free Audit
                             </a>
                         </div>
                     </div>
