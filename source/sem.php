@@ -83,8 +83,13 @@
 </section>
 
 <!-- SERVICE REPORT -->
-<section class="container-fluid gray-bg services-report">
-    <?php include './templates/service-report.php'; ?>
+<!-- <section class="container-fluid gray-bg services-report">
+    <?php //include './templates/service-report.php'; ?>
+</section>
+ -->
+<!-- SEO REPORT -->
+<section class="container-fluid gray-bg">
+    <?php include './templates/seo-report.php'; ?>
 </section>
 
 <!-- FOOTER -->
