@@ -2,7 +2,10 @@
 <html lang="en">
 
 <head>
-    <?php include './templates/head.php'; ?>
+    <?php 
+    $page_title = "Conversion Websites | Return On Click - 1300 021 087";
+    $page_description = "Conversion Websites | Having a website you like is great; having one that works is better. Return On Click are pioneers in conversion rate optimisation.";
+    include './templates/head.php'; ?>
     <style>
         @media only screen and (max-width: 768px) {
             .not-on-mobile {

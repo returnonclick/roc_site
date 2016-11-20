@@ -2,7 +2,10 @@
 <html lang="en">
 
 <head>
-    <?php include './templates/head.php'; ?>
+    <?php 
+    $page_title = "Website Copywriter | Return On Click - 1300 021 087";
+    $page_description = "Website Copywriter | Our writers are experts in the field of content marketing, giving them a distinct edge when it comes to writing copy to inspire action.";
+    include './templates/head.php'; ?>
 </head>
 
 <body>

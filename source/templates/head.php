@@ -9,10 +9,10 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Return on Click</title>
+    <title><?php echo $page_title; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="shortcut icon" href="">
-    <meta name="description" content="">
+    <meta name="description" content="<?php echo $page_description; ?>">
     <link rel="canonical" href="">
     <link rel="shortlink" href="">
     <link rel="author" href="">

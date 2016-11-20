@@ -2,7 +2,10 @@
 <html lang="en">
 
 <head>
-    <?php include './templates/head.php'; ?>
+    <?php 
+    $page_title = "Graphic Design | Return On Click - 1300 021 087";
+    $page_description = "Graphic Design | Our graphic designers can draw in the eye, and our innovative and intelligent designs also draw in the mind. Your Branding, Your Vision.";
+    include './templates/head.php'; ?>
 </head>
 
 <body>

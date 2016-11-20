@@ -2,7 +2,10 @@
 <html lang="en">
 
 <head>
-    <?php include './templates/head.php'; ?>
+    <?php 
+    $page_title = "Website Wireframing | Return On Click - 1300 021 087";
+    $page_description = "Website Wireframing | The blueprint for the website design process. Streamline the customer experience with an intelligent website wireframe.";
+    include './templates/head.php'; ?>
 </head>
 
 <body>

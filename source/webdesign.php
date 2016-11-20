@@ -2,7 +2,10 @@
 <html lang="en">
 
 <head>
-    <?php include './templates/head.php'; ?>
+    <?php 
+    $page_title = "Web Design | Return On Click - 1300 021 087";
+    $page_description = "Web Design | Ensure that your website reflects your market and clientele and is clear about who you are, what you do and what separates you from others.";
+    include './templates/head.php'; ?>
 </head>
 
 <body>
